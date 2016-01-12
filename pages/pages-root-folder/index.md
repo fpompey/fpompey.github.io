@@ -8,10 +8,10 @@ layout: frontpage
 header:
   image_fullwidth: Fond_Acceuil.jpg
 widget1:
-  title: "Blog & Portfolio"
-  url: 'http://phlow.github.io/feeling-responsive/blog/'
+  title: "Procédure Monitoring"
+  url: 'http://fpompey.github.io/p1/Procedure_Ipmonitor/'
   image: widget-1-302x182.jpg
-  text: 'Every good portfolio website has a blog with fresh news, thoughts and develop&shy;ments of your activities. <em>Feeling Responsive</em> offers you a fully functional blog with an archive page to give readers a quick overview of all your posts.'
+  text: 'Procédure utilisé pour le monitoring avec IpMonitor + Cacti. Cette procédure a été réalisé lors de mes deux années en alternance dans la société BCS Technologies.'
 widget2:
   title: "Why use this theme?"
   url: 'http://phlow.github.io/feeling-responsive/info/'
