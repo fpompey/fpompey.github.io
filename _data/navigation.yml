@@ -7,7 +7,7 @@
   side: left
 
 - title: P1 Production de service
-  url: "/P1/"
+  url: "/p1/"
   side: left
   dropdown:
   - title: "Procédure IPmonitor"
