@@ -17,26 +17,6 @@
   url: "/P2/"
   side: left
 
-- title: P3 Infrastructures
-  url: "/P3/"
-  side: left
-
-- title: P4 Développement
-  url: "/P4/"
-  side: left
-
-- title: P5 Gestion Informatique
-  url: "/P5/"
-  side: left
-
-- title: Tableau de compétences
-  url: "/Tableau/"
-  side: left
-
-#- title: Getting Started
-#  url: "/getting-started/"
-#  side: left
-
 #- title: "Templates"
 #  url: "/design/"
 #  side: left
