@@ -3,135 +3,103 @@ layout: default
 ---
 
 <!DOCTYPE html>
-<html$if(lang)$ lang="$lang$"$endif$>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  $for(author-meta)$
-  <meta name="author" content="$author-meta$">
-  $endfor$
-  $if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$">
-  $endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+      <title>Résumé Title</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  $if(quotes)$
-  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-  $endif$
-  $for(css)$
-    <link rel="stylesheet" href="../assets/css/stylesheets_pandoc_cv.css">
-  $endfor$
-  $for(header-includes)$
-    $header-includes$
-  $endfor$
-</head>
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
 <body>
-  <header itemscope itemtype="http://http://schema.org/Person" class="$if(photo)$with-photo$endif$">
-    <div id="title" class="$if(qrcode)$qrcode$endif$">
-      $if(qrcode)$
-      <img id="qrcode" src="$qrcode$" />
-      $endif$
-      <h1 class="fullname">
-        <span itemprop="givenName">$firstname$</span>
-        <span itemprop="familyName">$lastname$</span>
+  <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
+    <div id="title" class="qrcode">
+            <img id="qrcode" src="images/qrcode.png" />
+            <h1 class="fullname">
+        <span itemprop="givenName">Firstname</span>
+        <span itemprop="familyName">Lastname</span>
       </h1>
-      <h2 class="title">$title$</h2>
+      <h2 class="title">Résumé Title</h2>
     </div>
-    $if(photo)$
-    <img src="$photo$" />
-    $endif$
-    <ul class="details">
+        <img src="images/picture.png" />
+        <ul class="details">
       <!-- phone -->
-      $if(phone)$
-      $if(settings.protect-phone)$
-      $if(privatecv)$
-      <li><a class='phone' href="phoneto:$phone$">$phone$</a></li>
-      $endif$
-      $else$
-      <li><a class='phone' href="phoneto:$phone$">$phone$</a></li>
-      $endif$
-      $endif$
-      <!-- mobile -->
-      $if(mobile)$
-      $if(settings.protect-mobile)$
-      $if(privatecv)$
-      <li><a class='mobile' href="phoneto:$mobile$">$mobile$</a></li>
-      $endif$
-      $else$
-      <li><a class='mobile' href="phoneto:$mobile$">$mobile$</a></li>
-      $endif$
-      $endif$
-      <!-- fax -->
-      $if(fax)$
-      $if(settings.protect-fax)$
-      $if(privatecv)$
-      <li><a class='fax' href="phoneto:$fax$">$fax$</a></li>
-      $endif$
-      $else$
-      <li><a class='fax' href="phoneto:$fax$">$fax$</a></li>
-      $endif$
-      $endif$
-      <!-- email -->
-      $if(email)$
-      $if(settings.protect-email)$
-      $if(privatecv)$
-      <li><a href="mailto:$email$">$email$</a></li>
-      $endif$
-      $else$
-      <li><a href="mailto:$email$">$email$</a></li>
-      $endif$
-      $endif$
-      <!-- homepage -->
-      $if(homepage)$
-      <li><a href="$homepage$" itemprop="url" title="homepage">$homepage$</a></li>
-      $endif$
-      <!--if(address)-->
-      $if(address)$
-      $if(settings.protect-address)$
-      $if(privatecv)$
-      <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        $if(address.city)$
-        <span itemprop="addressLocality">$address.city$</span>
-        $endif$
-        $if(address.country)$
-        <span itemprop="addressCountry">$address.country$</span>
-        $endif$
-      </li>
-      $endif$
-      $else$
-      <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        $if(address.city)$
-        <span itemprop="addressLocality">$address.city$</span>
-        $endif$
-        $if(address.country)$
-        <span itemprop="addressCountry">$address.country$</span>
-        $endif$
-      </li>
-      $endif$
-      $endif$
-      <!--endif-->
+                        <li><a class='phone' href="phoneto:+2 (345) 678 901">+2 (345) 678 901</a></li>
+                        <!-- mobile -->
+                        <li><a class='mobile' href="phoneto:+1 (234) 567 890">+1 (234) 567 890</a></li>
+                        <!-- fax -->
+                        <li><a class='fax' href="phoneto:+3 (456) 789 012">+3 (456) 789 012</a></li>
+                        <!-- email -->
+                        <li><a href="mailto:contact@yoursite.com">contact@yoursite.com</a></li>
+                        <!-- homepage -->
+            <li><a href="http://yoursite.com" itemprop="url" title="homepage">http://yoursite.com</a></li>
+            <!--if(address)-->
+            <!--endif-->
     </ul>
   </header>
 
-  $for(include-before)$
-  $include-before$
-  $endfor$
+  
+  <section id="profile" class="level2">
+  <h2>Profile</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo turpis, malesuada iaculis eros vitae, posuere auctor metus. Fusce eget neque posuere, placerat quam quis, sodales sapien. Pellentesque tempus orci dui, eget ultrices lacus egestas sed. Suspendisse et est tincidunt dolor consectetur aliquam. Etiam a mauris a leo dignissim consectetur. Proin quis metus consequat, convallis velit commodo, vulputate lorem. Cras dapibus nulla at venenatis dignissim. In semper elit ac nibh pretium hendrerit.</p>
+  </section>
+  <section id="education" class="level2">
+  <h2>Education</h2>
+  <dl>
+  <dt>year-year</dt>
+  <dd><p><strong>Degree</strong>, <em>Institution</em>, City, Country<br /> in Grade</p>
+  <p>What awesome things did you do… Or <strong><em>anything you want</em></strong></p>
+  <dl>
+  <dt>extra</dt>
+  <dd>Some extra
+  </dd>
+  <dt>extra</dt>
+  <dd>Some other extra
+  </dd>
+  </dl>
+  </dd>
+  <dt>year-year</dt>
+  <dd><p><strong>Degree</strong>, <em>Institution</em>, City, Country<br /> in Grade</p>
+  <p>What awesome things did you do… Or <strong><em>anything you want</em></strong></p>
+  <dl>
+  <dt>extra</dt>
+  <dd>Some extra
+  </dd>
+  <dt>extra</dt>
+  <dd>Some other extra
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  </section>
+  <section id="awards-and-grants" class="level2">
+  <h2>Awards and Grants</h2>
+  <dl>
+  <dt>year</dt>
+  <dd><p><strong>Award</strong>, <em>Provider</em>, Country<br />Cras dapibus nulla at venenatis dignissim. In semper elit ac nibh pretium hendrerit.</p>
+  </dd>
+  <dt>year</dt>
+  <dd><p><strong>Award</strong>, <em>Provider</em>, Country<br />Cras dapibus nulla at venenatis dignissim. In semper elit ac nibh pretium hendrerit.</p>
+  </dd>
+  </dl>
+  </section>
+  <section id="experience" class="level2">
+  <h2>Experience</h2>
+  <p>to continue …</p>
+  </section>
 
-  $body$
-
-  $for(include-after)$
-  $include-after$
-  $endfor$
-
+  
   <footer>
-    $footer$
-    $if(settings.display-lastupdate)$
-    <p class="date">$date$</p>
-    $endif$
-  </footer>
+    <ul>
+    <li><a href="http://twitter.com/yourtwitter">yourtwitter</a></li>
+    <li><a href="http://github.com/yourgithub">yourgithub</a></li>
+    <li><a href="linkedin.com/in/yourlinkedin">yourlinkedin</a></li>
+    </ul>
+      </footer>
 </body>
-</html>
+</html># 
+
