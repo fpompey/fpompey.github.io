@@ -6,12 +6,11 @@ teaser: "Cette procédure a été faite dans le cadre de ma première année dan
 breadcrumb: true
 tags:
     - procedure
+    - supervision
+    - monitoring
 categories:
     - procedure
-image:
-    thumb: gallery-example-3-thumb.jpg
-    title: gallery-example-3.jpg
-    caption_url: http://unsplash.com
+show_meta: false
 ---
 
 # IPmonitor #
