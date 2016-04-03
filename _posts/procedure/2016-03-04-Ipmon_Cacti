@@ -1,17 +1,14 @@
 ---
 layout: page
-subheadline: Procedure
+subheadline: Procédure
 title:  "Procédure IpMonitor & Cacti"
 teaser: "Cette procédure a été faite dans le cadre de ma première année dans la société BCS Technologies, elle a subi plusieurs modification à la suite des différents avis lors de ma seconde année."
-breadcrumb: true
-tags:
-    - procedure
 categories:
     - procedure
-image:
-    thumb: gallery-example-3-thumb.jpg
-    title: gallery-example-3.jpg
-    caption_url: http://unsplash.com
+tags:
+    - procedure
+    - monitoring
+    - supervision
 header: no
 ---
 
@@ -232,4 +229,9 @@ Si votre machine utilisent des compteurs différents.
 Ajouter le template associé et mettre les graphs (en général tous les graphs sont à mettre sur ces différents templates).
 
 Lien du pad BCS http://pad.bcs.cx/p/Procedure_Monitoring
+
+### All Header-Styles
+{: .t60 }
+
+{% include list-posts tag='header' %}
 
