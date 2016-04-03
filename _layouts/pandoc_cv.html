@@ -1,3 +1,8 @@
+---
+layout: pandoc_cv
+format: post
+---
+
 <!DOCTYPE html>
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
@@ -19,7 +24,7 @@
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
   $endif$
   $for(css)$
-    <link rel="stylesheet" href="$css$">
+    <link rel="stylesheet" href="../assets/css/stylesheets_pandoc_cv.css">
   $endfor$
   $for(header-includes)$
     $header-includes$
