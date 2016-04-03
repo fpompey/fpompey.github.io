@@ -9,7 +9,7 @@ header:
   image_fullwidth: Fond_Acceuil.jpg
 widget1:
   title: "Procédure IpMonitor & Cacti"
-  url: 'http://fpompey.github.io/procedure/IpMonitor_Cacti/'
+  url: 'http://fpompey.github.io/procedure/Ipmon_Cacti/'
   image: widget-1-302x182.jpg
   text: 'Procédure utilisé pour le monitoring avec IpMonitor + Cacti. Cette procédure a été réalisé lors de mes deux années en alternance dans la société BCS Technologies.'
 widget2:
