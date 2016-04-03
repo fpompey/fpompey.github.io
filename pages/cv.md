@@ -1,1 +1,0 @@
-/root/.git/fpompey.github.io/Pandoc/cv/cv.md
