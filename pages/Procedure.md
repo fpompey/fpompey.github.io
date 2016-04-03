@@ -7,7 +7,7 @@ header:
 permalink: "/Procedure/"
 ---
 <ul>
-    {% for post in site.categories.procedure %}
+    {% for post in site.categories.Procedure %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
