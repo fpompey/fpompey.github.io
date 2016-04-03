@@ -1,12 +1,13 @@
 ---
 layout: page
+show_meta: false
 title:  "Curriculum Vitae"
-teaser: "Mon CV"
 categories:
     - CV
 tags:
     - CV
 header: no
+permalink: "/CV/"
 ---
 
 Pompey Florian								Français
@@ -41,5 +42,4 @@ Centres intérêt:
 Sports: Volley-ball, Basketball, natation
 Développement web et petits logiciels et réalisation d’une page web
 Musique : Guitare
-
 
