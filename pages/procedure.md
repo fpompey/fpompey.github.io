@@ -4,10 +4,10 @@ show_meta: false
 title: "Procédure"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/Procedure/"
+permalink: "/procedure/"
 ---
 <ul>
-    {% for post in site.categories.Procedure %}
+    {% for post in site.categories.procedure %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

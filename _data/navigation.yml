@@ -3,15 +3,15 @@
   side: left
 
 - title: CV
-  url: "/CV/"
+  url: "/cv/"
   side: left
 
 - title: Procédure
-  url: "/Procedure/"
+  url: "/procedure/"
   side: left
   dropdown:
   - title: "Ipmonitor & Cacti"
-    url: "/Procedure/Ipmon&Cacti/"
+    url: "/procedure/Ipmon&Cacti/"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
