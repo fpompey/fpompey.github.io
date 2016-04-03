@@ -5,6 +5,7 @@ title: "Procédure"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/procedure/"
+breadcrumb: true
 ---
 <ul>
     {% for post in site.categories.procedure %}

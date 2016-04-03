@@ -8,6 +8,7 @@ tags:
     - cv
 header: no
 permalink: "/cv/"
+breadcrumb: true
 ---
 
 Pompey Florian								Français
