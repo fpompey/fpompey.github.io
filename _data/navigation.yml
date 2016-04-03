@@ -1,4 +1,4 @@
-- title: Acceuil
+- title: Accueil
   url: "/"
   side: left
 
@@ -6,16 +6,16 @@
   url: "/CV/"
   side: left
 
-- title: P1 Production de service
-  url: "/p1/"
+- title: Procédure
+  url: "/Procedure/"
   side: left
   dropdown:
-  - title: "Procédure IPmonitor"
-    url: "/p1/Procedure_Ipmonitor/"
+  - title: "Ipmonitor & Cacti"
+    url: "/procedure/Ipmon&Cacti/"
 
-- title: P2 Fourniture de services
-  url: "/P2/"
-  side: left
+#- title: P2 Fourniture de services
+#  url: "/P2/"
+#  side: left
 
 #- title: "Templates"
 #  url: "/design/"
@@ -78,7 +78,7 @@
 #    url: "/blog/archive/"
 
 - title: "Recherchez"
-  url: "/search/"
+  url: "/recherchez/"
   side: right
 
 - title: "Contact"

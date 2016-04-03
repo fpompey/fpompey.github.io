@@ -8,13 +8,13 @@ layout: frontpage
 header:
   image_fullwidth: Fond_Acceuil.jpg
 widget1:
-  title: "Procédure Monitoring"
-  url: 'http://fpompey.github.io/p1/Procedure_Ipmonitor/'
+  title: "Procédure IpMonitor & Cacti"
+  url: 'http://fpompey.github.io/procedure/IpMonitor&Cacti/'
   image: widget-1-302x182.jpg
   text: 'Procédure utilisé pour le monitoring avec IpMonitor + Cacti. Cette procédure a été réalisé lors de mes deux années en alternance dans la société BCS Technologies.'
 widget2:
   title: "CV"
-  url: 'http://fpompey.github.io/cv/CV/'
+  url: 'http://fpompey.github.io/CV/'
   text: '<em>Mon CV</em> '
   video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
 widget3:

@@ -1,13 +1,13 @@
 ---
 layout: page
 show_meta: false
-title: "P1 production de Service"
+title: "Procédure"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/p1/"
+permalink: "/procedure/"
 ---
 <ul>
-    {% for post in site.categories.P1 %}
+    {% for post in site.categories.procedure %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

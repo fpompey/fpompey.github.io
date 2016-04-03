@@ -1,5 +1,5 @@
 ---
-title: "A website that doesn't exit"
+title: "Ce site web n'existe pas"
 layout: redirect
 sitemap: false
 permalink: /redirect-page/
