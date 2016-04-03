@@ -2,24 +2,42 @@
 show_meta: false
 permalink: "/cv/"
 breadcrumb: true
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      <title>Curriculum Vitae</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+        <link rel="stylesheet" href="../assets/css/stylesheets_pandoc_cv.css">
+    </head>
+<body>
+  <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
+    <div id="title" class="qrcode">
+            <img id="qrcode" src="../assets/img/images_pandoc_cv/qrcode.png" />
+            <h1 class="fullname">
+        <span itemprop="givenName">Pompey</span>
+        <span itemprop="familyName">Florian</span>
+      </h1>
+      <h2 class="title">Curriculum Vitae</h2>
+    </div>
+        <img src="../assets/img/images_pandoc_cv/picture.png" />
+        <ul class="details">
+      <!-- phone -->
+            <!-- mobile -->
+            <!-- fax -->
+            <!-- email -->
+                        <li><a href="mailto:florian.pompey@laposte.net">florian.pompey@laposte.net</a></li>
+                        <!-- homepage -->
+            <li><a href="http://portfolio.fpompey.com" itemprop="url" title="homepage">http://portfolio.fpompey.com</a></li>
+            <!--if(address)-->
+            <!--endif-->
+    </ul>
+  </header>
 ---
 
-<header itemscope="" itemtype="http://http://schema.org/Person" class="with-photo">
-
-<div id="title" class="qrcode">![](../assets/img/images_pandoc_cv/qrcode.png)
-
-# <span itemprop="givenName">Pompey</span> <span itemprop="familyName">Florian</span>
-
-## Curriculum Vitae
-
-</div>
-
-![](../assets/img/images_pandoc_cv/picture.png)
-
-*   [florian.pompey@laposte.net](mailto:florian.pompey@laposte.net)
-*   [http://portfolio.fpompey.com](http://portfolio.fpompey.com "homepage")
-
-</header>
 
 <section id="profile" class="level2">
 
