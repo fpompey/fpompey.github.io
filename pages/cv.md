@@ -3,11 +3,11 @@ layout: page
 show_meta: false
 title:  "Curriculum Vitae"
 categories:
-    - CV
+    - cv
 tags:
-    - CV
+    - cv
 header: no
-permalink: "/CV/"
+permalink: "/cv/"
 ---
 
 Pompey Florian								Français
