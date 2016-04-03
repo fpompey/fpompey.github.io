@@ -1,6 +1,5 @@
 ---
 show_meta: false
-header: no
 permalink: "/cv/"
 breadcrumb: true
 ---
