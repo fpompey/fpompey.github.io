@@ -2,22 +2,19 @@
 layout: page
 show_meta: false
 title:  "Curriculum Vitae"
+subheadline: "Pompey Florian"
 categories:
     - cv
 tags:
     - cv
 header: no
 permalink: "/cv/"
----
-
----
-title: 'Your Name'
 website: http://portfolio.fpompey.com
 street: 23 rue Michel Strogoff
 city: Cergy
 postcode: 95800
 email: florian.pompey@laposte.net
-...
+---
 
 ### Personal summary
 
