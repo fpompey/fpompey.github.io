@@ -11,7 +11,7 @@
   side: left
   dropdown:
   - title: "Ipmonitor & Cacti"
-    url: "/procedure/Ipmon&Cacti/"
+    url: "/Procedure/Ipmon&Cacti/"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"

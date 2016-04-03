@@ -4,7 +4,7 @@ show_meta: false
 title: "Procédure"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/procedure/"
+permalink: "/Procedure/"
 ---
 <ul>
     {% for post in site.categories.procedure %}
