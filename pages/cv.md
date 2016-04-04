@@ -3,7 +3,7 @@ show_meta: false
 permalink: "/cv/"
 breadcrumb: true
 layout: page_pandoc
-Title: Curriculum Vitae
+title: "Curriculum Vitae"
 ---
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
@@ -28,8 +28,8 @@ Title: Curriculum Vitae
             
 	    <!--if(address)-->
 	    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="Cergy">City</span>
-                <span itemprop="France">Country</span>
+                <span itemprop="City">Cergy</span>
+                <span itemprop="Country">France</span>
             </li>
             
 	    <!--endif-->
