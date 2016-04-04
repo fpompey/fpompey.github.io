@@ -18,7 +18,7 @@ title: "Curriculum Vitae"
         <ul class="details">
       	    <!-- phone -->
             <!-- mobile -->
-            (+33)777303621
+            <li><a class='mobile' href="phoneto:(+33)777303621">(+33)777303621</a></li>
             <!-- fax -->
 
             <!-- email -->
