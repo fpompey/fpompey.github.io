@@ -2,10 +2,9 @@
 show_meta: false
 permalink: "/cv/"
 breadcrumb: true
-layout: page
+layout: page_pandoc
 title: Curriculum Vitae
 ---
-        <link rel="stylesheet" href="stylesheets/style.css">
 <body>
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
