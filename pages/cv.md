@@ -84,16 +84,16 @@ title: "Curriculum Vitae"
   <dl>
   
   <dt>Bureautique</dt>
-  <dd><p><strong>Open office, Word :</strong>, <em>niveau intermédiaire</em></p></dd>
-  <dd><p><strong>SolidWorks :</strong>, <em>niveau débutant</em></p></dd>
+  <dd><p><strong>Open office, Word :</strong><em> niveau intermédiaire</em></p></dd>
+  <dd><p><strong>SolidWorks :</strong><em> niveau débutant</em></p></dd>
   
   <dt>Développement</dt>
-  <dd><p><strong>Programmation C, html, CSS, java :</strong>, <em>niveau intermediaire</em></p></dd>
-  <dd><p><strong>Programmation PHP, MySQL :</strong>, <em>niveau débutant</em></p></dd>
+  <dd><p><strong>Programmation C, html, CSS, java :</strong><em> niveau intermediaire</em></p></dd>
+  <dd><p><strong>Programmation PHP, MySQL :</strong><em> niveau débutant</em></p></dd>
   
   <dt>Langues</dt>
-  <dd><p><strong>Anglais :</strong><em>niveau intermediaire</em></p></dd>
-  <dd><p><strong>Espagnol :</strong><em>niveau débutant</em></p></dd>
+  <dd><p><strong>Anglais :</strong><em> niveau intermediaire</em></p></dd>
+  <dd><p><strong>Espagnol :</strong><em> niveau débutant</em></p></dd>
   
   </dl>
   </section>
