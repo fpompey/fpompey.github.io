@@ -3,6 +3,7 @@ show_meta: false
 permalink: "/cv/"
 breadcrumb: true
 layout: page_pandoc
+Title: Curriculum Vitae
 ---
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
@@ -15,19 +16,27 @@ layout: page_pandoc
     </div>
         <img src="../assets/img/images_pandoc/picture.png" />
         <ul class="details">
-      <!-- phone -->
+      	    <!-- phone -->
             <!-- mobile -->
             <!-- fax -->
+
             <!-- email -->
-                        <li><a href="mailto:florian.pompey@laposte.net">florian.pompey@laposte.net</a></li>
+            <li><a href="mailto:florian.pompey@laposte.net">florian.pompey@laposte.net</a></li>
+
                         <!-- homepage -->
             <li><a href="http://portfolio.fpompey.com" itemprop="url" title="homepage">http://portfolio.fpompey.com</a></li>
-            <!--if(address)-->
-            <!--endif-->
-    </ul>
+            
+	    <!--if(address)-->
+	    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="Cergy">City</span>
+                <span itemprop="France">Country</span>
+            </li>
+            
+	    <!--endif-->
+        </ul>
   </header>
 
-  <section id="informations-personnel" class="level2">
+  <section id="informations-personnel" class="level2 listing">
   <h2>Informations Personnel</h2>
   <dl>
   <dt>Date de Naissance</dt>
