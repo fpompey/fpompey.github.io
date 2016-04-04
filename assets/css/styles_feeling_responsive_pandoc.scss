@@ -119,17 +119,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-style: normal;
 }
 
-///* line 16, ../../stylesheets/_fonts.scss */
-//a[href^="http"]:before, a[href^="mailto:"]:before, a.phone:before, a.mobile:before, a.fax:before, a.twitter:before, a[href*='twitter.com']:before, a.github:before, a[href*='github.com']:before, a.linkedin:before, a[href*='linkedin.com']:before {
-//  display: inline-block;
-//  font-family: FontAwesome;
-//  font-style: normal;
-//  font-weight: normal;
-//  line-height: 1;
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
-//  padding-right: 5px;
-//}
+/* line 16, ../../stylesheets/_fonts.scss */
+a[href^="http"]:before, a[href^="mailto:"]:before, a.phone:before, a.mobile:before, a.fax:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 5px;
+}
 
 /* line 29, ../../stylesheets/_fonts.scss */
 a[href^="mailto:"]:before {
