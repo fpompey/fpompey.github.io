@@ -8,14 +8,14 @@ title: Curriculum Vitae
 <body>
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
-            <img id="qrcode" src="images/qrcode.png" />
+            <img id="qrcode" src="../assets/img/images_pandoc/qrcode.png" />
             <h1 class="fullname">
         <span itemprop="givenName">Pompey</span>
         <span itemprop="familyName">Florian</span>
       </h1>
       <h2 class="title">Curriculum Vitae</h2>
     </div>
-        <img src="images/picture.png" />
+        <img src="../assets/img/images_pandoc/picture.png" />
         <ul class="details">
       <!-- phone -->
             <!-- mobile -->
@@ -92,13 +92,5 @@ title: Curriculum Vitae
   <h2>Experience</h2>
   <p>to continue …</p>
   </section>
-
-  
-  <footer>
-    <ul>
-    <li><a href="http://twitter.com/yourtwitter">yourtwitter</a></li>
-    <li><a href="http://github.com/fpompey.github.io">yourgithub</a></li>
-    </ul>
-      </footer>
 </body>
-</html>#  
+</html> 
