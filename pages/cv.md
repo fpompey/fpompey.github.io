@@ -3,7 +3,6 @@ show_meta: false
 permalink: "/cv/"
 breadcrumb: true
 layout: page_pandoc
-title: Curriculum Vitae
 ---
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
@@ -41,11 +40,13 @@ title: Curriculum Vitae
   <dd>Permis B
   </dd>
   </dl>
-  
+  </section>
+
   <section id="profile" class="level2">
   <h2>Profile</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo turpis, malesuada iaculis eros vitae, posuere auctor metus. Fusce eget neque posuere, placerat quam quis, sodales sapien. Pellentesque tempus orci dui, eget ultrices lacus egestas sed. Suspendisse et est tincidunt dolor consectetur aliquam. Etiam a mauris a leo dignissim consectetur. Proin quis metus consequat, convallis velit commodo, vulputate lorem. Cras dapibus nulla at venenatis dignissim. In semper elit ac nibh pretium hendrerit.</p>
   </section>
+
   <section id="education" class="level2">
   <h2>Education</h2>
   <dl>
