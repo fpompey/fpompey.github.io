@@ -103,8 +103,13 @@ title: "Curriculum Vitae"
   
   <dt>Babysitting </dt>
   <dd><p><strong>• Babysitting </strong>, <em>Ponctuellement en 2013</em></p></dd>
+  
+  <dt>Babysitting </dt>
   <dd><p><strong>• Déménagement</strong>, <em>Juin 2013 et Février 2012</em></p></dd>
+  
+  <dt>Babysitting </dt>
   <dd><p><strong>• Dépanage Informatique</strong>, <em>en 2013</em></p></dd>
+  
   <dd><p><strong>• Stage</strong>, <em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
   <dd><p><strong>• MacDonalds</strong>, <em>Emploi saisonnier été 2014</em></p></dd>
   <dd><p><strong>• Alternance</strong>, <em>Depuis Septembre 2014</em></p></dd>
