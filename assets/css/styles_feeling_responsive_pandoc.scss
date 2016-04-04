@@ -131,6 +131,31 @@ a[href^="http"]:before, a[href^="mailto:"]:before, a.phone:before, a.mobile:befo
   padding-right: 5px;
 }
 
+/* line 28, ../../stylesheets/_fonts.scss */
+a[href^="http"]:before {
+  content: "" !important;
+}
+
+/* line 29, ../../stylesheets/_fonts.scss */
+a[href^="mailto:"]:before {
+  content: "" !important;
+}
+
+/* line 30, ../../stylesheets/_fonts.scss */
+a.phone:before {
+  content: "" !important;
+}
+
+/* line 31, ../../stylesheets/_fonts.scss */
+a.mobile:before {
+  content: "" !important;
+}
+
+/* line 32, ../../stylesheets/_fonts.scss */
+a.fax:before {
+  content: "" !important;
+}
+
 /* fonts */
 /* line 21, ../../stylesheets/style.scss */
 body {
@@ -393,12 +418,12 @@ section.jumbotron, section.jumbotron p {
   text-align: center;
 }
 
-// @media screen {
-//  /* line 261, ../../stylesheets/style.scss */
-//  #qrcode {
-//    display: none;
-//  }
-//}
+@media screen {
+  /* line 261, ../../stylesheets/style.scss */
+  #qrcode {
+    display: none;
+  }
+}
 
 @media print, projection {
   @page {
