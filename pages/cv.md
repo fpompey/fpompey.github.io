@@ -5,7 +5,6 @@ breadcrumb: true
 layout: page_pandoc
 title: Curriculum Vitae
 ---
-<body>
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
             <img id="qrcode" src="../assets/img/images_pandoc/qrcode.png" />
@@ -92,5 +91,3 @@ title: Curriculum Vitae
   <h2>Experience</h2>
   <p>to continue …</p>
   </section>
-</body>
-</html> 
