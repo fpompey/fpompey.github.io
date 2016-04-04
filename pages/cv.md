@@ -101,17 +101,22 @@ title: "Curriculum Vitae"
   <section id="experience" class="level2">
   <h2>Expériences professionnelles :</h2>
   
-  <dt>Babysitting </dt>
-  <dd><p><strong>• Babysitting </strong>, <em>Ponctuellement en 2013</em></p></dd>
+  <dt>Babysitting</dt>
+  <dd><p><strong>• Babysitting</strong>, <em>Ponctuellement en 2013</em></p></dd>
   
-  <dt>Babysitting </dt>
+  <dt>Déménagement </dt>
   <dd><p><strong>• Déménagement</strong>, <em>Juin 2013 et Février 2012</em></p></dd>
   
-  <dt>Babysitting </dt>
+  <dt>Dépanage Informatique </dt>
   <dd><p><strong>• Dépanage Informatique</strong>, <em>en 2013</em></p></dd>
   
+  <dt>Stage </dt>
   <dd><p><strong>• Stage</strong>, <em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
+  
+  <dt>MacDonalds </dt>
   <dd><p><strong>• MacDonalds</strong>, <em>Emploi saisonnier été 2014</em></p></dd>
+  
+  <dt>Alternance </dt>
   <dd><p><strong>• Alternance</strong>, <em>Depuis Septembre 2014</em></p></dd>
   
   </section>
