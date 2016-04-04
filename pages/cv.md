@@ -92,25 +92,26 @@ title: "Curriculum Vitae"
   <dd><p><strong>Programmation PHP, MySQL :</strong>, <em>niveau débutant</em></p></dd>
   
   <dt>Langues</dt>
-  <dd><p><strong>Anglais :</strong>, <em>niveau intermediaire</em></p></dd>
-  <dd><p><strong>Espagnol :</strong>, <em>niveau débutant</em></p></dd>
+  <dd><p><strong>Anglais :</strong><em>niveau intermediaire</em></p></dd>
+  <dd><p><strong>Espagnol :</strong><em>niveau débutant</em></p></dd>
   
   </dl>
   </section>
   
   <section id="experience" class="level2">
   <h2>Expériences professionnelles :</h2>
+  <dl>
   
-  <dt><strong>• Babysitting</strong></dt>
+  <dt><strong>Babysitting</strong></dt>
   <dd><p><em>Ponctuellement en 2013</em></p></dd>
   
-  <dt><strong>• Déménagement</strong></dt>
+  <dt><strong>Déménagement</strong></dt>
   <dd><p><em>Juin 2013 et Février 2012</em></p></dd>
   
-  <dt><strong>• Dépanage Informatique</strong></dt>
+  <dt><strong>Dépanage Informatique</strong></dt>
   <dd><p><em>en 2013</em></p></dd>
   
-  <dt><strong>• Stage</strong></dt>
+  <dt><strong>Stage</strong></dt>
   <dd><p><em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
   
   <dt><strong>• MacDonalds</strong></dt>
@@ -119,10 +120,12 @@ title: "Curriculum Vitae"
   <dt><strong>• Alternance</strong></dt>
   <dd><p><em>Depuis Septembre 2014</em></p></dd>
   
+  </dl>
   </section>
   
   <section id="experience" class="level2">
   <h2>Centres intérêt: :</h2>
+  <dl>
   
   <dt><strong>Sports</strong></dt>
   <dd><p><em>Volley-ball</em></p></dd>
@@ -137,4 +140,5 @@ title: "Curriculum Vitae"
   <dd><p><em>Petits logiciels java (Launcher, plugins)</em></p></dd>
   <dd><p><em>Automatisation des tâches</em></p></dd>
   
+  </dl>
   </section>
