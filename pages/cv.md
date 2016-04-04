@@ -124,15 +124,15 @@ title: "Curriculum Vitae"
   <section id="experience" class="level2">
   <h2>Centres intérêt: :</h2>
   
-  <dt>Sports</dt>
+  <dt><strong>Sports</strong></dt>
   <dd><p><em>Volley-ball</em></p></dd>
   <dd><p><em>Basketball</em></p></dd>
   <dd><p><em>Natation</em></p></dd>
   
-  <dt>Musique</dt>
+  <dt><strong>Musique</strong></dt>
   <dd><p><em>Guitare-ball</em></p></dd>
   
-  <dt>Développement</dt>
+  <dt><strong>Développement</strong></dt>
   <dd><p><em>Réalisation de page Web</em></p></dd>
   <dd><p><em>Petits logiciels java (Launcher, plugins)</em></p></dd>
   <dd><p><em>Automatisation des tâches</em></p></dd>
