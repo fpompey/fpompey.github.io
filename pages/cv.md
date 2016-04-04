@@ -28,7 +28,7 @@ title: Curriculum Vitae
     </ul>
   </header>
 
-    <section id="informations-personnel" class="level2 listing">
+  <section id="informations-personnel" class="level2">
   <h2>Informations Personnel</h2>
   <dl>
   <dt>Date de Naissance</dt>
@@ -41,7 +41,6 @@ title: Curriculum Vitae
   <dd>Permis B
   </dd>
   </dl>
-  </section>
   
   <section id="profile" class="level2">
   <h2>Profile</h2>

@@ -109,87 +109,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* default grid value */
-/* layouts settings */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 16, ../../stylesheets/_fonts.scss */
-a[href^="http"]:before, a[href^="mailto:"]:before, a.phone:before, a.mobile:before, a.fax:before, a.twitter:before, a[href*='twitter.com']:before, a.github:before, a[href*='github.com']:before, a.linkedin:before, a[href*='linkedin.com']:before {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 5px;
-}
-
-/* line 28, ../../stylesheets/_fonts.scss */
-a[href^="http"]:before {
-  content: "" !important;
-}
-
-/* line 29, ../../stylesheets/_fonts.scss */
-a[href^="mailto:"]:before {
-  content: "" !important;
-}
-
-/* line 30, ../../stylesheets/_fonts.scss */
-a.phone:before {
-  content: "" !important;
-}
-
-/* line 31, ../../stylesheets/_fonts.scss */
-a.mobile:before {
-  content: "" !important;
-}
-
-/* line 32, ../../stylesheets/_fonts.scss */
-a.fax:before {
-  content: "" !important;
-}
-
-/* line 35, ../../stylesheets/_fonts.scss */
-a.twitter:before, a[href*='twitter.com']:before {
-  content: "" !important;
-}
-
-/* line 36, ../../stylesheets/_fonts.scss */
-a.github:before, a[href*='github.com']:before {
-  content: "" !important;
-}
-
-/* line 37, ../../stylesheets/_fonts.scss */
-a.linkedin:before, a[href*='linkedin.com']:before {
-  content: "" !important;
-}
-
-/* line 106, ../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
-html {
-  font-size: 112.5%;
-  line-height: 1.27778em;
-}
-
-/* line 13, ../../stylesheets/style.scss */
-body {
-  max-width: 59em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2em;
-}
-/* line 12, ../../../../../var/lib/gems/1.9.1/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-body:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 /* fonts */
 /* line 21, ../../stylesheets/style.scss */
 body {
@@ -369,12 +288,6 @@ header [itemprop='address'] {
 }
 
 /* Section */
-/* line 161, ../../stylesheets/style.scss */
-section {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-}
 /* line 167, ../../stylesheets/style.scss */
 section > p {
   margin-top: 1.27778em;
@@ -456,33 +369,6 @@ section.jumbotron h1, section.jumbotron h2 {
 /* line 237, ../../stylesheets/style.scss */
 section.jumbotron, section.jumbotron p {
   text-align: center;
-}
-
-/* Footer */
-/* line 245, ../../stylesheets/style.scss */
-footer {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  margin-top: 1.27778em;
-  padding-top: 1.27778em;
-  padding-bottom: 1.27778em;
-  margin-bottom: 1.27778em;
-  text-align: center;
-}
-/* line 252, ../../stylesheets/style.scss */
-footer li {
-  display: inline;
-}
-/* line 252, ../../stylesheets/style.scss */
-footer li:before {
-  content: '\25CF';
-  padding: 10px;
-  color: #bfbfbf;
-}
-/* line 253, ../../stylesheets/style.scss */
-footer p {
-  margin-top: 1.27778em;
 }
 
 @media screen {
