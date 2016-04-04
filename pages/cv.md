@@ -101,22 +101,40 @@ title: "Curriculum Vitae"
   <section id="experience" class="level2">
   <h2>Expériences professionnelles :</h2>
   
-  <dt>Babysitting</dt>
-  <dd><p><strong>• Babysitting</strong>, <em>Ponctuellement en 2013</em></p></dd>
+  <dt><strong>• Babysitting</strong></dt>
+  <dd><p><em>Ponctuellement en 2013</em></p></dd>
   
-  <dt>Déménagement </dt>
-  <dd><p><strong>• Déménagement</strong>, <em>Juin 2013 et Février 2012</em></p></dd>
+  <dt><strong>• Déménagement</strong></dt>
+  <dd><p><em>Juin 2013 et Février 2012</em></p></dd>
   
-  <dt>Dépanage Informatique </dt>
-  <dd><p><strong>• Dépanage Informatique</strong>, <em>en 2013</em></p></dd>
+  <dt><strong>• Dépanage Informatique</strong></dt>
+  <dd><p><em>en 2013</em></p></dd>
   
-  <dt>Stage </dt>
-  <dd><p><strong>• Stage</strong>, <em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
+  <dt><strong>• Stage</strong></dt>
+  <dd><p><em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
   
-  <dt>MacDonalds </dt>
-  <dd><p><strong>• MacDonalds</strong>, <em>Emploi saisonnier été 2014</em></p></dd>
+  <dt><strong>• MacDonalds</strong></dt>
+  <dd><p><em>Emploi saisonnier été 2014</em></p></dd>
   
-  <dt>Alternance </dt>
-  <dd><p><strong>• Alternance</strong>, <em>Depuis Septembre 2014</em></p></dd>
+  <dt><strong>• Alternance</strong></dt>
+  <dd><p><em>Depuis Septembre 2014</em></p></dd>
+  
+  </section>
+  
+  <section id="experience" class="level2">
+  <h2>Centres intérêt: :</h2>
+  
+  <dt>Sports</dt>
+  <dd><p><em>Volley-ball</em></p></dd>
+  <dd><p><em>Basketball</em></p></dd>
+  <dd><p><em>Natation</em></p></dd>
+  
+  <dt>Musique</dt>
+  <dd><p><em>Guitare-ball</em></p></dd>
+  
+  <dt>Développement</dt>
+  <dd><p><em>Réalisation de page Web</em></p></dd>
+  <dd><p><em>Petits logiciels java (Launcher, plugins)</em></p></dd>
+  <dd><p><em>Automatisation des tâches</em></p></dd>
   
   </section>
