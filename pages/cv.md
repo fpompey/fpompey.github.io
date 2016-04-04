@@ -83,15 +83,15 @@ title: "Curriculum Vitae"
   <h2>Langues  et  Compétences :</h2>
   <dl>
   
-  <dt>Bureautique</dt>
+  <dt>• Bureautique</dt>
   <dd><p><strong>Open office, Word :</strong>, <em>niveau intermédiaire</em></p></dd>
   <dd><p><strong>SolidWorks :</strong>, <em>niveau débutant</em></p></dd>
   
-  <dt>Développement</dt>
+  <dt>• Développement</dt>
   <dd><p><strong>Programmation C, html, CSS, java :</strong>, <em>niveau intermediaire</em></p></dd>
   <dd><p><strong>Programmation PHP, MySQL :</strong>, <em>niveau débutant</em></p></dd>
   
-  <dt>Langues</dt>
+  <dt>• Langues</dt>
   <dd><p><strong>Anglais :</strong><em>niveau intermediaire</em></p></dd>
   <dd><p><strong>Espagnol :</strong><em>niveau débutant</em></p></dd>
   
@@ -102,16 +102,16 @@ title: "Curriculum Vitae"
   <h2>Expériences professionnelles :</h2>
   <dl>
   
-  <dt><strong>Babysitting</strong></dt>
+  <dt><strong>• Babysitting</strong></dt>
   <dd><p><em>Ponctuellement en 2013</em></p></dd>
   
-  <dt><strong>Déménagement</strong></dt>
+  <dt><strong>• Déménagement</strong></dt>
   <dd><p><em>Juin 2013 et Février 2012</em></p></dd>
   
-  <dt><strong>Dépanage Informatique</strong></dt>
+  <dt><strong>• Dépanage Informatique</strong></dt>
   <dd><p><em>en 2013</em></p></dd>
   
-  <dt><strong>Stage</strong></dt>
+  <dt><strong>• Stage</strong></dt>
   <dd><p><em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
   
   <dt><strong>• MacDonalds</strong></dt>
@@ -127,15 +127,15 @@ title: "Curriculum Vitae"
   <h2>Centres intérêt: :</h2>
   <dl>
   
-  <dt><strong>Sports</strong></dt>
+  <dt><strong>• Sports</strong></dt>
   <dd><p><em>Volley-ball</em></p></dd>
   <dd><p><em>Basketball</em></p></dd>
   <dd><p><em>Natation</em></p></dd>
   
-  <dt><strong>Musique</strong></dt>
+  <dt><strong>• Musique</strong></dt>
   <dd><p><em>Guitare-ball</em></p></dd>
   
-  <dt><strong>Développement</strong></dt>
+  <dt><strong>• Développement</strong></dt>
   <dd><p><em>Réalisation de page Web</em></p></dd>
   <dd><p><em>Petits logiciels java (Launcher, plugins)</em></p></dd>
   <dd><p><em>Automatisation des tâches</em></p></dd>
