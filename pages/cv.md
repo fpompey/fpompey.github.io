@@ -51,7 +51,7 @@ title: "Curriculum Vitae"
 
   <section id="profile" class="level2">
   <h2>Profile</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo turpis, malesuada iaculis eros vitae, posuere auctor metus. Fusce eget neque posuere, placerat quam quis, sodales sapien. Pellentesque tempus orci dui, eget ultrices lacus egestas sed. Suspendisse et est tincidunt dolor consectetur aliquam. Etiam a mauris a leo dignissim consectetur. Proin quis metus consequat, convallis velit commodo, vulputate lorem. Cras dapibus nulla at venenatis dignissim. In semper elit ac nibh pretium hendrerit.</p>
+  <p>Présentation de mon parcours.</p>
   </section>
 
   <section id="education" class="level2">
