@@ -15,7 +15,7 @@ widget1:
 widget2:
   title: "CV"
   url: 'http://fpompey.github.io/cv/'
-  text: '<em>Mon CV</em> '
+  text: 'Mon CV.                                                                                                                                                            '
   image: widget-2.jpg
 widget3:
   title: "Download Theme"
