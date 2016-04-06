@@ -109,7 +109,7 @@ title: "Curriculum Vitae"
   <dd><p><em>Juin 2013 et Février 2012</em></p></dd>
   
   <dt><strong>Dépanage Informatique</strong></dt>
-  <dd><p><em>en 2013</em></p></dd>
+  <dd><p><em>En 2013</em></p></dd>
   
   <dt><strong>Stage</strong></dt>
   <dd><p><em>5 semaines du 28 avril au 30 mai 2014 dans l’entreprise Castelis</em></p></dd>
@@ -124,7 +124,7 @@ title: "Curriculum Vitae"
   </section>
   
   <section id="experience" class="level2">
-  <h2>Centres intérêt: :</h2>
+  <h2>Centres intérêt: </h2>
   <dl>
   
   <dt><strong>Sports</strong></dt>
