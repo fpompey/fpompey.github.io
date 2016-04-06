@@ -19,9 +19,9 @@ widget2:
   image: widget-2.jpg
 widget3:
   title: "Download Theme"
-  url: 'https://github.com/Phlow/feeling-responsive'
+  url: 'https://fpompey.github.io/procedure/'
   image: widget-1-303x182.jpg
-  text: '<em>Procédure Vm Linux</em> réalisé dans le cadre de ma formation dans le BTS SIO IMCP et dans la société BCS Technologies'
+  text: 'Procédure Vm Linux réalisé dans le cadre de ma formation dans le BTS SIO IMCP et dans la société BCS Technologies'
 #
 # Use the call for action to show a button on the frontpage
 #
