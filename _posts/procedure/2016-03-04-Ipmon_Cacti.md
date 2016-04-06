@@ -85,7 +85,9 @@ Il faut impérativement mettre en place:
 - Les partitions qu’utilisent la BDD *(comme [/] [/srv] [/var] …)*
 
 Pour savoir qu'elle partition est utilisé connecter vous à la machine et effectuer
-        df -h
+
+
+    df -h
 
 ## Autre ##
 
