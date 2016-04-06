@@ -26,8 +26,12 @@ Essayer de respecter au mieux la même mise en forme que sur le reste des compte
     [MACHINE][NOM_COMPTEUR][TYPE_COMPTEUR]
 
 **A Retenir:**
-- Tout les compteurs Drivespace mis en place qui peuvent fonctionner en 24x7 doivent avoir un compteur HO a 15% et le compteur drivespace qui sera 24x7 à 5% (A adapter selon la taille de la partition, exemple une partition de 15Go sera plus à 10% ou 8% soit environ 1G afin de pouvoir agir avant saturation du drivespace) Cela permettra d'être avertie en HO si c'est une augmentation normale (HO lente et progressive) ou brutal (24x7).
-- Tout les compteurs *Custom:SNMP* que vous allez mettre en place vont nécéssiter un OID du type 1.3.6.1.4.1. Chaque équipement aura un OID qui pourra varier selon le compteur CPU/MEMORY ou autre ... Il faudra donc noter la marque de l'équipement et rechercher l'OID qui correspond à votre compteur
+
+- Tout les compteurs Drivespace mis en place qui sont en 24x7 doivent avoir un compteur HO a 15% et le compteur drivespace qui sera 24x7 à 5% (A adapter selon la taille de la partition, exemple une partition de 15Go sera plus à 10% ou 8% soit environ 1G afin de pouvoir agir avant saturation du drivespace). 
+Cela permettra d'être avertie en HO si c'est une augmentation normale (HO lente et progressive) ou brutal (24x7).
+
+- Tout les compteurs *Custom:SNMP* que vous allez mettre en place vont nécéssiter un OID du type 1.3.6.1.4.1. 
+Chaque équipement aura un OID qui pourra varier selon le compteur CPU/MEMORY ou autre ... Il faudra donc noter la marque de l'équipement et rechercher l'OID qui correspond à votre compteur
 
 Exemple: Power supply Alarm PDU APC 1.3.6.1.4.1.318.1.1.12.4.1.3.0
 
@@ -38,6 +42,7 @@ Pour toutes les machines physique il faut ajoutter le compteur DRAC
 Ces machines sont surtout réservé à un type d’application
 En fonction de l’applicatif mis en place, il faudra adapter les compteurs pour surveiller au mieux l’applicatif.
 Il faut impérativement mettre en place :
+
  - PING
  - PHYSICAL MEMORY
  - CPU
@@ -47,6 +52,7 @@ Il faut impérativement mettre en place :
 ### Backup ###
 Ces machines sont presque toute sous Windows, les soft principalement utilisé sont **VEEAM** et **BACKUP EXEC**.
 Il faut impérativement mettre en place :
+
 - PING
 - PHYSICAL MEMORY
 - CPU
@@ -60,51 +66,60 @@ Pour toutes les machines physique il faut ajoutter le compteur DRAC.
 Ces machines sont surtout réservé à un type d’application *(WEB, MYSQL, CACHE, Applicatif)*.
 En fonction de l’applicatif mis en place, il faudra adapter les compteurs pour surveiller au mieux l’applicatif.
 Il faut impérativement mettre en place :
+
 - PING
 - MEMORY
 - CPU
 - Les partitions qu’utilisent la machine *(souvent le [/] et [/var/www]*
+
 Lors du monitoring il faut surtout faire attention a ne pas rajoutter des compteurs de drivespace inutile (ipmonitor à une limitte de compteur qu'il peux crée). Il ne faut donc pas ajoutter les partition comme /dev /run /sys [/boot /tmp] (Ces deux là ne doivent pas être monitoré sur ipmonitor mais peuvent être graphé sur Cacti pour avoir un aperçu)
 
 ### Base de donées ###
 Ces machines sont presque toutes sous Unix *(mysql, postgresql, oracle)*.
 En fonction de la base de données utilisée les compteurs devront être adapté en conséquences.
 Il faut impérativement mettre en place:
+
 - PING
 - PHYSICAL MEMORY
 - CPU
 - Les partitions qu’utilisent la BDD *(comme [/] [/srv] [/var] …)*
+
 Pour savoir qu'elle partition est utilisé connecter vous à la machine et effectuer
         df -h
 
 ## Autre ##
 
 ### ESX ou Baie de Stockage ###
-Généralement on monitore
+Généralement on monitore :
+
 - PING
 - DRAC
 - CPU
 - DRIVESPACE de l’ESX.
 
 ### VCenter ###
-Généralement si le Vcenter est accessible en ligne
+Généralement si le Vcenter est accessible en ligne :
+
 - PING
 - HTTP
 - HTTPS
 
 ### Firewall ###
 Ces machines sont principalement des fortigates
-Généralement on monitore
+Généralement on monitore :
+
 - PING
 - HTTPS
 - HTTP
 - CPU
 - Compteur de bande passante utilisé *(BANDWITH)*
+- 
 Si les firewall sont en Cluster il faut ajoutter un compteur Master et Slave.
 
 ### FortiAnalyser ###
 Ces machines sont principalement des fortigates
-Généralement on monitore
+Généralement on monitore :
+
 - PING
 - HTTP
 - HTTPS
@@ -114,7 +129,8 @@ Généralement on monitore
 - Compact Flash Disk Drivespace
 
 ### Switch ###
-Généralement on monitore
+Généralement on monitore :
+
 - PING
 - CPU
 - Memory
@@ -124,13 +140,15 @@ Généralement on monitore
 
 ### Contacteur Portes ###
 Il sont mis en place afin de surveiller si la baie est ouverte sans autorisation.
-Généralement on monitore
+Généralement on monitore :
+
 - PING
 - Contacteur de la porte
 - HTTP
 
 ### PDU ###
-On monitore
+On monitore :
+
 - PING
 - POWER SUPLY ALARM
 
@@ -146,11 +164,13 @@ Il est avant tout présent afin de voir l'historique de la machine et l'évoluti
 En général les template associé sont :
 
 **Associated Graph Template**
+
 - Host MIB - Logged in Users
 - Host MIB - Proceses
 - SNMP Informant - Memory Usage
 
 **Associated Data Queries**
+
 - SNMP - Get Mounted Partitions
 - SNMP - Get Processor Information
 - SNMP - Interfce Statistics
@@ -158,7 +178,8 @@ En général les template associé sont :
 
 **Data Query [SNMP - Get Mounted Partitions]**
 
-Toutes les partitions que possèdent la machine, principalement
+Toutes les partitions que possèdent la machine, principalement :
+
 - C:
 - D:
 - Virtual Memory
@@ -167,6 +188,7 @@ Toutes les partitions que possèdent la machine, principalement
 **Data Query [SNMP - Interface Statistics]**
 
 On graph le traffic, voir les ports up pour les graphs.
+
 - In/Out Bits
 - Default - In/Out Errors/Discarded Packets
 - Default - In/Out Unicast Packets
@@ -178,9 +200,11 @@ On graph le traffic, voir les ports up pour les graphs.
 **Data Query [W32 - Memory Statistics]**
 
 ## Machine Unix ##
+
 En général les template associé sont :
 
 **Associated Graph Template**
+
 - BCS Probe - Memory
 - BCS Probe - Swap (Si swap présent sur la machine)
 - ucd 20 Processes
@@ -189,6 +213,7 @@ En général les template associé sont :
 - Unix - Logged in Users
 
 **Associated Data Queries**
+
 - RFC1213 Statistics
 - SNMP - Get Disk IO
 - SNMP - Get Mounted Partitions
@@ -205,13 +230,15 @@ En général les template associé sont :
 Tout les disque, à savoir ce qui finissent par une lettre *ex: sda, sdb ...* sont des disque.
 Ceux finissant par des chiffres sont des partitions *ex: sd1, sd2 ...*
 On ne graph que les disque pas les partition :
+
 - Host MIB - Disk IO - Bytes per second
 - Host MIB - Disk IO - Transactions
 
 
 **Data Query [SNMP - Get Mounted Partitions]**
 
-Toutes les partitions que possèdent la machine, principalement
+Toutes les partitions que possèdent la machine, principalement :
+
 - /
 - /srv
 - /backup
@@ -221,6 +248,7 @@ Toutes les partitions que possèdent la machine, principalement
 **Data Query [SNMP - Interface Statistics]**
 
 On graph le traffic, voir les ports up pour les graphs.
+
 - Default - In/Out Bits (64-bit Counters)
 - Default - In/Out Errors/Discarded Packets
 - Default - In/Out Unicast Packets
