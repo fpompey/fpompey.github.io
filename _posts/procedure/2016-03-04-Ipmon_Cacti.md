@@ -87,6 +87,7 @@ Il faut impérativement mettre en place:
 Pour savoir qu'elle partition est utilisé connecter vous à la machine et effectuer
 
     df -h
+    
 ## Autre ##
 
 ### ESX ou Baie de Stockage ###
@@ -256,5 +257,3 @@ On graph le traffic, voir les ports up pour les graphs.
 Si votre machine utilisent des compteurs différents.
 *Exemple : Postgresql, Nginx, php-fpm ...*
 Ajouter le template associé et mettre les graphs (en général tous les graphs sont à mettre sur ces différents templates).
-
-Lien du pad BCS http://pad.bcs.cx/p/Procedure_Monitoring
