@@ -7,7 +7,7 @@ permalink: "/contact/"
 <div id="wufoo-qj0b5de0wrgglx">
 Fill out my <a href="https://fpompey.wufoo.com/forms/qj0b5de0wrgglx">online form</a>.
 </div>
-<div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">HTML Forms powered by <a href="http://www.wufoo.com">Wufoo</a>.</div>
+<div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
 <script type="text/javascript">var qj0b5de0wrgglx;(function(d, t) {
 var s = d.createElement(t), options = {
 'userName':'fpompey',
