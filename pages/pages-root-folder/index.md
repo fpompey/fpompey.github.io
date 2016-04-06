@@ -18,10 +18,10 @@ widget2:
   text: 'Mon CV.                                                                                                                                                            '
   image: widget-2.jpg
 widget3:
-  title: "Download Theme"
+  title: "Procédure Linux"
   url: 'https://fpompey.github.io/procedure/'
   image: widget-1-302x182.jpg
-  text: 'Procédure Vm Linux réalisé dans le cadre de ma formation dans le BTS SIO IMCP et dans la société BCS Technologies'
+  text: 'Procédure Vm Linux réalisé dans le cadre de ma formation dans le BTS SIO IMCP et dans la société BCS Technologies                                                   ' 
 #
 # Use the call for action to show a button on the frontpage
 #
