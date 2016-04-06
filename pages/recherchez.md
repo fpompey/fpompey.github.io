@@ -1,6 +1,7 @@
 ---
 permalink: /recherchez/
 layout: page
+breadcrumbs: true
 title: "Recherchez"
 sitemap: false
 ---
