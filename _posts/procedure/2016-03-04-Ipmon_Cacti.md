@@ -38,11 +38,11 @@ Pour toutes les machines physique il faut ajoutter le compteur DRAC
 Ces machines sont surtout réservé à un type d’application
 En fonction de l’applicatif mis en place, il faudra adapter les compteurs pour surveiller au mieux l’applicatif.
 Il faut impérativement mettre en place :
-- PING
-- PHYSICAL MEMORY
-- CPU
-- DRIVESPACE qu’utilisent la machine *(souvent le [C:\] et [D:\])*
-- Service associé à l'applicatif
+ - PING
+ - PHYSICAL MEMORY
+ - CPU
+ - DRIVESPACE qu’utilisent la machine *(souvent le [C:\] et [D:\])*
+ - Service associé à l'applicatif
 
 ### Backup ###
 Ces machines sont presque toute sous Windows, les soft principalement utilisé sont **VEEAM** et **BACKUP EXEC**.
