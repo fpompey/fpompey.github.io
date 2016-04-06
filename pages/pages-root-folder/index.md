@@ -6,7 +6,7 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: Fond_Acceuil.jpg
+  image_fullwidth: baniere.jpg
 widget1:
   title: "Procédure IpMonitor & Cacti"
   url: 'http://fpompey.github.io/procedure/Ipmon_Cacti/'
