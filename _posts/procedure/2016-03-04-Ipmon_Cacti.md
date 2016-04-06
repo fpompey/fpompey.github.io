@@ -86,9 +86,7 @@ Il faut impérativement mettre en place:
 
 Pour savoir qu'elle partition est utilisé connecter vous à la machine et effectuer
 
-
     df -h
-
 ## Autre ##
 
 ### ESX ou Baie de Stockage ###
