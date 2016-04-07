@@ -16,7 +16,7 @@ widget2:
   title: "CV"
   url: 'http://fpompey.github.io/cv/'
   text: 'Mon CV.                                                                                                                                                            '
-  image: widget-2-302x198.jpg
+  image: widget-2-184x182.jpg
 widget3:
   title: "Procédure Linux"
   url: 'http://fpompey.github.io/procedure/Installation_Linux/'
