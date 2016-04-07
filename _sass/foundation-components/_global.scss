@@ -258,7 +258,7 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
 // We use these to control various global styles
-$body-bg: #fff !default;
+$body-bg: url(http://fpompey.github.io/assets/img/images_pandoc/Fond_CV.png) !default;
 $body-font-color: #222 !default;
 $body-font-family: $font-family-sans-serif !default;
 $body-font-weight: $font-weight-normal !default;
@@ -414,8 +414,8 @@ $cursor-text-value: text !default;
 
     // Default body styles
     body {
-      //background: $body-bg;
-      background-image: url(http://fpompey.github.io/assets/img/images_pandoc/Fond_CV.png)
+      background-image: $body-bg;
+      //background-image: url(http://fpompey.github.io/assets/img/images_pandoc/Fond_CV.png)
       color: $body-font-color;
       padding: 0;
       margin: 0;
