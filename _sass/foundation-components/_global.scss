@@ -414,7 +414,8 @@ $cursor-text-value: text !default;
 
     // Default body styles
     body {
-      background: $body-bg;
+      //background: $body-bg;
+      background-image: url(http://fpompey.github.io/assets/img/images_pandoc/Fond_CV.png)
       color: $body-font-color;
       padding: 0;
       margin: 0;
