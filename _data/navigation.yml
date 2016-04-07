@@ -12,6 +12,8 @@
   dropdown:
   - title: "Ipmonitor & Cacti"
     url: "/procedure/Ipmon_Cacti/"
+    - title: "Installation Linux"
+    url: "/procedure/Installation_Linux/"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
