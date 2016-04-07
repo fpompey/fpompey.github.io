@@ -17,7 +17,7 @@ Pour commencer connecter-vous à ESX à partir de vSphère client
 
 Une fois connectée crée une machine virtuelle :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image1.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image001.png)
 
 Créer la Vm en suivant les étapes :
 
@@ -27,23 +27,23 @@ Renommer la VM (essayer de respecter la même syntaxe pour votre réseau).
 
 Choisissez votre espace de stockage :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image2.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image002.png)
 
 Choisissez votre système d'exploitation :
 
 Pour notre cas Ubuntu 64 bits
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image3.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image003.png)
 
 Laisser par défaut le réseau :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image4.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image004.png)
 
 Choisissez votre taille de disque (garder suffisamment d'espace pour installer le serveur).
 
 Pour notre cas 7GB seront suffisant.
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image5.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image005.png)
 
 Finaliser l’installation en appuyant sur Terminer
 
@@ -53,7 +53,7 @@ Faites un clic droit sur votre nom de VM et "ouvrir console"
 
 Maintenant il suffit d'ajouter l'ISO du serveur que l'on souhaite installer :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image6.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image006.png)
 
 Sur le réseau Commun/Linux/ISO/ \[Nom\_Sys\_Exploitation\]
 
@@ -61,7 +61,7 @@ Dans notre cas Ubuntu 14.04 serveur 64bits
 
 Une fois l'ISO mise allée sur Vm :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image7.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image007.png)
 
 Commencer la procédure d’installation du serveur, certaines options pourront différer
 
@@ -79,39 +79,39 @@ Nous allons créer le partitionnement de notre VM.
 
 1) Choisir le disque dur principal afin de commencer le partitionnement et crée votre volume Groupe qui sera appelé main, n’oubliez pas de le séléctionnez:
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image8.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image008.png)
 
 Crée ensuite 2 volume logique, 1 swap (non obligatoire dépend si la ram est suffisante) de 1G et un root de 5G (la encore dépend du besoin de votre VM).
 
 Attention selon votre installation votre partitionnement pourra être un peu différent au niveau du partitionnement, demander le nombre, le nom précis des volumes logiques ainsi que la taille nécessaires avant la configuration.
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image9.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image009.png)
 
 Pour root préciser :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image10.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image010.png)
 
 Monter la partition root sur :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image11.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image011.png)
 
 Votre partitionnement root devrait ressembler à ceci :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image12.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image012.png)
 
 La configuration du swap doit être :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image13.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image013.png)
 
 Vos volumes crée devrait ressembler à :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image14.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image014.png)
 
 Choisissez votre choix de mise à jour (non automatique est conseillé pour éviter tout problème)
 
 Installez les programmes désirés, pour notre cas nous allons rajouter OpenSSH server :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image15.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image015.png)
 
 Installer GRUB
 
@@ -127,7 +127,7 @@ Pour la suite de la procédure, il est conseillé de se connecter via ssh à vot
 
 Pour connaitre votre ip faire un if config et regarder l’adresse inet addr :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image16.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image016.png)
 
 Dans notre cas 10.0.16.164
 
@@ -143,11 +143,11 @@ Configurer le zsh, pour cela utiliser celui de M6 par exemple. Récupérer le et
 
 Une fois ajouté faite un chsh et changer le nom en /bin/zsh :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image17.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image017.png)
 
 Déconnecter vous et reconnecter vous et le zsh devraient être correctement configuré :
 
-![alt text](https://fpompey.github.io/images/Installation_Linux/image18.png)
+![alt text](https://fpompey.github.io/images/Installation_Linux/image018.png)
 
 Pour installer la BCS-probe.
 
