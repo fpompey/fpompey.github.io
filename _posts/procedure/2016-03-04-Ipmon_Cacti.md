@@ -33,8 +33,6 @@ Cela permettra d'être avertie en HO si c'est une augmentation normale (HO lente
 Chaque équipement aura un OID qui pourra varier selon le compteur CPU/MEMORY ou autre ... Il faudra donc noter la marque de l'équipement et rechercher l'OID qui correspond à votre compteur.
 
 ![alt text](https://fpompey.github.io/images/Compteur_DRAC_IpMonitor.png "Compteur_DRAC_IpMonitor")
-![alt text](https://github.com/fpompey/fpompey.github.io/blob/master/images/Compteur_DRAC_IpMonitor.png "Compteur_DRAC-IpMonitor")
-
 
 Exemple: Power supply Alarm PDU APC 1.3.6.1.4.1.318.1.1.12.4.1.3.0
 
@@ -162,6 +160,8 @@ Tout le monitoring que l'on peux retrouver sur Cacti est utilisé à titre **d'i
 
 Il est avant tout présent afin de voir l'historique de la machine et l'évolution dans le temps comme un esapce disque qui évolue progressivement.
 
+![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace_Time.png "Graph_Drivespace_Time")
+
 **Chaque compteurs figurant sur Ipmon doit être graphé avec Cacti.**
 
 ## Machine Windows ##
@@ -189,6 +189,8 @@ Toutes les partitions que possèdent la machine, principalement :
 - Virtual Memory
 - Physical Memory
 
+![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace.png "Graph_Cacti_Drivespace")
+
 **Data Query [SNMP - Interface Statistics]**
 
 On graph le traffic, voir les ports up pour les graphs.
@@ -215,6 +217,8 @@ En général les template associé sont :
 - ucd/net - Full CPU Usage
 - ucd/net - Load Average
 - Unix - Logged in Users
+
+![alt text](https://fpompey.github.io/images/Graph_Cacti_CPU.png "Graph_Cacti_CPU")
 
 **Associated Data Queries**
 
@@ -256,6 +260,8 @@ On graph le traffic, voir les ports up pour les graphs.
 - Default - In/Out Bits (64-bit Counters)
 - Default - In/Out Errors/Discarded Packets
 - Default - In/Out Unicast Packets
+
+![alt text](https://fpompey.github.io/images/Graph_Cacti_Bandwith.png "Graph_Cacti_Bandwith")
 
 Si votre machine utilisent des compteurs différents.
 *Exemple : Postgresql, Nginx, php-fpm ...*
