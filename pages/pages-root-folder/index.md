@@ -19,7 +19,7 @@ widget2:
   image: widget-2.jpg
 widget3:
   title: "Procédure Linux"
-  url: 'https://fpompey.github.io/procedure/'
+  url: 'http://fpompey.github.io/procedure/Installation_Linux/'
   image: widget-3-github-303x182.jpg
   text: 'Procédure Vm Linux réalisé dans le cadre de ma formation dans le BTS SIO IMCP et dans la société BCS Technologies                                                   ' 
 #
