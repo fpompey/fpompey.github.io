@@ -12,7 +12,6 @@
   dropdown:
   - title: "Ipmonitor & Cacti"
     url: "/procedure/Ipmon_Cacti/"
-  dropdown:
   - title: "Installation Linux"
     url: "/procedure/Installation_Linux/"
 
