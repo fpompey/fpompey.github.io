@@ -163,6 +163,8 @@ Test avec
 
     /opt/bcs-probe/bcs-probe --diag
 
+### Connexion uniquement avec le compte root ###
+
 Tapez la commande suivante
 
     vi /etc/ssh/sshd_config
@@ -180,6 +182,7 @@ pour redémarrer le service SSH
 Effectuer un *passwd* pour changer le mot de passe root et renseigner le afin de ne pas l’oublier.
 
 Supprimer l’utilisateur précédemment utilisé avec *deluser [nom]*
+Il vous suffira de modifier à nouveau la ligne *PermitRootLogin* pour mettre *without-password* afin d'effectuer une connexion uniquement par clé. **Attention** à penser à envoyer votre clé sur le serveur distant avant.
 
 ### Pour mettre une communauté ###
 
