@@ -153,7 +153,7 @@ Déconnecter vous et reconnecter vous et le zsh devraient être correctement con
 
 ![alt text](https://fpompey.github.io/images/Installation_Linux/image018.png)
 
-Pour installer la BCS-probe.
+### Pour installer la BCS-probe ###
 
 Récupérer BCS-probe
 
@@ -181,7 +181,7 @@ Effectuer un *passwd* pour changer le mot de passe root et renseigner le afin de
 
 Supprimer l’utilisateur précédemment utilisé avec *deluser [nom]*
 
-Pour mettre une community aller dans 
+### Pour mettre une communauté ###
 
     vim /etc/snmp/snmpd.conf
 
