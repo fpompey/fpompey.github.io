@@ -13,9 +13,9 @@ widget1:
   image: widget-1-302x182.jpg
   text: 'Procédure utilisé pour le monitoring avec IpMonitor + Cacti. Cette procédure a été réalisé lors de mes deux années en alternance dans la société BCS Technologies.'
 widget2:
-  title: "CV"
+  title: "curriculum vitae"
   url: 'http://fpompey.github.io/cv/'
-  text: '                                                                                                                                                            Mon CV.'
+  text: '                                                                                                                                              Mon Curriculum vitae.'
   image: widget-2-184x182.jpg
 widget3:
   title: "Procédure Linux"
