@@ -4,6 +4,7 @@ permalink: "/cv/"
 breadcrumb: true
 layout: page_pandoc
 title: "Curriculum Vitae"
+background-image: url(http://fpompey.github.io/assets/img/images_pandoc/Fond_CV.png)
 ---
   <header itemscope itemtype="http://http://schema.org/Person" class="with-photo">
     <div id="title" class="qrcode">
