@@ -32,7 +32,7 @@ Cela permettra d'être avertie en HO si c'est une augmentation normale (HO lente
 - Tout les compteurs *Custom:SNMP* que vous allez mettre en place vont nécéssiter un OID du type 1.3.6.1.4.1. 
 Chaque équipement aura un OID qui pourra varier selon le compteur CPU/MEMORY ou autre ... Il faudra donc noter la marque de l'équipement et rechercher l'OID qui correspond à votre compteur.
 
-![alt text](https://fpompey.github.io//images/Compteur_DRAC_IpMonitor "Compteur_DRAC_IpMonitor")
+![alt text](https://fpompey.github.io/images/Compteur_DRAC_IpMonitor "Compteur_DRAC_IpMonitor")
 
 
 Exemple: Power supply Alarm PDU APC 1.3.6.1.4.1.318.1.1.12.4.1.3.0
