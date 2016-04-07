@@ -189,8 +189,6 @@ Toutes les partitions que possèdent la machine, principalement :
 - Virtual Memory
 - Physical Memory
 
-![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace.png "Graph_Cacti_Drivespace")
-
 **Data Query [SNMP - Interface Statistics]**
 
 On graph le traffic, voir les ports up pour les graphs.
@@ -251,6 +249,8 @@ Toutes les partitions que possèdent la machine, principalement :
 - /srv
 - /backup
 - /var
+
+![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace.png "Graph_Cacti_Drivespace")
 
 
 **Data Query [SNMP - Interface Statistics]**
