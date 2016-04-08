@@ -14,6 +14,10 @@
     url: "/procedure/Ipmon_Cacti/"
   - title: "Installation Linux"
     url: "/procedure/Installation_Linux/"
+  - title: "MFC_Routage_VLAN"
+    url: "/procedure/MFC_Routage_VLAN/"
+  - title: "MFC_EON"
+    url: "/procedure/MFC_EON/"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
