@@ -159,7 +159,6 @@ Tout le monitoring que l'on peux retrouver sur Cacti est utilisé à titre **d'i
 
 Il est avant tout présent afin de voir l'historique de la machine et l'évolution dans le temps comme un esapce disque qui évolue progressivement.
 
-![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace_Time.png "Graph_Drivespace_Time")
 
 **Chaque compteurs figurant sur Ipmon doit être graphé avec Cacti.**
 
@@ -215,7 +214,6 @@ En général les template associé sont :
 - ucd/net - Load Average
 - Unix - Logged in Users
 
-![alt text](https://fpompey.github.io/images/Graph_Cacti_CPU.png "Graph_Cacti_CPU")
 
 **Associated Data Queries**
 
@@ -249,7 +247,6 @@ Toutes les partitions que possèdent la machine, principalement :
 - /backup
 - /var
 
-![alt text](https://fpompey.github.io/images/Graph_Cacti_Drivespace.png "Graph_Cacti_Drivespace")
 
 
 **Data Query [SNMP - Interface Statistics]**
@@ -260,7 +257,6 @@ On graph le traffic, voir les ports up pour les graphs.
 - Default - In/Out Errors/Discarded Packets
 - Default - In/Out Unicast Packets
 
-![alt text](https://fpompey.github.io/images/Graph_Cacti_Bandwith.png "Graph_Cacti_Bandwith")
 
 Si votre machine utilisent des compteurs différents.
 *Exemple : Postgresql, Nginx, php-fpm ...*
