@@ -18,6 +18,10 @@
     url: "/procedure/MFC_Routage_VLAN/"
   - title: "MFC_EON"
     url: "/procedure/MFC_EON/"
+    
+- title: Exercices
+  url: "/exercice/"
+  side: left 
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
