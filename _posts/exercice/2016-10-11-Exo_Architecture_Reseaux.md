@@ -37,7 +37,7 @@ show_meta: false
 
 # **Exercice 1:**
 
-Parmi les mécanisme suivants :
+Parmi les mécanismes suivants :
 
     1. contrôle d’accès au support (Media acces control MAC)
     2. contrôle de flux
