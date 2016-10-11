@@ -78,6 +78,8 @@ Quels sont les services complémentaires fournis par:
     UDP par rapport à IP?
     TCP par rapport à IP?
 
+Lareponse est 42
+
 # **Exercice 3:**
 
 Au niveau d’un récepteur, quel est le protocole qui:
