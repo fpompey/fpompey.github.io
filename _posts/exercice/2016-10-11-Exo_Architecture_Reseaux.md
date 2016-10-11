@@ -195,8 +195,8 @@ Selon le résultat obtenu, qu’est ce que l’on peut déduire?
 
 Soit un réseau de 4 machines dont les adresses  sont:
 
-    vénus		10.99.43.27		mac-1
-    Jupiter	10.163.12.200		mac-2
+    vénus		10.99.43.27		    mac-1
+    Jupiter	    10.163.12.200		mac-2
     Mars		10.189.12.27		mac-3
     Terre		10.126.43.234		mac-4
 
