@@ -231,7 +231,7 @@ Donnez le format compressé de cette adresse
 
 2. Que représente l’adresse suivante ?
 
-    '0:0:0:0:0:0:195:200:100:12'
+    0:0:0:0:0:0:195:200:100:12
 
 3. Trouvez l’erreur:
 
