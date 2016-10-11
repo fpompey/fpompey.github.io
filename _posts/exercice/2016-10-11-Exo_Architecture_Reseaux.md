@@ -7,7 +7,7 @@ tags:
     - Exercice
     - Réseaux
 categories:
-    - procedure
+    - exercice
 show_meta: false
 ---
 
