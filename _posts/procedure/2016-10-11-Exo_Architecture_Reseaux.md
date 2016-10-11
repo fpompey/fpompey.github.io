@@ -231,10 +231,10 @@ Donnez le format compressé de cette adresse
 
 2. Que représente l’adresse suivante ?
 
-    0:0:0:0:0:0:195:200:100:12
+    '0:0:0:0:0:0:195:200:100:12'
 
 3. Trouvez l’erreur:
 
-    '1abc::fec3:2bf::1'
+    1abc::fec3:2bf::1
 
 4. Quel est le point commun entre une adresse privée IPV4 et une adresse locale de site IPV6?
