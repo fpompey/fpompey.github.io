@@ -128,13 +128,27 @@ Dans le cas d’un hôte présentant l’adresse IP 172.32.65.13 et un masque de
 
 Soient l’adresse IP 192.100.10.70 et le masque de sous-réseau 255.255.255.240, donnez:
 
-    Le netid et l’adresse IP du réseau
-    Le hostid et l’adresse IP de la machine
-    Le nombre maxi possible de sous-réseaux
-    Le nombre maxi possible de stations par sous-réseau
-    L’adresse de broadcast sur le sous-réseau 128
+1. Le netid et l’adresse IP du réseau
+2. Le hostid et l’adresse IP de la machine
+3. Le nombre maxi possible de sous-réseaux
+4. Le nombre maxi possible de stations par sous-réseau
+5. L’adresse de broadcast sur le sous-réseau 128
 
 Les adresses IP des machines du sous-réseau 128 vont de quelle adresse à quelle adresse?
+
+Réponse: 
+
+1. Classe C => Net ID = 192.100.10.  
+L'adresse IP de de réseau est 192.100.10.0.
+
+2. L'adresse IP de la machine est 192.100.10.64.  
+Le Host ID est 6 (le masque est 240 et les bit à 1 pour 4 2 donc = 6).
+
+3. Le nombre maxi possible de sous-réseaux est 16 (2^4 = 16).
+
+4. Le nombre maxi possible de stations est 14 (2^4 -2 = 14).
+
+5. L'adresse de broadcast est de
 
 # **Exercice 11:**
 
