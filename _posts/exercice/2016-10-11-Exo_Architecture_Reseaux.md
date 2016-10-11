@@ -158,6 +158,11 @@ Un utilisateur du réseau A sur la machine 100.64.0.102 se plaint de ne pouvoir 
 
 Expliquez pourquoi ?
 
+Réponse:  
+D'après les mêmes adresses IP, A et B sont sur le même sous réseau 64, or physiquement, elles sont dans deux sous réseaux distincts, donc erreur de routage.
+Pour résoudre le souci on pourrait changer les adresses IP ou le masque.
+
+
 # **Exercice 12:**
 
 Parmi les adresses suivantes déterminez celles qui peuvent être utilisées pour les hôtes des sous-réseaux du réseau 200.100.50.0 dont le masque est 255.255.255.240:
