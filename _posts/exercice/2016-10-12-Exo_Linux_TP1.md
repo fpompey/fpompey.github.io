@@ -18,12 +18,21 @@ Lire le manuel de "ls" pour expliquer le résultat de la commande suivante :
     $ ls -srF /etc
 
 Réponse :
+-F ajoute un caractère (parmi \*/=>@| ) à chaque entrée
+-r inverse l'ordre du tri (sans paramètre il était en ordre alphabétique, ça sera donc l'inverse ici)
+-s affiche la taille allouée à chaque fichiers en nombre de blocs
+Et cette commande s'appliquera sur le répertoire /etc
+
 
 # **Question 2**
 
 Donner une commande qui affiche :
 
         Hello <user>, welcome on <host> avec <user> et <host> remplacés par le nom de l’utilisateur actif et par le nom de la machine.
+
+Réponse :
+echo « Hello $USER, welcome on $HOSTNAME »
+
 
 # **Question 3**
 
