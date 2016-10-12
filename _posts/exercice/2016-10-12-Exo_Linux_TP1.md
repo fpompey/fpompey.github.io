@@ -1,11 +1,11 @@
 ---
 layout: page
-title:  "Exercice Architecture Reseaux"
-teaser: "Exercice Architecture Reseaux lors de la semainedu 10 Octobre 2016"
+title:  "Exercice Linux TP1"
+teaser: "Exercice Linux TP1 lors de la semainedu 10 Octobre 2016"
 breadcrumb: true
 tags:
     - Exercice
-    - Réseaux
+    - Linux
 categories:
     - exercice
 show_meta: false
