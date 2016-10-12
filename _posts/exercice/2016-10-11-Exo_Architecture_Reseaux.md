@@ -243,20 +243,56 @@ Selon le résultat obtenu, qu’est ce que l’on peut déduire?
 
 Soit un réseau de 4 machines dont les adresses  sont:
 
-    vénus		10.99.43.27		    mac-1
+    Vénus		    10.99.43.27		  mac-1
     Jupiter	    10.163.12.200		mac-2
-    Mars		10.189.12.27		mac-3
-    Terre		10.126.43.234		mac-4
+    Mars		    10.189.12.27		mac-3
+    Terre		    10.126.43.234		mac-4
 
 1. Quel est le netid de ce plan d’adressage?
 
 2. Quel est le nombre de bits, minimum et maximum, nécessaire pour que vénus et terre soient sur le sous-réseau A , jupiter et mars soient sur le sous-réseau B ?  
 Donnez les masques correspondants.
 
-3. Quel est le nombre de bits minimum pour que les 4 machines soient sur des sous-réseaux différents?   
+3. Quel est le nombre de bits minimum pour que les 4 machines soient sur des sous-réseaux différents ?   
 Donnez le masque correspondant.
 
 4. Donnez le contenu de la table ARP de vénus en considérant que nous sommes dans la configuration de la question 2.
+
+**Réponse:**
+
+1.Le NetId de ce plan d'adressage est **10**, il est lié au premiet octect "10" qui correspond à la classe A, le second octect étant différent sur les autres IP du réseau.
+
+2.Il faut convertir en binaire pour identifier combien de bits sont nécéssaire au minimum et maximum pour être dans la classe A et B
+
+    Vénus : 10.99.43.27 => 00001010.01100011.43.27
+    00001010 (10)
+    01100011 (99)
+
+    Jupiter : 10.163.12.200 => 00001010.101000011.12.200
+    00001010 (10)
+    10100011 (163)
+
+    Mars : 10.189.12.27 => 00001010.10111101.12.27
+    00001010 (10)
+    10111101(189)
+
+    Terre : 10.126.43.234 => 00001010.01111110.43.234
+    00001010 (10)
+    01111110 (126)
+
+Il faut donc au minimum 7 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
+masque = 254.0.0.0 => /7
+
+Il faut donc au maximum 8 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
+masque = 255.0.0.0 => /8
+
+Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.
+masque = 255.224.0.0  => /11
+
+Il faut donc au maximum 16 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
+masque = 255.255.0.0 => /16
+
+3.Il faut au minimum 12 bits pour que les 4 machines soient sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
 
 # **Exercice 18:**
 
