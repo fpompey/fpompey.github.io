@@ -138,17 +138,44 @@ Les adresses IP des machines du sous-réseau 128 vont de quelle adresse à quell
 
 **Réponse:**
 
-1. Classe C => Net ID = 192.100.10.  
-L'adresse IP de de réseau est 192.100.10.0.
+1. Grace au premier octet de l'IP **192** nous savons que le réseau appartient à la classe C, pour notre IP => Net ID = 192.100.10  
+L'adresse IP de de réseau est 192.100.10.0 grâce au masque qui est 255.255.255.240 => /28
 
-2. L'adresse IP de la machine est 192.100.10.64.  
-Le Host ID est 6 (le masque est 240 et les bit à 1 pour 4 2 donc = 6).
+    Le masque en binaire  
+    11111111.11111111.11111111.11110000
 
-3. Le nombre maxi possible de sous-réseaux est 16 (2^4 = 16).
+2. Le Host ID est 6, le masque est 240, sur les 8 derniers bits seul les 4 derniers sont dédiés aux machines, les bit à 1 correpondent alors à 4 et 2 donc = 6)
 
-4. Le nombre maxi possible de stations est 14 (2^4 -2 = 14).
+Pour déterminer l'IP de la machine on a en binaire :  
 
-5. L'adresse de broadcast est 192.100.10.143 (le bit du réseau qui est 128 auquel on ajoute les 4 bits à 1 des machines donc 128+15)
+    IP machine :     192.168.10.   0100/0110 (70)  
+    Masque réseau :  255.255.255.  1111/0000 (240)  
+    Avec le ET logique, on obtient  0100/0000 (64)  
+
+L'adresse IP de la machine est donc 192.168.10.64
+
+3. Le nombre maxi possible de sous-réseaux est lié au masque /28 donc il n'y aura que les 4 derbiers bits qui seront pris en compte  
+Le calcul :
+
+    2^4 = 16
+
+Il y aura doncc 16 sous réseaux possible au maximum.
+
+4. Le nombre maxi possible de machines est identique au raisonnement précédent - addresse de réseau - addresse de broadcast  
+Le calcul:
+
+    (2^4 -2 = 14)
+
+Il y aura doncc 14 machines possible au maximum dans ce réseau.
+
+5. L'adresse de broadcast est 192.100.10.143 (le bit du réseau qui est 128 auquel on ajoute les 4 bits à 1 des machines donc 128+15)   
+Le calcul pour un broadcast, tout les bits en dehors du masque passent à 1, les autres sont ignorés donc à 0:
+
+    IP : 192.100.10.128  
+    En binaire les 8 derniers bits : 10000000  (128)
+    Masque : 255.255.255.240  
+    En binaire les 8 derniers bits : 00001111  (15)
+    Avec le OU logique, on obtient : 10001111  (128+15 = 143)
 
 # **Exercice 11:**
 
@@ -158,7 +185,7 @@ Un utilisateur du réseau A sur la machine 100.64.0.102 se plaint de ne pouvoir 
 
 Expliquez pourquoi ?
 
-Réponse:  
+**Réponse:**  
 D'après les mêmes adresses IP, A et B sont sur le même sous réseau 64, or physiquement, elles sont dans deux sous réseaux distincts, donc erreur de routage.
 Pour résoudre le souci on pourrait changer les adresses IP ou le masque.
 
