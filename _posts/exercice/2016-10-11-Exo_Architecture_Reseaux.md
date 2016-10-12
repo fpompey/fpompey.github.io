@@ -136,7 +136,7 @@ Soient l’adresse IP 192.100.10.70 et le masque de sous-réseau 255.255.255.240
 
 Les adresses IP des machines du sous-réseau 128 vont de quelle adresse à quelle adresse?
 
-Réponse: 
+**Réponse:**
 
 1. Classe C => Net ID = 192.100.10.  
 L'adresse IP de de réseau est 192.100.10.0.
@@ -148,7 +148,7 @@ Le Host ID est 6 (le masque est 240 et les bit à 1 pour 4 2 donc = 6).
 
 4. Le nombre maxi possible de stations est 14 (2^4 -2 = 14).
 
-5. L'adresse de broadcast est de
+5. L'adresse de broadcast est 192.100.10.143 (le bit du réseau qui est 128 auquel on ajoute les 4 bits à 1 des machines donc 128+15)
 
 # **Exercice 11:**
 
