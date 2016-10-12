@@ -272,24 +272,29 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
 Les adresses IPv6 sont hiérarchiques.  
 Expliquez.
 
-1. Qu’indique le contenu du champ FP (Format  Prefix ) ?  
+1.Qu’indique le contenu du champ FP (Format  Prefix ) ?  
 Donnez le format compressé de cette adresse
 
     0:0:0:0:0:0:0:1
 
-**réponse**
-
-    ::1
-
-Car on peut remplacer une suite de zéros par "::" mais une seule fois dans l'adresse.
-
-
-2. Que représente l’adresse suivante ?
+2.Que représente l’adresse suivante ?
 
     0:0:0:0:0:0:195:200:100:12
 
-3. Trouvez l’erreur:
+3.Trouvez l’erreur:
 
     1abc::fec3:2bf::1
 
-4. Quel est le point commun entre une adresse privée IPV4 et une adresse locale de site IPV6?
+4.Quel est le point commun entre une adresse privée IPV4 et une adresse locale de site IPV6?
+
+
+**Réponse :**
+
+1.Le champ FP indique  
+L'adresse  0:0:0:0:0:0:0:1 peut être compressée en ::1 car en IPV6 on peut remplacer les suites de zéros par un "::". Toutefois on ne peut le faire qu'une seule fois par adresse, afin que le routeur sache remplacer par le bon nombre d'octets.
+
+2.
+
+3.On a pas le droit de mettre deux fois les "::" dans une adresse IPV6, car il devient impossible de savoir combien de 0 sont contenus dans les "::".
+
+4.Les adresses locales de site IPV6 respectent la notation CIDR, comme les adresses privées d'IPV4. (On sait à quelle région géographique les adresses appartiennent).
