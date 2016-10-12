@@ -277,6 +277,13 @@ Donnez le format compressé de cette adresse
 
     0:0:0:0:0:0:0:1
 
+**réponse**
+
+    ::1
+
+Car on peut remplacer une suite de zéros par "::" mais une seule fois dans l'adresse.
+
+
 2. Que représente l’adresse suivante ?
 
     0:0:0:0:0:0:195:200:100:12
