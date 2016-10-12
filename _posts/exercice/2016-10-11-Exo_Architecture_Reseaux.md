@@ -286,7 +286,7 @@ masque = 254.0.0.0 => /7
 Il faut donc au maximum 8 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
 masque = 255.0.0.0 => /8
 
-Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.
+Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
 masque = 255.224.0.0  => /11
 
 Il faut donc au maximum 16 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
