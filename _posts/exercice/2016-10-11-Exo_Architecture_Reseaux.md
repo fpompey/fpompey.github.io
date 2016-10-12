@@ -136,19 +136,48 @@ Soient l’adresse IP 192.100.10.70 et le masque de sous-réseau 255.255.255.240
 
 Les adresses IP des machines du sous-réseau 128 vont de quelle adresse à quelle adresse?
 
-Réponse: 
+**Réponse:**
 
-1. Classe C => Net ID = 192.100.10.  
-L'adresse IP de de réseau est 192.100.10.0.
+1.Grace au premier octet de l'IP **192** nous savons que le réseau appartient à la classe C  
+pour notre IP => Net ID = 192.100.10  
+L'adresse IP de de réseau est 192.100.10.0 grâce au masque qui est 255.255.255.240 => /28
 
-2. L'adresse IP de la machine est 192.100.10.64.  
-Le Host ID est 6 (le masque est 240 et les bit à 1 pour 4 2 donc = 6).
 
-3. Le nombre maxi possible de sous-réseaux est 16 (2^4 = 16).
+    Le masque en binaire  
+    11111111.11111111.11111111.11110000
 
-4. Le nombre maxi possible de stations est 14 (2^4 -2 = 14).
+2.Le Host ID est 6, le masque est 240, sur les 8 derniers bits seul les 4 derniers sont dédiés aux machines, les bit à 1 correpondent alors à 4 et 2 donc = 6)
 
-5. L'adresse de broadcast est de
+Pour déterminer l'IP de la machine on a en binaire :  
+
+    IP machine :     192.168.10.   0100/0110 (70)  
+    Masque réseau :  255.255.255.  1111/0000 (240)  
+    Avec le ET logique, on obtient  0100/0000 (64)  
+
+L'adresse IP de la machine est donc 192.168.10.64
+
+3.Le nombre maxi possible de sous-réseaux est lié au masque /28 donc il n'y aura que les 4 derbiers bits qui seront pris en compte  
+Le calcul :
+
+    2^4 = 16
+
+Il y aura doncc 16 sous réseaux possible au maximum.
+
+4.Le nombre maxi possible de machines est identique au raisonnement précédent - addresse de réseau - addresse de broadcast  
+Le calcul:
+
+    (2^4 -2 = 14)
+
+Il y aura donc 14 machines possible au maximum dans ce réseau.
+
+5.L'adresse de broadcast est 192.100.10.143 (le bit du réseau qui est 128 auquel on ajoute les 4 bits à 1 des machines donc 128+15)   
+Le calcul pour un broadcast, tout les bits en dehors du masque passent à 1, les autres sont ignorés donc à 0:
+
+    IP : 192.100.10.128  
+    En binaire les 8 derniers bits : 10000000  (128)
+    Masque : 255.255.255.240  
+    En binaire les 8 derniers bits : 00001111  (15)
+    Avec le OU logique, on obtient : 10001111  (128+15 = 143)
 
 # **Exercice 11:**
 
@@ -158,7 +187,7 @@ Un utilisateur du réseau A sur la machine 100.64.0.102 se plaint de ne pouvoir 
 
 Expliquez pourquoi ?
 
-Réponse:  
+**Réponse:**  
 D'après les mêmes adresses IP, A et B sont sur le même sous réseau 64, or physiquement, elles sont dans deux sous réseaux distincts, donc erreur de routage.
 Pour résoudre le souci on pourrait changer les adresses IP ou le masque.
 
@@ -214,20 +243,56 @@ Selon le résultat obtenu, qu’est ce que l’on peut déduire?
 
 Soit un réseau de 4 machines dont les adresses  sont:
 
-    vénus		10.99.43.27		    mac-1
+    Vénus		    10.99.43.27		  mac-1
     Jupiter	    10.163.12.200		mac-2
-    Mars		10.189.12.27		mac-3
-    Terre		10.126.43.234		mac-4
+    Mars		    10.189.12.27		mac-3
+    Terre		    10.126.43.234		mac-4
 
 1. Quel est le netid de ce plan d’adressage?
 
 2. Quel est le nombre de bits, minimum et maximum, nécessaire pour que vénus et terre soient sur le sous-réseau A , jupiter et mars soient sur le sous-réseau B ?  
 Donnez les masques correspondants.
 
-3. Quel est le nombre de bits minimum pour que les 4 machines soient sur des sous-réseaux différents?   
+3. Quel est le nombre de bits minimum pour que les 4 machines soient sur des sous-réseaux différents ?   
 Donnez le masque correspondant.
 
 4. Donnez le contenu de la table ARP de vénus en considérant que nous sommes dans la configuration de la question 2.
+
+**Réponse:**
+
+1.Le NetId de ce plan d'adressage est **10**, il est lié au premiet octect "10" qui correspond à la classe A, le second octect étant différent sur les autres IP du réseau.
+
+2.Il faut convertir en binaire pour identifier combien de bits sont nécéssaire au minimum et maximum pour être dans la classe A et B
+
+    Vénus : 10.99.43.27 => 00001010.01100011.43.27
+    00001010 (10)
+    01100011 (99)
+
+    Jupiter : 10.163.12.200 => 00001010.101000011.12.200
+    00001010 (10)
+    10100011 (163)
+
+    Mars : 10.189.12.27 => 00001010.10111101.12.27
+    00001010 (10)
+    10111101(189)
+
+    Terre : 10.126.43.234 => 00001010.01111110.43.234
+    00001010 (10)
+    01111110 (126)
+
+Il faut donc au minimum 7 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
+masque = 254.0.0.0 => /7
+
+Il faut donc au maximum 8 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
+masque = 255.0.0.0 => /8
+
+Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
+masque = 255.224.0.0  => /11
+
+Il faut donc au maximum 16 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
+masque = 255.255.0.0 => /16
+
+3.Il faut au minimum 12 bits pour que les 4 machines soient sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
 
 # **Exercice 18:**
 
@@ -243,17 +308,29 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
 Les adresses IPv6 sont hiérarchiques.  
 Expliquez.
 
-1. Qu’indique le contenu du champ FP (Format  Prefix ) ?  
+1.Qu’indique le contenu du champ FP (Format  Prefix ) ?  
 Donnez le format compressé de cette adresse
 
     0:0:0:0:0:0:0:1
 
-2. Que représente l’adresse suivante ?
+2.Que représente l’adresse suivante ?
 
     0:0:0:0:0:0:195:200:100:12
 
-3. Trouvez l’erreur:
+3.Trouvez l’erreur:
 
     1abc::fec3:2bf::1
 
-4. Quel est le point commun entre une adresse privée IPV4 et une adresse locale de site IPV6?
+4.Quel est le point commun entre une adresse privée IPV4 et une adresse locale de site IPV6?
+
+
+**Réponse :**
+
+1.Le champ FP indique  
+L'adresse  0:0:0:0:0:0:0:1 peut être compressée en ::1 car en IPV6 on peut remplacer les suites de zéros par un "::". Toutefois on ne peut le faire qu'une seule fois par adresse, afin que le routeur sache remplacer par le bon nombre d'octets.
+
+2.
+
+3.On a pas le droit de mettre deux fois les "::" dans une adresse IPV6, car il devient impossible de savoir combien de 0 sont contenus dans les "::".
+
+4.Les adresses locales de site IPV6 respectent la notation CIDR, comme les adresses privées d'IPV4. (On sait à quelle région géographique les adresses appartiennent).
