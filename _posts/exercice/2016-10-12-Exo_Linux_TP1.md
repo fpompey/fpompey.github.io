@@ -17,6 +17,8 @@ Lire le manuel de "ls" pour expliquer le résultat de la commande suivante :
 
     $ ls -srF /etc
 
+Réponse :
+
 # **Question 2**
 
 Donner une commande qui affiche :
