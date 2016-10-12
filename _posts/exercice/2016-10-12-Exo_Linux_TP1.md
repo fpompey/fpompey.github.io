@@ -51,10 +51,9 @@ Donner une commande permettant de créer l’arborescence
 
 en une seule ligne (regarder la page info de mkdir).
 
-Réponse :
+**Réponse :**
 
 mkdir -p $HOME/a/b/c/d/e/f/
-
 
 
 # **Question 5**
