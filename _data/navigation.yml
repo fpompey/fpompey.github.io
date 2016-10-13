@@ -24,14 +24,14 @@
   side: left
   dropdown:
   - title: "Linux"
-    url: "/ESGI/Linux/"
+    url: "/esgi/linux/"
       # dropdown:
         #- title: "Cours Linux"
         #  url: "/ESGI/Linux/Cours_Linux"
         #- title: "Exercice Linux"
         #  url: "/ESGI/Linux/Exercice_Linux"
   - title: "Architecture et Réseaux"
-    url: "/ESGI/Architecture&Reseaux/" 
+    url: "/esgi/architecture&reseaux/" 
       # dropdown:
         #- title: "Cours Architecture et Réseaux"
         #  url: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux"
