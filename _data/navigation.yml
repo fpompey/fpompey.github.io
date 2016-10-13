@@ -18,10 +18,25 @@
     url: "/procedure/MFC_Routage_VLAN/"
   - title: "MFC_EON"
     url: "/procedure/MFC_EON/"
-    
-- title: Exercices
-  url: "/exercice/"
-  side: left 
+
+- title: ESGI
+  url: "/ESGI/"
+  side: left
+    dropdown:
+    - title: "Linux"
+      url: "/ESGI/Linux/"
+        dropdown:
+        - title: "Cours Linux"
+          url: "/ESGI/Linux/Cours_Linux"
+        - title: "Exercice Linux"
+          url: "/ESGI/Linux/Exercice_Linux"
+    - title: "Architecture et Réseaux"
+      url: "/ESGI/Architecture&Reseaux/"
+        dropdown:
+        - title: "Cours Architecture et Réseaux"
+          url: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux"
+        - title: "Exercice Architectureet Réseaux"
+          url: "/ESGI/Architecture&Reseaux/Exercice_Architecture&Reseaux"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
