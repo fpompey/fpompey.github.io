@@ -7,8 +7,7 @@ header:
 permalink: "/ESGI/Linux/"
 breadcrumb: true
 ---
-<ul>
-    ![Cours Linux](https://fpompey.github.io/ESGI/Linux/Cours_Linux/)
 
-    ![Exercice Linux](https://fpompey.github.io/ESGI/Linux/Exercice_Linux/)
-</ul>
+![Cours Linux](https://fpompey.github.io/ESGI/Linux/Cours_Linux/)
+
+![Exercice Linux](https://fpompey.github.io/ESGI/Linux/Exercice_Linux/)
