@@ -4,10 +4,10 @@ show_meta: false
 title: "Linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/ESGI/Linux/"
+permalink: "/esgi/linux/"
 breadcrumb: true
 ---
 
-[Cours Linux](https://fpompey.github.io/ESGI/Linux/Cours_Linux/)
+[Cours Linux](https://fpompey.github.io/esgi/linux/cours_linux/)
 
-[Exercice Linux](https://fpompey.github.io/ESGI/Linux/Exercice_Linux/)
+[Exercice Linux](https://fpompey.github.io/esgi/linux/exercice_linux/)
