@@ -20,7 +20,7 @@
     url: "/procedure/MFC_EON/"
 
 - title: ESGI
-  url: "/ESGI/"
+  url: "/esgi/"
   side: left
   dropdown:
   - title: "Linux"
