@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Notes Eric"
-teaser: "Notes Eric lors de la semainedu 10 Octobre 2016"
+teaser: "Notes Eric lors de la semaine du 10 Octobre 2016"
 breadcrumb: false
 tags:
     - esgi

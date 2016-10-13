@@ -351,6 +351,8 @@ port d = (16) = 00 15
 
 La différence est due aux deux octets de bourrage pour atteindre la longueur donnée de 44 octets.
 
+![schéma](http://portfolio.fpompey.com/images/Question18.png)
+
 
 # **Exercice 19:**
 
