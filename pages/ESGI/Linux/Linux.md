@@ -8,6 +8,6 @@ permalink: "/ESGI/Linux/"
 breadcrumb: true
 ---
 
-![Cours Linux](https://fpompey.github.io/ESGI/Linux/Cours_Linux/)
+[Cours Linux](https://fpompey.github.io/ESGI/Linux/Cours_Linux/)
 
-![Exercice Linux](https://fpompey.github.io/ESGI/Linux/Exercice_Linux/)
+[Exercice Linux](https://fpompey.github.io/ESGI/Linux/Exercice_Linux/)
