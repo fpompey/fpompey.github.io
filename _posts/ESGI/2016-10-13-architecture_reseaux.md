@@ -11,7 +11,7 @@ show_meta: false
 
 # Cours
 <ul>
-    {% for post in site.categories.esgi.architecture_reseaux.cours_architecture_reseaux %}
+    {% for post in site.categories.cours_architecture_reseaux %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
