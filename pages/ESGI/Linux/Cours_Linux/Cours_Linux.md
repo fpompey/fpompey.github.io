@@ -8,7 +8,7 @@ permalink: "/ESGI/Linux/Cours_Linux/"
 breadcrumb: true
 ---
 <ul>
-    {% for post in site.categories.Cours_Linux %}
+    {% for post in site.categories.ESGI/Linux/Cours_Linux %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
