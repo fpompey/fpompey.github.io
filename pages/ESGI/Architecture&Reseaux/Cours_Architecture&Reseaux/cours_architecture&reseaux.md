@@ -4,11 +4,11 @@ show_meta: false
 title: "Cours Architecture et Réseaux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux/"
+permalink: "/esgi/architecture&reseaux/cours_architecture&reseaux/"
 breadcrumb: true
 ---
 <ul>
-    {% for post in site.categories.ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux %}
+    {% for post in site.categories.esgi/architecture&reseaux/cours_architecture&reseaux %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
