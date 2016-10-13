@@ -5,6 +5,8 @@ title: "Cours Architecture et Réseaux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/esgi/architecture&reseaux/cours_architecture&reseaux/"
+categories:
+    - architecture&reseaux
 breadcrumb: true
 ---
 <ul>
