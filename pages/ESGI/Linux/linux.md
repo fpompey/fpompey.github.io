@@ -4,7 +4,7 @@ show_meta: false
 title: "Linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/esgi/linux/"
+permalink: "/linux/"
 breadcrumb: true
 ---
 
