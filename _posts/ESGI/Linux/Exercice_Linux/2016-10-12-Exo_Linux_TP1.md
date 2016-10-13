@@ -8,7 +8,7 @@ tags:
     - Linux
     - Exercice
 categories:
-    - Exercice_Linux
+    - ESGI/Linux/Exercice_Linux
 show_meta: false
 ---
 
