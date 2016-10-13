@@ -2,7 +2,7 @@
 layout: page
 title:  "Exercice Linux TP1"
 teaser: "Exercice Linux TP1 lors de la semainedu 10 Octobre 2016"
-breadcrumb: true
+breadcrumb: false
 tags:
     - esgi
     - linux
