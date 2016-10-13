@@ -310,7 +310,7 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
 Préambule, 7 octets  
 début trame, 1 octet  
 @ MAC destination, 6 octets  
-@ NAS SVC, 6 octets  
+@ MAS source, 6 octets  
 n° protocole, 2 octets
 Données transportées, 46 à 1500 octets (c'est le paquet IP, MTU-eth)  
 checksum CRC 32, 6 octets  
