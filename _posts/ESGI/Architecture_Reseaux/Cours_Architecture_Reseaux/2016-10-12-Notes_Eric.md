@@ -5,10 +5,10 @@ teaser: "Notes Eric lors de la semainedu 10 Octobre 2016"
 breadcrumb: true
 tags:
     - esgi
-    - architecture&reseaux
+    - architecture_reseaux
     - cours
 categories:
-    - cours_architecture&reseaux
+    - cours_architecture_reseaux
 show_meta: false
 ---
 
