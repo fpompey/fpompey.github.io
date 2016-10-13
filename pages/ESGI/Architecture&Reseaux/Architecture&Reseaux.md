@@ -1,7 +1,7 @@
 ---
 layout: page
 show_meta: false
-title: "Cours"
+title: "Architecture et Réseaux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/ESGI/Architecture&Reseaux/"
