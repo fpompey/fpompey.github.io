@@ -8,7 +8,7 @@ tags:
     - architecture&reseaux
     - exercice
 categories:
-    - esgi/architecture&reseaux/exercice_architecture&reseaux
+    - exercice_architecture&reseaux
 show_meta: false
 ---
 

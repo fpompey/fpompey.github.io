@@ -4,10 +4,13 @@ show_meta: false
 title: "Linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/esgi/linux/"
+permalink: "/linux/"
+categories:
+    - esgi
 breadcrumb: true
 ---
-
-[Cours Linux](https://fpompey.github.io/esgi/linux/cours_linux/)
-
-[Exercice Linux](https://fpompey.github.io/esgi/linux/exercice_linux/)
+<ul>
+    {% for post in site.categories.linux %}
+    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>

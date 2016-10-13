@@ -7,8 +7,8 @@ header:
 permalink: "/esgi/"
 breadcrumb: true
 ---
-
-[Linux Système avancé](https://fpompey.github.io/esgi/linux/)  
-
-[Architecture Réseaux](https://fpompey.github.io/esgi/architecture&reseaux/)  
-
+<ul>
+    {% for post in site.categories.esgi %}
+    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
