@@ -35,3 +35,20 @@ Le controle de flux, c'est pour éviter les pertes de données. (il est présent
 Avantage d'UDP par rapport à IP:
 transmission vers les applications à l'aide des ports + checksum sur les données et pas seulement sur les entêtes.
 UDP c'est une couche transport alors qu'IP c'est la couche réseau.
+
+
+
+Modèle OSI  
+
+Application                       APDU
+Présentation        message       PPDU
+Session                           SPDU
+transport           segment       TPDU
+Réseau              paquet        NPDU
+Liaison             trame         LPDU
+Physique            bit
+
+
+
+Entre l'interface physique et la pile TCP / IP il y a les drivers, les pilotes et le NDIS  
+Entre la pile TCP / IP et les processus ou les applications, il y a l'API et la TLI  

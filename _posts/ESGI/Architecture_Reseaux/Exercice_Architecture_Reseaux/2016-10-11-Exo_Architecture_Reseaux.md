@@ -304,6 +304,24 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
     C8 01 04 05 00 15 00 06     e8 01 00 00 00 00 60 02
     10 00 bd 4d 00 00 02 04     04 00 00 00
 
+
+**Réponse :**
+
+Préambule, 7 octets  
+début trame, 1 octet  
+@ MAC destination, 6 octets  
+@ NAS SVC, 6 octets  
+n° protocole, 2 octets
+Données transportées, 46 à 1500 octets (c'est le paquet IP, MTU-eth)  
+checksum CRC 32, 6 octets  
+
+Taille minimale de la trame éthernet = 64 octets (6+6+2+46+4)  
+Taille maximale d'une trame éthernet = 1518 octets
+
+
+
+
+
 # **Exercice 19:**
 
 Les adresses IPv6 sont hiérarchiques.  
