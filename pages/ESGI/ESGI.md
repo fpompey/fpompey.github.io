@@ -7,8 +7,8 @@ header:
 permalink: "/ESGI/"
 breadcrumb: true
 ---
-<ul>
-    ![Linux Système avancé](https://fpompey.github.io/ESGI/Linux/)
 
-    ![Architecture Réseaux](https://fpompey.github.io/ESGI/Architecture&Reseaux/)
-</ul>
+    ![Linux Système avancé](https://fpompey.github.io/ESGI/Linux/)  
+
+    ![Architecture Réseaux](https://fpompey.github.io/ESGI/Architecture&Reseaux/)  
+
