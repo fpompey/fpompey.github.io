@@ -5,10 +5,10 @@ teaser: "Exercice Architecture Reseaux lors de la semainedu 10 Octobre 2016"
 breadcrumb: true
 tags:
     - esgi
-    - architecture&reseaux
+    - architecture_reseaux
     - exercice
 categories:
-    - exercice_architecture&reseaux
+    - exercice_architecture_reseaux
 show_meta: false
 ---
 
