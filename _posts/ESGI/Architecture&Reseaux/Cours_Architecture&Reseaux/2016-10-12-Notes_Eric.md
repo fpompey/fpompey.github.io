@@ -8,7 +8,7 @@ tags:
     - Architecture&Reseaux
     - Cours
 categories:
-    - Cours_Architecture&Reseaux
+    - ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux
 show_meta: false
 ---
 
