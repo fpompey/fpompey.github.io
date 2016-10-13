@@ -4,7 +4,7 @@ show_meta: false
 title: "Exercice linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/exercice_linux/"
+permalink: "/esgi/linux/exercice_linux/"
 categories:
     - linux
 breadcrumb: true

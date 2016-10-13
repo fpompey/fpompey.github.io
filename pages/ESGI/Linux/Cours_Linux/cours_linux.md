@@ -4,7 +4,7 @@ show_meta: false
 title: "Cours Linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/cours_linux/"
+permalink: "/esgi/linux/cours_linux/"
 categories:
     - linux
 breadcrumb: true
