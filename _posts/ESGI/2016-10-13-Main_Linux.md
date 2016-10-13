@@ -10,6 +10,6 @@ categories:
 show_meta: false
 ---
 
-[Cours Linux](https://fpompey.github.io/esgi/linux/cours_L=linux/)
+[Cours Linux](https://fpompey.github.io/esgi/linux/cours_linux/)
 
 [Exercice Linux](https://fpompey.github.io/esgi/linux/exercice_linux/)
