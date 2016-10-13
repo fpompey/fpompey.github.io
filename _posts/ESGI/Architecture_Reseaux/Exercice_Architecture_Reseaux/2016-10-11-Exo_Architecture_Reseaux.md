@@ -310,7 +310,7 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
 Préambule, 7 octets  
 début trame, 1 octet  
 @ MAC destination, 6 octets  
-@ MAS source, 6 octets  
+@ MAC source, 6 octets  
 n° protocole, 2 octets
 Données transportées, 46 à 1500 octets (c'est le paquet IP, MTU-eth)  
 checksum CRC 32, 6 octets  
@@ -319,7 +319,37 @@ Taille minimale de la trame éthernet = 64 octets (6+6+2+46+4)
 Taille maximale d'une trame éthernet = 1518 octets
 
 
+ethernet:
+@ mac dest (48) = 08 00 20 01 b4 32  
+@ mac source (48) = 08 00 20 00 61 f3
+n° protocole (16) = 08 00 (numéro du protocole IPV4)
 
+IPV4
+version (4) = 4 (IPV4)
+longueur entête (4) = 5 (entête fixe, pas d'options)
+type de service (8) = 00
+longueur totale (16) = 00 2c (44 octets)
+identification (16) = 0c 30
+
+bit non utilisé (1)
+bit DF (1)                (16) = 00 00
+bit MF (1)
+offset (13)
+
+durée de vie (8) = 1e
+n°protocole (8) = 06 (n° de TCP)
+controle (16) = b0 79
+@ IP S (32) = c0 09 c8 0b
+@ IP D (32) = c0 09 c8 01
+options (0) = pas d'options car longueur d'entête = 5
+
+TCP
+port s = (16) = 04 05
+port d = (16) = 00 15
+
+(il manque des trucs mais c'est long et chiant à écrire)
+
+La différence est due aux deux octets de bourrage pour atteindre la longueur donnée de 44 octets.
 
 
 # **Exercice 19:**
