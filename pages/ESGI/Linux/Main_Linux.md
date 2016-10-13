@@ -5,6 +5,8 @@ title: "Linux"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/linux/"
+categories:
+    - esgi
 breadcrumb: true
 ---
 
