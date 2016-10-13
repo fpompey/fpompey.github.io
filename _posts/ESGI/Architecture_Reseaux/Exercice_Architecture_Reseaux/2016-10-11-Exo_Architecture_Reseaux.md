@@ -281,19 +281,29 @@ Donnez le masque correspondant.
     00001010 (10)
     01111110 (126)
 
-Il faut donc au minimum 7 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
-masque = 254.0.0.0 => /7
+Il faut donc au minimum 9 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
+masque = 255.128.0.0 => /9
 
-Il faut donc au maximum 8 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
-masque = 255.0.0.0 => /8
+Il faut donc au maximum 11 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
+masque = 255.224.0.0 => /11
 
-Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
+Il faut donc au minimum  9 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
+masque = 255.128.0.0  => /9
+
+Il faut donc au maximum 8 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
+masque = 255.224.0.0 => /11
+
+3.Il faut au minimum 11 bits pour que les 4 machines avant ques les machines soit sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
 masque = 255.224.0.0  => /11
 
-Il faut donc au maximum 16 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
-masque = 255.255.0.0 => /16
+4.Talbe ARP de Vénus :
 
-3.Il faut au minimum 12 bits pour que les 4 machines soient sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
+  NOM          IP              MAC
+Terre     10.126.43.234       MAC-R4
+Mars      10.189.12.27        MAC-R1
+Jupiter   10.163.12.200       MAC-R1
+
+![schéma](http://portfolio.fpompey.com/images/ESGI/Table_ARP_Q17_Architecture_Reseaux.png)
 
 # **Exercice 18:**
 
@@ -351,7 +361,7 @@ port d = (16) = 00 15
 
 La différence est due aux deux octets de bourrage pour atteindre la longueur donnée de 44 octets.
 
-![schéma](http://portfolio.fpompey.com/images/Question18.png)
+![schéma](http://portfolio.fpompey.com/images/ESGI/Trame_Ethernet_Q18_Architecture_Reseaux.png)
 
 
 # **Exercice 19:**
