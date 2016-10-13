@@ -2,7 +2,7 @@
 layout: page
 title:  "Notes Eric"
 teaser: "Notes Eric lors de la semainedu 10 Octobre 2016"
-breadcrumb: true
+breadcrumb: false
 tags:
     - esgi
     - architecture_reseaux
