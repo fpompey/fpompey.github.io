@@ -8,7 +8,7 @@ permalink: "/esgi/architecture&reseaux/cours_architecture&reseaux/"
 breadcrumb: true
 ---
 <ul>
-    {% for post in site.categories.esgi/architecture&reseaux/cours_architecture&reseaux %}
+    {% for post in site.categories.cours_architecture&reseaux %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

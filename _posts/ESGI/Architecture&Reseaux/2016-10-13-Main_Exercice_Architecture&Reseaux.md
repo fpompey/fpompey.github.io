@@ -1,10 +1,10 @@
 ---
 layout: page
-title:  "Cours Linux"
+title:  "Exercice Architecture et Réseaux"
 breadcrumb: true
 header:
    image_fullwidth: "header_unsplash_5.jpg"
 categories:
-    - linux
+    - architecture&reseaux
 show_meta: false
 ---
