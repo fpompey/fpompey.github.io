@@ -281,19 +281,29 @@ Donnez le masque correspondant.
     00001010 (10)
     01111110 (126)
 
-Il faut donc au minimum 7 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
-masque = 254.0.0.0 => /7
+Il faut donc au minimum 9 bits pour avoir l'addresse de classe A entre Vénus et Terre (0000101/0)  
+masque = 255.128.0.0 => /9
 
-Il faut donc au maximum 8 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
-masque = 255.0.0.0 => /8
+Il faut donc au maximum 11 bits pour avoir l'adresse de classe A (Une adresse IP de classe A dispose d'une partie net id comportant uniquement un seul octet)  
+masque = 255.224.0.0 => /11
 
-Il faut donc au minimum  11 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
+Il faut donc au minimum  9 bits pour avoir l'adresse de classe B entre Jupiter et Mars.  
+masque = 255.128.0.0  => /9
+
+Il faut donc au maximum 8 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
+masque = 255.224.0.0 => /11
+
+3.Il faut au minimum 11 bits pour que les 4 machines avant ques les machines soit sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
 masque = 255.224.0.0  => /11
 
-Il faut donc au maximum 16 bits pour avoir l'adresse de classe B (Une adresse IP de classe A dispose d'une partie net id comportant uniquement deux octet)  
-masque = 255.255.0.0 => /16
+4.Talbe ARP de Vénus :
 
-3.Il faut au minimum 12 bits pour que les 4 machines soient sur des sous-réseaux différents (dernier bits différents de tous les réseaux en binaire)
+  NOM          IP              MAC
+Terre     10.126.43.234       MAC-R4
+Mars      10.189.12.27        MAC-R1
+Jupiter   10.163.12.200       MAC-R1
+
+![schéma](http://portfolio.fpompey.com/images/ESGI/Table_ARP_Q17_Architecture_Reseaux.png)
 
 # **Exercice 18:**
 
@@ -303,6 +313,56 @@ Décoder la trame Ethernet suivante et dire pourquoi le paquet IP transporté es
     00 2c 0c 30 00 00 1e 06     b0 79 c0 09 c8 0b c0 09
     C8 01 04 05 00 15 00 06     e8 01 00 00 00 00 60 02
     10 00 bd 4d 00 00 02 04     04 00 00 00
+
+
+**Réponse :**
+
+Préambule, 7 octets  
+début trame, 1 octet  
+@ MAC destination, 6 octets  
+@ MAC source, 6 octets  
+n° protocole, 2 octets
+Données transportées, 46 à 1500 octets (c'est le paquet IP, MTU-eth)  
+checksum CRC 32, 6 octets  
+
+Taille minimale de la trame éthernet = 64 octets (6+6+2+46+4)  
+Taille maximale d'une trame éthernet = 1518 octets
+
+
+ethernet:
+@ mac dest (48) = 08 00 20 01 b4 32  
+@ mac source (48) = 08 00 20 00 61 f3
+n° protocole (16) = 08 00 (numéro du protocole IPV4)
+
+IPV4
+version (4) = 4 (IPV4)
+longueur entête (4) = 5 (entête fixe, pas d'options)
+type de service (8) = 00
+longueur totale (16) = 00 2c (44 octets)
+identification (16) = 0c 30
+
+bit non utilisé (1)
+bit DF (1)                (16) = 00 00
+bit MF (1)
+offset (13)
+
+durée de vie (8) = 1e
+n°protocole (8) = 06 (n° de TCP)
+controle (16) = b0 79
+@ IP S (32) = c0 09 c8 0b
+@ IP D (32) = c0 09 c8 01
+options (0) = pas d'options car longueur d'entête = 5
+
+TCP
+port s = (16) = 04 05
+port d = (16) = 00 15
+
+(il manque des trucs mais c'est long et chiant à écrire)
+
+La différence est due aux deux octets de bourrage pour atteindre la longueur donnée de 44 octets.
+
+![schéma](http://portfolio.fpompey.com/images/ESGI/Trame_Ethernet_Q18_Architecture_Reseaux.png)
+
 
 # **Exercice 19:**
 
@@ -335,3 +395,5 @@ L'adresse  0:0:0:0:0:0:0:1 peut être compressée en ::1 car en IPV6 on peut rem
 3.On a pas le droit de mettre deux fois les "::" dans une adresse IPV6, car il devient impossible de savoir combien de 0 sont contenus dans les "::".
 
 4.Les adresses locales de site IPV6 respectent la notation CIDR, comme les adresses privées d'IPV4. (On sait à quelle région géographique les adresses appartiennent).
+
+PJ en rapport : ![PJ](http://portfolio.fpompey.com/Piece_jointes/ESGI/architectures de réseaux-TCP-IP.pptx)
