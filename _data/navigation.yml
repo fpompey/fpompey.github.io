@@ -31,7 +31,7 @@
         #- title: "Exercice Linux"
         #  url: "/ESGI/Linux/Exercice_Linux"
   - title: "Architecture et Réseaux"
-    url: "/esgi/architecture&reseaux/" 
+    url: "/esgi/architecture_reseaux/" 
       # dropdown:
         #- title: "Cours Architecture et Réseaux"
         #  url: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux"
