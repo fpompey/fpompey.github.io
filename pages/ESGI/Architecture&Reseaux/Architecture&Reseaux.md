@@ -7,8 +7,8 @@ header:
 permalink: "/ESGI/Architecture&Reseaux/"
 breadcrumb: true
 ---
-<ul>
-    ![Cours Architecture et Réseaux](https://fpompey.github.io/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux/)
 
-    ![Exercice Architecture et Réseaux](https://fpompey.github.io/Architecture&Reseaux/Exercice_Architecture&Reseaux/)
-</ul>
+![Cours Architecture et Réseaux](https://fpompey.github.io/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux/)
+
+![Exercice Architecture et Réseaux](https://fpompey.github.io/Architecture&Reseaux/Exercice_Architecture&Reseaux/)
+
