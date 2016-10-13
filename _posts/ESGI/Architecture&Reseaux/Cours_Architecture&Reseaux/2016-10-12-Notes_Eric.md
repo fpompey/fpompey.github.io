@@ -1,3 +1,17 @@
+---
+layout: page
+title:  "Notes Eric"
+teaser: "Notes Eric lors de la semainedu 10 Octobre 2016"
+breadcrumb: true
+tags:
+    - ESGI
+    - Architecture&Reseaux
+    - Cours
+categories:
+    - Cours_Architecture&Reseaux
+show_meta: false
+---
+
 IPV6 est plus sécurisé que l'IPV4.
 La ou il faut ajouter l'IPsec (sécurisé) à l'IPV4, l'IPV6 l'inclut nativement.
 L'IPsec permet de supporter les VPN.
