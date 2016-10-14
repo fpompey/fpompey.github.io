@@ -18,12 +18,13 @@ Lire le manuel de "ls" pour expliquer le résultat de la commande suivante :
 
     $ ls -srF /etc
 
-**Réponse :**    
+**Réponse:**    
 -F ajoute un caractère (parmi \*/=>@| ) à chaque entrée  
 -r inverse l'ordre du tri (sans paramètre il était en ordre alphabétique, ça sera donc l'inverse ici)  
 -s affiche la taille allouée à chaque fichiers en nombre de blocs  
 Et cette commande s'appliquera sur le répertoire /etc  
 
+Affiche les fichiers en triant selon la taille du plus grand au plus petit et selon le type
 
 # **Question 2**
 
@@ -31,7 +32,7 @@ Donner une commande qui affiche :
 
         Hello <user>, welcome on <host> avec <user> et <host> remplacés par le nom de l’utilisateur actif et par le nom de la machine.
 
-**Réponse :**  
+**Réponse:**  
 
 echo « Hello $USER, welcome on $HOSTNAME »
 
@@ -44,6 +45,14 @@ Trouver l’emplacement du programme info.
 Pouvez vous trouver l’emplacement de cd et echo ?  
 Pourquoi ?
 
+**Réponse:**
+
+    Echo $PATH | tr ‘ :’ ‘ \n’ | xargs –I % sh –c ‘ echo % ; ls  -l %| head -4 ‘.
+
+L’option I stock la variable currente de xargs dans la variable %,  
+Sh permet d’ouvrir un shell temporaire ou on affiche le contenu de la variable courante stocké dans % suivie de la liste des fichiers et répertoires dans le dossier ayant pour nom la valeur de %  puis on réduit la liste au 3 premiers fichiers avec la partie head -4.
+
+
 # **Question 4**
 
 Donner une commande permettant de créer l’arborescence
@@ -52,7 +61,7 @@ Donner une commande permettant de créer l’arborescence
 
 en une seule ligne (regarder la page info de mkdir).
 
-**Réponse :**
+**Réponse:**
 
 mkdir -p $HOME/a/b/c/d/e/f/
 
@@ -73,6 +82,10 @@ Supprimer le répertoire
 
 Qu’est devenu le fichier test1 ?
 
+**Réponse:**
+
+Le fichier test1 a disparu.
+
 # **Question 6**
 
 Modifier l’arborescence pour obtenir
@@ -81,9 +94,20 @@ Modifier l’arborescence pour obtenir
 
 sans perdre les fichiers test2 et test3 dans d/ (b doit être supprimé).
 
+**Réponse:**
+
+Faire :   
+cd /a  
+mv b/c  
+rm -rf b  
+
 # **Question 7**
 
 Donner la taille de /bin/cat de façon "humaine", c’est à dire en Ko, en Mo ou en Go selon la taille du fichier (info ls).
+
+**Réponse:**
+
+Ls -lh
 
 # **Question 8**
 
@@ -93,6 +117,10 @@ Faire en sorte que :
 
 liste le contenu le /usr/share/doc.
 
+**Réponse:**
+
+
+
 # **Question 9**
 
 Récupérer tp1-files.tar.gz.   
@@ -100,6 +128,10 @@ Décompressez l’archive.
 Les extensions des fichiers à l’intérieur ne correspondent pas au type de leur véritable contenu.   
 Remettre les bonnes extensions.
 Pour télécharger l’archive, taper les commandes suivantes :
+
+**Réponse:**
+
+
 
 # **Question 10**
 
@@ -114,9 +146,17 @@ La sortie du dernier ls doit être équivalente à :
     $ cd /lib/modules
     $ ls
 
+**Réponse:**
+
+
+
 # **Question 11**
 
 Supprimer tous les répertoires créés dans $HOME.
+
+**Réponse:**
+
+
 
 # **Question 12**
 
@@ -133,6 +173,10 @@ Attention, ces commandes doivent être exécutés sous l’identité de l’admi
 Pour changer d’utilisateur, utiliser la commande su.   
 Penser à retourner en utilisateur normal après ces commandes (commande exit).
 
+**Réponse:**
+
+
+
 # **Question 13**
 
   **Etape 1**
@@ -142,6 +186,9 @@ Donner une commande qui liste les fichiers/répertoires de /usr/share/doc en exc
 1. Les fichiers commençants par "lib"
 2. Les fichiers commençants par les lettres a,b,c,d,e,s,x
 
+**Réponse:**
+
+
   **Etape 2**
 
 Comment peut-on combiner la commande de l’étape 1 avec tar pour créer une archive
@@ -149,3 +196,5 @@ Comment peut-on combiner la commande de l’étape 1 avec tar pour créer une ar
     $HOME/mydoc.tar.gz
 
 contenant tous les fichiers/répertoires de /usr/share/doc à l’exception de ceux cités à l’étape 1 ?
+
+**Réponse:**

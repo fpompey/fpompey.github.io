@@ -396,4 +396,4 @@ L'adresse  0:0:0:0:0:0:0:1 peut être compressée en ::1 car en IPV6 on peut rem
 
 4.Les adresses locales de site IPV6 respectent la notation CIDR, comme les adresses privées d'IPV4. (On sait à quelle région géographique les adresses appartiennent).
 
-PJ en rapport : ![PJ](http://portfolio.fpompey.com/Piece_jointes/ESGI/architectures de réseaux-TCP-IP.pptx)
+PJ en rapport : [PJ](http://portfolio.fpompey.com/Piece_jointes/ESGI/architectures de réseaux-TCP-IP.pptx)

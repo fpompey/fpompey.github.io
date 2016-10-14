@@ -53,4 +53,4 @@ Physique            bit
 Entre l'interface physique et la pile TCP / IP il y a les drivers, les pilotes et le NDIS  
 Entre la pile TCP / IP et les processus ou les applications, il y a l'API et la TLI  
 
-PJ en rapport : ![PJ](http://portfolio.fpompey.com/Piece_jointes/ESGI/architectures de réseaux-TCP-IP.pptx)
+PJ en rapport : [PJ](http://portfolio.fpompey.com/Piece_jointes/ESGI/architectures de réseaux-TCP-IP.pptx)
