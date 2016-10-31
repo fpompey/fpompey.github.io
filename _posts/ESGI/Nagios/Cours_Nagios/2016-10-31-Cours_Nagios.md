@@ -1,3 +1,17 @@
+---
+layout: page
+title:  "Cours Nagios"
+teaser: "Cours Nagios lors de la semaine du 31 Octobre 2016"
+breadcrumb: false
+tags:
+    - ESGI
+    - Nagios
+    - Cours
+categories:
+    - cours_nagios
+show_meta: false
+---
+
 On va parler Nagios et supervision
 on va installer nagios
 bosser sur l'interface web, mettre des plugins
