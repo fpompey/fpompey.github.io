@@ -27,5 +27,5 @@ passer en root (su puis le login) et utiliser les commandes suivantes:
 adduser (ajout utilisateur)  
 deluser (suppression utilisateur)  
 usermod (droits de l'utilisateur)  
-addgroup (cration du groupe)  
+addgroup (création du groupe)  
 delgroup (suppression du groupe)  
