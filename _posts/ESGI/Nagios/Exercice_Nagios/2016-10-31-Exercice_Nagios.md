@@ -107,6 +107,7 @@ On devrait voir
 Création du premier hosts dans
 
     /etc/nagios/hosts/localhost.cfg
+
     define host{
       host_name                 localhost
       alias                     localhost
@@ -125,6 +126,7 @@ Création du premier hosts dans
 Création du premier services
 
     /etc/nagios/services/localhost-www.cfg
+
     define service{
       host_name                 localhost
       service_description       www
@@ -142,6 +144,7 @@ Création du premier services
 Monitorer service ssh
 
     /etc/nagios/services/localhost-ssh.cfg
+
     define service{
       host_name                 localhost
       service_description       ssh
@@ -159,6 +162,7 @@ Monitorer service ssh
 Création timeperiod
 
     /etc/nagios/timeperiods/timeperiods.cfg
+
     define timeperiod{
       timeperiod_name 24x7      
       alias                     24 Hours A Day, 7 Days A Week
@@ -192,6 +196,7 @@ Création timeperiod
 Création d'un Contact
 
     /etc/nagios/contacts/contacts.cfg
+
     define contact{
       contact_name                    fpompey
       alias                           Florian POMPEY
@@ -221,3 +226,34 @@ Création d'un groups de contact
 Reload de la conf pour vérifier les éventuelles erreurs
 
     /opt/nagios/bin/nagios -v /etc/nagios/nagios.cfg
+
+On va mettre en place l'interface web
+
+    /etc/apache2/site-available/nagios.conf
+
+    ScriptAlias /nagios/cgi-bin /opt/nagios/sbin
+    Alias /nagios /opt/nagios/share
+
+    <DirectoryMatch /opt/nagios/share>
+           Options FollowSymLinks
+           AllowOverride AuthConfig
+           Order Allow,Deny
+           Allow From All
+           AuthName "Nagios Access"
+           AuthType Basic
+           AuthUserFile /etc/nagios/htpasswd.users
+           AuthGroupFile /etc/nagios/htpasswd.groups
+           require valid-user
+    </DirectoryMatch>
+
+    <DirectoryMatch /opt/nagios/sbin>
+           Options ExecCGI
+           AllowOverride AuthConfig
+           Order Allow,Deny
+           Allow From All
+           AuthName "Nagios Access"
+           AuthType Basic
+           AuthUserFile /etc/nagios/htpasswd.users
+           AuthGroupFile /etc/nagios/htpasswd.groups
+           require valid-user
+    </DirectoryMatch>
