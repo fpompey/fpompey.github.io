@@ -11,3 +11,55 @@ categories:
     - exercice_algorithme_avancee
 show_meta: false
 ---
+
+# Exercice 1
+
+Créer un tableau de 5 entiers
+  - Le remplir avec 17, 5, 41, 12, 30
+  - L'afficher
+  - Rechercher le min
+  - Afficher le min
+  - Faire le Tri dans le tableau
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main()
+    {
+        int tableau[5]={17,5,41,12,30};
+        int i,j,a,b,c;
+        int taille = 5;
+
+        for (j = 0 ; j < taille ; j++)
+        {
+            int min = tableau[j];
+            int position_min = j;
+
+            for (i = j ; i < taille ; i++)
+            {
+                if(tableau[i] < min)
+                {
+                    min = tableau[i];
+                    position_min = i;
+
+                    a = min;
+                    b = position_min;
+                }
+
+            }
+
+            c = tableau[j];
+            tableau[j] = a;
+            tableau[position_min] = c;
+        }
+
+        printf("\nLe minimum du tableau est %d\n", tableau[0]);
+
+        printf("\nLe premier minimum du tableau est %d", tableau[0]);
+        printf("\nLe second minimum du tableau est %d", tableau[1]);
+        printf("\nLe troisieme minimum du tableau est %d", tableau[2]);
+        printf("\nLe quatrieme minimum du tableau est %d", tableau[3]);
+        printf("\nLe cinquieme minimum du tableau est %d", tableau[4]);
+
+        return 0;
+    }
