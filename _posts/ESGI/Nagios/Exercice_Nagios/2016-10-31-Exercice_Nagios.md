@@ -107,6 +107,7 @@ On devrait voir
 Création du premier hosts dans
 
     /etc/nagios/hosts/localhost.cfg
+
     define host{
       host_name                 localhost
       alias                     localhost
@@ -116,7 +117,22 @@ Création du premier hosts dans
       retry_interval            1
       max_check_attempts        5
       check_period              24x7
-      contactgroups             admins
+      contact_groups             admins
+      notification_interval     60
+      notification_period       24x7
+      notification_options      d,u,r
+    }
+
+    define host{
+      host_name                 raspi
+      alias                     raspi
+      address                   10.33.2.138
+      check_command             check-host-alive
+      check_interval            5
+      retry_interval            1
+      max_check_attempts        5
+      check_period              24x7
+      contact_groups             admins
       notification_interval     60
       notification_period       24x7
       notification_options      d,u,r
@@ -125,6 +141,7 @@ Création du premier hosts dans
 Création du premier services
 
     /etc/nagios/services/localhost-www.cfg
+
     define service{
       host_name                 localhost
       service_description       www
@@ -142,6 +159,7 @@ Création du premier services
 Monitorer service ssh
 
     /etc/nagios/services/localhost-ssh.cfg
+
     define service{
       host_name                 localhost
       service_description       ssh
@@ -159,6 +177,7 @@ Monitorer service ssh
 Création timeperiod
 
     /etc/nagios/timeperiods/timeperiods.cfg
+
     define timeperiod{
       timeperiod_name 24x7      
       alias                     24 Hours A Day, 7 Days A Week
@@ -192,6 +211,7 @@ Création timeperiod
 Création d'un Contact
 
     /etc/nagios/contacts/contacts.cfg
+
     define contact{
       contact_name                    fpompey
       alias                           Florian POMPEY
@@ -208,6 +228,7 @@ Création d'un Contact
 Création d'un groups de contact
 
     /etc/nagios/contactgroups/admins.cfg
+
     define contactgroup{
       contactgroup_name         admins
       alias                     Administrateur système
@@ -221,3 +242,146 @@ Création d'un groups de contact
 Reload de la conf pour vérifier les éventuelles erreurs
 
     /opt/nagios/bin/nagios -v /etc/nagios/nagios.cfg
+
+On va mettre en place l'interface web
+
+    /etc/apache2/site-available/nagios.conf
+
+    ScriptAlias /nagios/cgi-bin /opt/nagios/sbin
+    Alias /nagios /opt/nagios/share
+
+    <DirectoryMatch /opt/nagios/share>
+           Options FollowSymLinks
+           AllowOverride AuthConfig
+           Order Allow,Deny
+           Allow From All
+           AuthName "Nagios Access"
+           AuthType Basic
+           AuthUserFile /etc/nagios/htpasswd.users
+           AuthGroupFile /etc/nagios/htpasswd.groups
+           require valid-user
+    </DirectoryMatch>
+
+    <DirectoryMatch /opt/nagios/sbin>
+           Options ExecCGI
+           AllowOverride AuthConfig
+           Order Allow,Deny
+           Allow From All
+           AuthName "Nagios Access"
+           AuthType Basic
+           AuthUserFile /etc/nagios/htpasswd.users
+           AuthGroupFile /etc/nagios/htpasswd.groups
+           require valid-user
+    </DirectoryMatch>
+
+On va mettre en place le contact pour l'adminstrateur Nagios
+
+    /etc/nagios/contacts/contacts.cfg
+
+    define contact{
+      contact_name                    fpompey
+      alias                           Florian POMPEY
+      email                           florian.pompey@gmail.com
+      contactgroups                   admins,nagiosadmin
+      host_notification_period        24x7
+      service_notification_period     24x7
+      host_notification_options       d,u,r
+      service_notification_options    w,u,c,r
+      host_notification_commands      notify-host-by-email   
+      service_notification_commands   notify-service-by-email
+    }
+
+Fichiers utilisés par le serveur Web pour les autorisations
+
+    cp /dev/null /etc/nagios/htpasswd.groups
+    htpasswd -c /etc/nagios/htpassws.users nagiosadmin
+
+Mettre un mot de passe sécurié
+
+Sécuriser ses Fichiers
+
+    chown root:nagioscmd /etc/nagios/htpasswd.*
+    chmod 0640 /etc/nagios/htpasswd.*
+
+Crée un lien symbolique de *etc/apache2/sites-enable/nagios.conf* vers */etc/apache2/site-available/nagios.conf*
+
+    Dans /etc/apache2/sites-enabled
+
+    ln -s ./site-available/nagios.conf nagios.conf
+
+Activer les CGI de l'authentification et lesite nagios
+
+    a2enmod authz_groupfile
+    a2enmod CGI
+    a2ensite nagios
+
+Ne pas oublier de restart les services
+
+    service apache2 restart
+    service nagios restart
+
+Modifier pour l'envoie de mail dans
+
+    /etc/nagios/commands
+
+    # 'notify-host-by-email' command definition
+    define command{
+           command_name     notify-host-by-email
+           command_line	    /usr/bin/printf "%b" "Subject: $NOTIFICATIONTYPE$ Host Alert: $HOSTNAME$ is $HOSTSTATE$\\n\\n***** Nagios *****\\n\\nNotification Type: $NOTIFICATIONTYPE$\\nHost: $HOSTNAME$\\nState: $HOSTSTATE$\\nAddress: $HOSTADDRESS$\\nInfo: $HOSTOUTPUT$\\n\\nDate/Time: $LONGDATETIME$\\n" | /usr/sbin/sendmail -vt $CONTACTEMAIL$\
+    }
+
+    # 'notify-service-by-email' command definition
+    define command{
+           command_name     notify-host-by-email
+           command_line	    /usr/bin/printf "%b" "Subject: $NOTIFICATIONTYPE$ Service Alert: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$\\n\\n***** Nagios *****\\n\\nNotification Type: $NOTIFICATIONTYPE$\\n\\nService: $SERVICEDESC$\\nHost: $HOSTALIAS$\\nAddress: $HOSTADDRESS$\\nState: $SERVICESTATE$\\n\\nDate/Time: $LONGDATETIME$\\n\\nAdditional Info:\\n\\n$SERVICEOUTPUT$\\n" | /usr/sbin/sendmail -vt $CONTACTEMAIL$
+    }
+
+Nous allons tester de crée un nouveau service, un listen sur le port TCP 21
+
+    /etc/nagios/services/localhost-ssh.cfg
+
+    define service{
+      host_name                 raspi
+      service_description       check_TCP
+      check_command             check_TCP
+      check_interval            5
+      check_period              24x7
+      retry_interval            1
+      max_check_attempts        3
+      contact_groups            admins
+      notification_interval     60
+      notification_period       24x7
+      notification_options      w,c,u,r
+    }
+
+Pour tester un plugin en ligne de commande se rendre à l'emplacement qui correspont à $USER1$ service_notification_options
+
+    cd /opt/nagios/plugins/
+
+    ./check_tcp -H 10.33.2.138 -p 21
+
+Nous allons faire un check ftp pour vérifier les identifiants, *login: upload mdp: upload*
+
+    /etc/nagios/service/raspi-ftp.cfg
+
+    define service{
+      host_name                 raspi
+      service_description       ftp
+      check_command             check_ftplogin!upload!upload
+      check_interval            5
+      check_period              24x7
+      retry_interval            1
+      max_check_attempts        3
+      contact_groups            admins
+      notification_interval     60
+      notification_period       24x7
+      notification_options      w,c,u,r
+    }
+
+    /etc/nagios/commands/default.cfg
+
+    # 'check_ftplogin' command definition
+    define command{
+           command_name     check_ftplogin
+           command_line	    $USER1$/check_ftp -H $HOSTADDRESS$ -E -s "USER $ARG1$\r\nPASS $ARG2$\r\n" -d 5 -e "230"  
+    }

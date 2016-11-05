@@ -31,13 +31,21 @@
         #- title: "Exercice Linux"
         #  url: "/ESGI/Linux/Exercice_Linux"
   - title: "Architecture et Réseaux"
-    url: "/esgi/architecture_reseaux/" 
+    url: "/esgi/architecture_reseaux/"
       # dropdown:
         #- title: "Cours Architecture et Réseaux"
         #  url: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux"
         #- title: "Exercice Architecture et Réseaux"
-        #  url: "/ESGI/Architecture&Reseaux/Exercice_Architecture&Reseaux"    
-      
+        #  url: "/ESGI/Architecture&Reseaux/Exercice_Architecture&Reseaux"
+  - title: "Nagios"
+    url: "/esgi/nagios/"
+  - title: "Projets"
+    url: "/esgi/projet/"
+  - title: "Algorithme avancée"
+    url: "/esgi/algorithme_avancée/"
+  - title: "Programation C"
+    url: "/esgi/programation_c/"
+
 #- title: P2 Fourniture de services
 #  url: "/P2/"
 #  side: left
