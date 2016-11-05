@@ -43,6 +43,8 @@
     url: "/esgi/projet/"
   - title: "Algorithme avancée"
     url: "/esgi/algorithme_avancée/"
+  - title: "Programation C"
+    url: "/esgi/programation_c/"
 
 #- title: P2 Fourniture de services
 #  url: "/P2/"
