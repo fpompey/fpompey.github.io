@@ -19,10 +19,11 @@ printf( " %c \n " , c);
 printf( " %c \n " , c++);
 printf( " %c \n " , c + 1);
 
-1. Définis la variable c puis prend la valeur a
-2. Afficher un espace la variable c suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " a "
-3. Afficher un espace la variable c = a suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante **(a la fin de la ligne le caractère c est incrémenté et passe à b)** = "  a "
-4. Afficher un espace la variable c + 1 = c suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante **(la variable c qui était b est incrémenté de 1 et devient c)** = "  c "
+    1. Définis la variable c puis prend la valeur a
+    2. Afficher un espace la variable c suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " a "
+    3. Afficher un espace la variable c = a suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante **(a la fin de la ligne le caractère c est incrémenté et passe à b)** = "  a "
+    4. Afficher un espace la variable c + 1 = c suivi d'un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante **(la variable c qui était b est incrémenté de 1 et devient c)** = "  c "
+
 **Exercice 2:**
 
 int i;
@@ -31,11 +32,11 @@ printf(" %d \n " , i + 1 );
 i=6;
 printf(" %d \n " , i - 1 );
 
-1. Définis la variable i
-2. Afficher un espace puis le nombre i (celui n'as pas été défini auparavant) suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = " ? "
-3. Afficher un espace puis le nombre i + 1 (celui n'as pas été défini auparavant) suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = "  ? "
-4. i prend la valeur 6
-5. Afficher un espace puis le nombre i=6 - 1 soit 5 suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = "  5 "
+    1. Définis la variable i
+    2. Afficher un espace puis le nombre i (celui n'as pas été défini auparavant) suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = " ? "
+    3. Afficher un espace puis le nombre i + 1 (celui n'as pas été défini auparavant) suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = "  ? "
+    4. i prend la valeur 6
+    5. Afficher un espace puis le nombre i=6 - 1 soit 5 suivi d'un espace puis un retour à la ligne, il fera un espace supplémentaire sur la ligne suivante = "  5 "
 
 **Exercice 3:**
 
@@ -45,11 +46,11 @@ printf(" %d \n", c);
 c = c % a;
 printf(" %d \n", c);
 
-1. Définis la variable a qui prend la valeur 4, définis la variable b qui prend la valeur 5, définis la variable x qui prend la valeur 6
-2. Effectue le calcul c = 4 / 5 -2 donc c prend la valeur -2
-3. Affiche un espace la variable c qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " -2 "
-4. Effectue le calcul c = 0 % 4 donc c prend la valeur -2
-5. Affiche un espace la variable c qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " -2 "
+    1. Définis la variable a qui prend la valeur 4, définis la variable b qui prend la valeur 5, définis la variable x qui prend la valeur 6
+    2. Effectue le calcul c = 4 / 5 -2 donc c prend la valeur -2
+    3. Affiche un espace la variable c qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " -2 "
+    4. Effectue le calcul c = 0 % 4 donc c prend la valeur -2
+    5. Affiche un espace la variable c qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " -2 "
 
 **Exercice 4:**
 
@@ -59,11 +60,11 @@ printf(" %d \n" , d);
 d = b / b / c;
 printf(" %d \n" , d);
 
-1. Définis la variable a qui prend la valeur 2, définis la variable b qui prend la valeur 4, définis la variable x qui prend la valeur 2
-2. Définis la variable d puis prend la valeur de l'opération 2 / 4 / 2 = 0
-3. Affiche un espace la variable d qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 0 "
-4. d prend la valeur de l'opération 4 / 4 / 2 = 0
-5. Affiche un espace la variable d qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 0 "
+    1. Définis la variable a qui prend la valeur 2, définis la variable b qui prend la valeur 4, définis la variable x qui prend la valeur 2
+    2. Définis la variable d puis prend la valeur de l'opération 2 / 4 / 2 = 0
+    3. Affiche un espace la variable d qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 0 "
+    4. d prend la valeur de l'opération 4 / 4 / 2 = 0
+    5. Affiche un espace la variable d qui est devenue 0 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 0 "
 
 **Exercice 5:**
 
@@ -71,9 +72,9 @@ int a = 3, b = 4;
 resultat = (a + b) % b;
 printf(" %d ",resultat);
 
-1. Définis la variable a qui prend la valeur 3, définis la variable b qui prend la valeur 4
-2. Resultat prend la valeur de l'opération (3 + 4) % 4 = 3 *(Mais la variable resultat n'étant pas déclaré le programme va planter)*
-3. Affiche un espace la variable resultat qui est devenue 3 puis un espace supplémentaire = " 3 " *(Mais la variable resultat n'étant pas déclaré le programme va planter)*
+    1. Définis la variable a qui prend la valeur 3, définis la variable b qui prend la valeur 4
+    2. Resultat prend la valeur de l'opération (3 + 4) % 4 = 3 *(Mais la variable resultat n'étant pas déclaré le programme va planter)*
+    3. Affiche un espace la variable resultat qui est devenue 3 puis un espace supplémentaire = " 3 " *(Mais la variable resultat n'étant pas déclaré le programme va planter)*
 
 **Exercice 6:**
 
@@ -81,17 +82,17 @@ int a = 45, b = 10, 4c = 2;
 printf(" %d \n ", a);
 printf(" %d ", a / b);
 
-1. Définis la variable a qui prend la valeur 45, définis la variable b qui prend la valeur 10, 4c qui prend la valeur 2 *(ce qui risque de provoquer une erreur car la variable commence par un chiffre)*
-2. Affiche un espace la variable a qui est 45 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 45 "
-3. Affiche un espace la variable 45 / 10 qui est 4 puis un espace supplémentaire = "  4 "
+    1. Définis la variable a qui prend la valeur 45, définis la variable b qui prend la valeur 10, 4c qui prend la valeur 2 *(ce qui risque de provoquer une erreur car la variable commence par un chiffre)*
+    2. Affiche un espace la variable a qui est 45 puis un retour a la ligne, il fera un espace supplémentaire sur la ligne suivante = " 45 "
+    3. Affiche un espace la variable 45 / 10 qui est 4 puis un espace supplémentaire = "  4 "
 
 **Exercice 7:**
 
 int a = 3, b = 7;
 printf(" %d ", a + b / b * b )
 
-1. Définis la variable a qui prend la valeur 3, définis la variable b qui prend la valeur 7
-2. Affiche un espace la variable 3 + 7 / 7 * 7 = 10  qui est 10 puis un espace supplémentaire = " 10 " *(Le programme va planter car il manque un ; sur le seconde ligne)*
+    1. Définis la variable a qui prend la valeur 3, définis la variable b qui prend la valeur 7
+    2. Affiche un espace la variable 3 + 7 / 7 * 7 = 10  qui est 10 puis un espace supplémentaire = " 10 " *(Le programme va planter car il manque un ; sur le seconde ligne)*
 
 **Exercice 8:**
 
@@ -103,6 +104,14 @@ traitement suivant :
 mois : 10
 année : 2016
 
+    int jour=0, mois=0, annee=0;
+    printf("Saisir date:\n"),
+    scanf("%d", &jour);
+    scanf("%d", &mois);
+    scanf("%d", &annee);
+    printf("jour %d\n mois %d\n annee %d\n", jour, mois, annee);
+
+
 **Exercice9:**
 
 Pour les questions suivantes, inscrivez les instructions nécessaires directement dans le
@@ -112,3 +121,9 @@ b) Donnez les instructions pour calculer la longueur de l'hypoténuse dans un tr
 rectangle (utilisez le théorème de Pythagore)
 Utilisez la librairie standard math.h pour manipuler PI et calculer les puissances (ainsi
 que les racines)
+
+    # include <math.h>
+    float aire, rayon = 8.3, perimetre,
+    aire = M PI * pow (rayon 2);
+    perimetre = 2 * M PI * rayon;
+    resultat = sqrt(pow (coteA, 2) + pow (coteB, 2));
