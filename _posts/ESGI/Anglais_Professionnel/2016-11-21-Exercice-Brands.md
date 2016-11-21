@@ -12,6 +12,8 @@ categories:
 show_meta: false
 ---
 
+# Exercice 1:
+
 ![Exo1-Brands](http://portfolio.fpompey.com/images/ESGI/Exo1-Brands.png)
 
 Loyalty => D
@@ -31,3 +33,9 @@ Research => N
 Share => K
 Challenger => O
 Segment => L
+
+# Exercice 2:
+
+![Exo2-Brands](http://portfolio.fpompey.com/images/ESGI/Exo2-Brands.png)
+
+Sydney Toledano (Directeur executif de Dior) est l'un des directeur executif de dior les plus ancien dans l'industrie du luxe. Comme l'industrie devient mondial, il doit jongler entre les demandes des **actionnaires** *(shareholders)* ainsi que les valeurs historique du produit, les besoins de trouver des exclusivités et d'exportation.
