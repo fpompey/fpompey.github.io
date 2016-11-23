@@ -33,6 +33,13 @@ t= [e1, e2, e3] &forall;i, ei &isin; N , taille finie
 Collection d'élements de même type, taille finie / infinie, non ordonné,les doublons  
 {1,3,2} = {1,3,2}
 
+Tri naïf/séléction => Recherchez le minimum dans tout le tableau, et le permutez avec la 1ère case une fois le minimum trouvé. Recommencez l'opération sans utiliser le premier nombre qui a été trouvé.
+Continuez jusqu'à avoir un ordre croissant dans sa suite
+
+Tri a bulle => Le premier nombre va se comparer au nombre suivant celu-ci.   
+Si le nombre est inférieur au nombre source, il permute jusqu'à se rendre au dernier nombre.  
+Continuez jusqu'à avoir un ordre croissant dans sa suite.
+
 **Liste**
 
 Collection d'élements de même type, taille finie / infinie, ordonnée les doublons  
@@ -73,3 +80,13 @@ Définition récursive de l'arbre binaire:
 ABR = Arbre binaire de recherche:
   1. Tous les noeuds dans une partie gauche sont plus petits que la racine
   2. Tous les noeuds dans une partie droite sont plus grands que la racine
+
+Parcours en largeur => Lister les noeuds niveau par niveau de gauche à droite.
+
+Parcours préfixe => r g d
+
+Parcours postfixe => g d r
+
+Parcours infixe => g r d
+
+On écrit le noeud si on est sur **r** sinon on est sur un arbre et on reappelle le parcours (Récursif)
