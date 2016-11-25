@@ -132,41 +132,49 @@ que les racines)
 
 # Boucle et conditions
 
-1) Ces deux boucles for comprennent-elles le même nombre d’itérations ?
-  for (j=0 ; j<8 ; j++)
-  for(j=0 ; j<=8 ; j++)
+**Exercice 1:**
+
+    Ces deux boucles for comprennent-elles le même nombre d’itérations ?
+    for (j=0 ; j<8 ; j++)
+    for(j=0 ; j<=8 ; j++)
 
     1. Non la deuxième fera une itération en plus car est compris dans la boucle contrairement à la première.
 
-2) La boucle for ci-après :
-  for( j = 65 ; j < 72 ; j++ )
-    printf("%c", j) ;
+**Exercice 2:**
 
-Est-elle équivalente à cette boucle while ?
+    La boucle for ci-après :
+    for( j = 65 ; j < 72 ; j++ )
+      printf("%c", j) ;
 
-  int k = 65;
-  while( k < 72 )
-  {
-    printf( "%c" , k );
-    k++;
-  }
+    Est-elle équivalente à cette boucle while ?
+
+    int k = 65;
+    while( k < 72 )
+    {
+      printf( "%c" , k );
+      k++;
+    }
 
     1. Oui, l'itération pour le for se fait avant de rentrer dans la boucle, alors que le while l'itération se fera en sortie de boucle, il effectuera donc le même nombre d'itération.
 
-3) Remplacez la boucle suivante par une boucle for :
-  int k=100 ;
-  do
-  {
-    printf("%c", k) ;
-    k++ ;
-  }
+**Exercice 3:**
 
-  while(k < 100);
+    Remplacez la boucle suivante par une boucle for :
+    int k=100 ;
+    do
+    {
+      printf("%c", k) ;
+      k++ ;
+    }
+
+    while(k < 100);
 
     1. for(int j = 100, j < 100, j++)
         printf("%c" , j);
 
-4) Ecrire un programme qui calcule la somme des nombres entiers de 1 à 100
+**Exercice 4:**
+
+    Ecrire un programme qui calcule la somme des nombres entiers de 1 à 100
 
     1.
     #include <stdio.h>
@@ -179,10 +187,12 @@ Est-elle équivalente à cette boucle while ?
         for(i = 0 ; i <= 100 ; i++)
           somme = somme +i;
           printf("La somme des nombres entiers de 1 a 100 est %i", somme);
+          return 0;
     }
 
+**Exercice 5:**
 
-5) Ecrire un programme qui calcule la somme des nombres entiers dans un intervalle donné.
+  Ecrire un programme qui calcule la somme des nombres entiers dans un intervalle donné.
 
   Demandez à l’utilisateur la saisie des deux bornes de l’intervalle
   Pensez à vérifier la cohérence des données saisies
@@ -212,9 +222,12 @@ Est-elle équivalente à cette boucle while ?
       somme += start;
 
       printf("La somme est egal a %d", somme);
+      return 0;
   }
 
-6) Ecrire un programme qui calcule la somme des nombres pairs de 1 à 100
+**Exercice 6:**
+
+    Ecrire un programme qui calcule la somme des nombres pairs de 1 à 100
 
     1.
     #include <stdio.h>
@@ -224,17 +237,20 @@ Est-elle équivalente à cette boucle while ?
     {
       # include <math.h>
       int i, somme = 0;
-      for(i = 0 ; i <= 100 ; i++)
-      {
-          if (i%2 == 0)
-          {
-              somme = somme +i;
-          }
-      }  
-      printf("La somme des nombres pairs de 1 a 100 est %i", somme);
+        for(i = 0 ; i <= 100 ; i++)
+        {
+            if (i%2 == 0)
+            {
+                somme = somme + i;
+            }
+        }  
+    printf("La somme des nombres pairs de 1 a 100 est %i", somme);
+    return 0;
     }
 
-7) Ecrire un programme qui affiche les nombres de 1 à 20 par lignes de 3 nombres.
+**Exercice 7:**
+
+  Ecrire un programme qui affiche les nombres de 1 à 20 par lignes de 3 nombres.
 
   Résultat attendu :
   1 2 3
@@ -254,37 +270,127 @@ Est-elle équivalente à cette boucle while ?
            else
               printf("%d ", i);
         }
+        return 0;
       }
 
-8) Ecrire un programme qui calcule la factorielle d’un nombre
-  Rappels :
-  Factorielle de 4 = 4x3x2x1 = 24
+**Exercice 8:**
+
+  Ecrire un programme qui calcule la factorielle d’un nombre
+  Rappels :  
+  Factorielle de 4 = 4x3x2x1 = 24  
   Factorielle de 0 = 1
 
-9) Même exercice que la question précédente mais à l’aide d’une fonction récursive
-  Rappel : Une fonction récursive est une fonction qui s’appelle elle-même, en ayant
-une condition de sortie (pour éviter les boucles infinies)
 
-C - Boucles et conditions 2
 
-10) Ecrire un programme qui permet la saisie d’un nombre entier et l’affiche à l’envers. Par
-exemple, si l’utilisateur saisit 123456 le programme devra afficher 654321
-  Rappel : 153 % 10 = 3 et 153 / 10 = 15
+  #include <stdio.h>
+  #include <stdlib.h>
 
-11) « Devine le nombre » :
-Ecrire un programme sous la forme d’un jeu, un nombre est déterminé aléatoirement, tant
-que l’utilisateur ne trouve pas le nombre en question par des saisies successives, il lui est
-offert la possibilité d’effectuer une nouvelle tentative jusqu’à obtention du résultat.
+  int main ()
+  {
+    int nombre = 0 , resultat = 1 ;
+    scanf("%d", &nombre);
 
-  Affinez votre message en indiquant si le nombre recheché est plus grand ou
-plus petit que le nombre saisi
+    while(nombre > 0)
+    {
+      resultat *= nombre ;
+      nombre -- ;
+    }
 
-  Ajoutez un nombre de tentatives maximum, provoquant ainsi une fin de
-partie si ce nombre est atteint
+    ou
 
-12) « Multiples »
-Ecrire un programme qui permet de savoir quels sont les multiples d’un nombre. On se
-contentera de déterminer si le nombre est multiple de 2, 3, 7, 11.
+    for(scanf("%d", &nombre) ; nombre > 0 ; nombre --)
+    {
+      resultat *= nombre ; <=> resultat = resultat * nombre ;    
+    }
 
-Il est conseillé de créer une fonction pour chaque multiple, et d’effectuer ensuite votre
-traitement en fonction du retour de ces différentes fonctions.
+    return 0;
+  }
+
+**Exercice 9:**
+
+  Même exercice que la question précédente mais à l’aide d’une fonction récursive
+  Rappel : Une fonction récursive est une fonction qui s’appelle elle-même, en ayant une condition de sortie (pour éviter les boucles infinies)
+
+
+**Exercice 10:**
+
+    Ecrire un programme qui permet la saisie d’un nombre entier et l’affiche à l’envers. Par
+    exemple, si l’utilisateur saisit 123456 le programme devra afficher 654321
+      Rappel : 153 % 10 = 3 et 153 / 10 = 15
+
+**Exercice 11:**
+
+    « Devine le nombre » :
+
+    Ecrire un programme sous la forme d’un jeu, un nombre est déterminé aléatoirement, tant
+    que l’utilisateur ne trouve pas le nombre en question par des saisies successives, il lui est
+    offert la possibilité d’effectuer une nouvelle tentative jusqu’à obtention du résultat.
+
+    Affinez votre message en indiquant si le nombre recheché est plus grand ou
+    plus petit que le nombre saisi
+
+    Ajoutez un nombre de tentatives maximum, provoquant ainsi une fin de
+    partie si ce nombre est atteint
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main ()
+    {
+      int nombre = 0 , valeur = 19;
+      int tentative = 10;
+
+        do
+        {
+          printf("Saisir nombre : ");
+          scanf("%d", &nombre);
+
+          if(nombre < valeur)
+          {
+            printf("C'est plus !\n");
+            tentative -- ;
+          }
+
+          else if(nombre > valeur)
+          {
+            printf("C'est moins !\n");
+            tentative --;
+          }
+
+          else
+          {
+            printf("Bravo !");
+          }
+        }
+
+        while(nombre != valeur && tentative > 0);
+        printf("\nPerdu !");
+
+        return 0;
+    }
+
+**Exercice 12:**
+
+    « Multiples »
+
+    Ecrire un programme qui permet de savoir quels sont les multiples d’un nombre. On se
+    contentera de déterminer si le nombre est multiple de 2, 3, 7, 11.
+
+    Il est conseillé de créer une fonction pour chaque multiple, et d’effectuer ensuite votre
+    traitement en fonction du retour de ces différentes fonctions.
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    main ()
+    {
+      int nombre = 0;
+      int cpt = 1;
+
+      for(scanf("%d", &nombre) ; cpt <= nombre ; cpt ++)
+      {
+        if(nombre %cpt == 0)
+          printf("%d\n", cpt);
+      }
+      return 0;
+    }
