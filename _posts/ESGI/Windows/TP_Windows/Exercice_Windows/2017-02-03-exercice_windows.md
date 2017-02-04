@@ -426,6 +426,7 @@ Modification d'un utilisateur
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_35.png)
 
 Plus bas vous pouvez également modifier à quel groupe est membre l'utilisateur
+
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_36.png)
 
 Modification d'un groupe
