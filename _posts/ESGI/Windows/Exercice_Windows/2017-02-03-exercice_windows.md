@@ -41,45 +41,46 @@ Dans ce TP nous allons mettre en place deux serveurs Windows 2012 R2 de deux fa�
 ## Installation d'un serveur version core
 
 Lancez le début d'une instalation classique en anglais.  
-Attention à bien mettre votre clavier en azerty si nécéssaire, cela pourra être changer plus tard en cas d'oubli.  
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_1.png)
+Attention à bien mettre votre clavier en azerty si nécéssaire, cela pourra être changer plus tard en cas d'oubli.
+
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_01.png)
 
 L'installation se lance.  
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_2.png)
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_02.png)
 
 Une fois sur votre terminal de commande passez en powershell pour commencer la configuration de base.
 
     powershell
 
-![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_1.png)
+![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_01.png)
 
-Si vous avez oubliez de passer votre clavier en qwerty vous pouvez effectuer la commande
+Si vous avez oublié de passer votre clavier en azerty vous pouvez effectuer la commande
 
     Set-WinUserLanguageList fr-fr
 
-![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_2.png)
+![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_02.png)
 
 Si vous avez besoin de vérifier la commande est
 
     Get-WinUserLanguageList
 
-![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_3.png)  
+![Changement de langue](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Langue_03.png)  
 
 Pour cette installation nous allons passer via sconfig, toutes les modifications que nous allons faire peuvent également se faire manuellement.
 
     sconfig
 
-Nous allons effectuer plusieurs changement :
+Nous allons effectuer plusieurs changements :
 
 ### Changement du hostname
 
 Option **2** (un redémarage est requis)
 
-![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_1.png)
+![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_01.png)
 
-![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_2.png)
+![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_02.png)
 
-![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_3.png)
+![Changement de Hostname](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_Hostname_03.png)
 
 ### Paramètre réseau
 
@@ -87,43 +88,43 @@ Option **8**
 
 Pour ce TP nous allons avoir besoin de passer en **IP fixe**, vous devriez avoir la liste de toutes vos connexions ethernet sur la machine.
 
-![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_1.png)
+![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_01.png)
 
 Dans notre cas il n'y en as qu'une seul, l'index **10**.
 
-![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_2.png)
+![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_02.png)
 
-Nous allons ensuite mettre enplace notre IP statique option **1** et **S**
+Nous allons ensuite mettre en place notre IP statique option **1** et **S**
 
-![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_3.png)
+![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_03.png)
 
 Puis mettre en place les DNS option **2**
 
-![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_4.png)
+![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_04.png)
 
 Une fois que tout est bien configuré, nous pouvons vérifier nos informations et sortir avec l'option **4**
 
-![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_5.png)
+![Changement de Network](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changment_Network_Settings_05.png)
 
-Une fois toutes les modifications effectués nous pouvons sortir de **sconfig** option **15**.
+Une fois toutes les modifications effectuées nous pouvons sortir de **sconfig** option **15**.
 
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_3.png)  
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_03.png)  
 
-On peut faire un test de connection pour vérifier que l'accès Internet et les DNS fonctionne correctement.
+On peut faire un test de connection pour vérifier que l'accès Internet et les DNS fonctionnent correctement.
 
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_4.png)
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_04.png)
 
 Pour vérifier ses DNS on peux également effectuer la commande
 
     Get-NetIPConfiguration
 
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_5.png)
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_05.png)
 
 Si on souhaite le changer il faut effectuer la commande
 
     Set-DNS-ClientServerAddress -interfaceindex 12 -ServerAddresses[*ip*]
 
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_6.png)
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_06.png)
 
 ### Setup d'un mot de passe pour le compte administrator
 
@@ -135,7 +136,7 @@ Une fois les paramètres réseaux nous allons mettre un mot de passe au compte a
 
 L'installation de base sur Windows Server 2012 Core est terminé pour pouvoir effectuer la partie sur Active Directory.
 
-![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_7.png)
+![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_07.png)
 
 ### Active Directory core
 
@@ -145,13 +146,13 @@ Nous installons le rôle serveur Active Directory Domain Services :
 
     Install-windowsfeature - name AD-Domain-Services -IncludeManagementTools
 
-![Installation Active Directory](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_1.png)
+![Installation Active Directory](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_01.png)
 
 Nous installons le rôle serveur DNS
 
     Install-windowsfeature DNS -IncludeManagementTools
 
-![Installation Active Directory](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_2.png)
+![Installation Active Directory](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_02.png)
 
 Création de la forêt avec le NetBiosName
 
@@ -175,17 +176,17 @@ Modifiez les informations pour mettre en place une IPstatique ainsi que les DNS.
 
 **Attention si il s'agit d'une création de domaine avec la forêt et le NetBIOS, les DNS doivent être l'IP de la machine elle même sinon il faut que les DNS soit celle de la machine source**, c'est à dire celle qui rejoint le domaine doit avoir les DNS ce la machine qui as crée l'AD, il faudra donc effectuer des modifications selon si vous avez crée depuis la machine Core ou depuis la machine avec l'interface visuelle.
 
-![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard(_1.png)
+![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_01.png)
 
 Vous pouvez vérifier vos information via votre terminal
 
     ipconfig /all
 
-![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_2.png)
+![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_02.png)
 
 Vous pouvez également vérifier si vous arrivez bien à joindre votre domaine crée précédemment (depuis l'interface gui ou depuis le core)
 
-![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_3.png)
+![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_03.png)
 
 Maintenant que la jonction est possible entre les deux serveurs nous allons faire rejoindre le second serveur au domaine.
 
@@ -197,13 +198,13 @@ Nous installons le rôle serveur Active Directory Domain Services :
 
     Install-windowsfeature - name AD-Domain-Services -IncludeManagementTools
 
-![Installation Active Directory Core](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_1.png)
+![Installation Active Directory Core](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_01.png)
 
 Nous installons le rôle serveur DNS
 
     Install-windowsfeature DNS -IncludeManagementTools
 
-![Installation Active Directory Core](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_2.png)
+![Installation Active Directory Core](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_02.png)
 
 Install-ADDSDomainController -DomainName pompeyflorian.local  
 Il faudra saisir un mot de passe et valider, un redémarage sera requis.
@@ -212,31 +213,31 @@ Il faudra saisir un mot de passe et valider, un redémarage sera requis.
 
 Nous allons ajouter le domaine contrôleur à un domaine existant.
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_1.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_01.png)
 
 Configuration du serveur en tant que Catalogue Global sur le même site crée précédemment, le mot de passe DSRM est à mettre de coté en cas de panne Active Directory.
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_2.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_02.png)
 
 Ignorez l'avertissement jaune.
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_3.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_03.png)
 
 Associez la réplication à un second serveur Active Directory
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_4.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_04.png)
 
 Laissez les chemins par défaut
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_5.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_05.png)
 
 Compte rendu global de vos actions
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_6.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_06.png)
 
 Lancez l'installation
 
-![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_7.png)
+![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_07.png)
 
 Le serveur va ensuite redémarrez.  
 Vos deux serveurs sont tous les deux controlleurs de domaine.
@@ -252,9 +253,9 @@ Sur votre serveur, sur l'option Paramètres NTDS cliquer sur propriétés.
 
 Activer ou désactiver le Catalogue global.
 
-![Catalogue Global](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_Catalogue_global_1.png)
+![Catalogue Global](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_Catalogue_global_01.png)
 
-![Catalogue Global](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_Catalogue_global_2.png)
+![Catalogue Global](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_Catalogue_global_02.png)
 
 ## Site de réplication
 
@@ -284,7 +285,7 @@ Click droit sur *[nom_serveur01]* et **Proprietes**, ajouter IP puis même chose
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Master\[nom_serveur]\Servers\Proprietes
 
-![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_1.png)
+![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_01.png)
 
 Après avoir crée les sites nous allons crée les sous_réseaux
 Click droit sur *subnet* **New Subnet**, il faut saisir la plage d'adresse et le masque dans notre cas 192.168.50.0/24
@@ -296,12 +297,12 @@ Click droit sur *DEFAULTIPSITELINK* dans Inter-site Transport\IP *Proprietes*
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Inter-site Transport\IP\DEFAULTIPSITELINK\Proprietes
 
-![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_2.png)
+![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_02.png)
 
 Nous pouvons constater que nos deux sites se trouvent bien dans le même lien et nous pouvons modifier la planification.  
 Dans notre cas je vais définir la planification de la réplication toutess les heures sauf le mercredi et le samedi.
 
-![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_3.png)
+![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_03.png)
 
 Nous pouvons ensuite vérifier notre réplication en la lançant manuellement sur le second site, dans **NTDS Settings** et faire **Replicate Configurations to the Selected DS**
 
@@ -309,9 +310,9 @@ Pour vérifier que tout c'est bien déroulé, nous pouvons vérifier en ligne de
 
     repadmin /Showrepl
 
-![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_4.png)
+![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_04.png)
 
-![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_5.png)
+![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_05.png)
 
 
 ## Création d'un OU
@@ -319,28 +320,28 @@ Pour vérifier que tout c'est bien déroulé, nous pouvons vérifier en ligne de
 Dans Active Directory Users ans Computers, nous allons crée une unité organisationnelle 'OU'
 Sur notre domaine effectuez un click droit puis **nouveau\Organisation Unit**
 
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_1.png)
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_2.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_01.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_02.png)
 
 Une fois l'OU **Holding** crée à la racine du domaine, nous allons crée trois OU **Compta, Marketing, Informatique** dans l'OU Holding.  
 Même opération que tout à l'heure click droit puis **nouveau\Organisation Unit**
 
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_3.png)
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_4.png)
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_5.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_03.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_04.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_05.png)
 
 ## Création des groupes de sécurités
 
 Une fois les *OU* crées, dans **compta** nous allons crée les groupes de sécurité **assistants** et **chefs comptables**  
 Click droit puis **nouveau\Group**
 
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_6.png)
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_7.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_06.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_07.png)
 
 Effectuer de nouveau la même opération pour crée les groupes **acceuil** et **assistantes** dans l'OU *marketing* et les groupes **developpeurs** et **techniciens** dans l'OU *informatique*  
 
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_8.png)
-![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_9.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_08.png)
+![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_09.png)
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_10.png)
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_11.png)
 
