@@ -48,3 +48,69 @@ Noms de variables:
 
 **caractères: char**  
     %c
+
+1) On appelle palindrome une suite de caractères qui se lit de la même façon dans les deux
+sens. Ecrire une fonction pour déterminer si un mot (représenté par un tableau de
+caractères) est un palindrome.
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main()
+    {
+    char mot[100];
+    printf ("Tapez un mot: ");
+    scanf ("%s",&mot);
+
+    if(palindrome(mot)==1)
+    {
+        printf("C'est un palindrome");
+    }
+
+    else
+    {
+        printf("Ce n'est pas un palindrome");
+    }
+    return 0;
+    }
+
+    int palindrome(char *mot)
+    {
+    int taille = strlen(mot);
+    int cpt;
+
+    for (cpt=0; cpt<taille/2; cpt++)
+    {
+    if(mot[cpt]!= mot[taille-cpt-1])
+    {
+     return 0;
+    }
+    }
+    return 1;
+    }
+
+2) Ecrire un programme qui lit une saisie d’une chaine de caractères puis affiche sa longueur
+(sans utiliser strlen()).
+
+3) Ecrire un programme qui demande la saisie de deux chaines de caractères et qui en créée
+une troisième en concaténant les deux chaines lues.
+
+4) Ecrire un programme qui demande la saisie de deux chaines de caractères et qui les
+compares pour indiquer si les deux chaines sont identiques ou pas.
+
+5) Ecrire un programme qui demande la saisie de deux chaines de caractères et d’un nombre
+entier. Le programme devra ensuite comparer les n (le nombre entier saisi) premiers
+caractères de chacune des chaines.
+
+6) Ecrire un programme qui demande la saisie de deux chaines de caractères et qui recherche la
+deuxième chaine dans la première. Le résultat attendu est du type oui/non
+
+7) Ecrire un programme qui demande la saisie d’une chaine de caractères et qui l’affiche en
+majuscules. Pour y parvenir, vous devrez manipuler les valeurs ASCII des caractères (voir
+table ASCII)
+
+8) Même question que pour la 7 mais en minuscule
+
+9) Ecrire un programme qui lit un verbe régulier en « er » au clavier et qui en affiche la
+conjugaison au présent de l’indicatif. Contrôlez s’il s’agit bien d’un verbe en « er » avant de le
+conjuguer. Vous pouvez utiliser les fonctions de string.h
