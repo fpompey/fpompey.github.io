@@ -164,21 +164,22 @@ Restart à la fin de l'installation.
 ## Installation d'un serveur standard
 
 Il faut effectuer le même type d'installation qu'effectué plus haut mais en version standard.  
-Une fois sur le serveur vous pouvez lancer le terminal
+Une fois connecté au serveur, vous pouvez lancer le terminal.
 
     cmd
 
-Ou bien effectuez les modification depuis l'interface graphique.  
+Ou bien effectuer les modifications depuis l'interface graphique.  
 Tout en bas à droite *Open Network and Sharing Center\Change adaptater ettings\[carte_ethernet]\Propriété\IPv4*  
-Modifiez les informations pour mettre en place une IPstatique ainsi que les DNS.
 
-*Dans mon cas nous allons configurer le serveur pompeyflorian02 comme rejoignant un domaine déjà existant sinon il suffit de suivre le tuto [içi](http://www.oameri.com/installer-un-controleur-de-domaine-active-directory-sous-windows-serveur-2012/) pour en crée un.*
+Modifier les informations pour mettre en place une IPstatique ainsi que les DNS.
 
-**Attention si il s'agit d'une création de domaine avec la forêt et le NetBIOS, les DNS doivent être l'IP de la machine elle même sinon il faut que les DNS soit celle de la machine source**, c'est à dire celle qui rejoint le domaine doit avoir les DNS ce la machine qui as crée l'AD, il faudra donc effectuer des modifications selon si vous avez crée depuis la machine Core ou depuis la machine avec l'interface visuelle.
+*Dans mon cas nous allons configurer le serveur pompeyflorian02 comme rejoignant un domaine déjà existant sinon il suffit de suivre le tuto [ici](http://www.oameri.com/installer-un-controleur-de-domaine-active-directory-sous-windows-serveur-2012/) pour en créer un.*
+
+**Attention si il s'agit d'une création de domaine avec la forêt et le NetBIOS, les DNS doivent être l'IP de la machine elle même sinon il faut que les DNS soit ceux de la machine source**, c'est à dire la machine qui rejoint le domaine doit avoir les DNS de la machine qui a créé l'AD, il faudra donc effectuer des modifications en fonction de ce que vous avez créé depuis la machine Core ou depuis la machine avec l'interface visuelle.
 
 ![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_01.png)
 
-Vous pouvez vérifier vos information via votre terminal
+Vous pouvez vérifier vos informations via votre terminal
 
     ipconfig /all
 
