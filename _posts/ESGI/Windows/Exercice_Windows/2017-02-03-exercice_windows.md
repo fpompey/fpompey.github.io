@@ -41,7 +41,7 @@ Dans ce TP nous allons mettre en place deux serveurs Windows 2012 R2 de deux fa�
 ## Installation d'un serveur version core
 
 Lancez le début d'une instalation classique en anglais.  
-Attention à bien mettre votre clavier en azerty si nécéssaire, cela pourra être changer plus tard en cas d'oubli.
+Attention à bien mettre votre clavier en azerty si nécessaire, cela pourra être changer plus tard en cas d'oubli.
 
 ![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_01.png)
 
@@ -128,19 +128,19 @@ Si on souhaite le changer il faut effectuer la commande
 
 ### Setup d'un mot de passe pour le compte administrator
 
-Une fois les paramètres réseaux nous allons mettre un mot de passe au compte administrator qui nous sera nécéssaire pour la partie avec Active Directory.
+Une fois les paramètres réseaux mis en place, nous allons mettre un mot de passe au compte administrator qui nous sera nécessaire pour la partie avec Active Directory.
 
     net user administrator *
 
 ![Changement de mot de passe](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Changement_mdp_administrator.png)
 
-L'installation de base sur Windows Server 2012 Core est terminé pour pouvoir effectuer la partie sur Active Directory.
+L'installation de base sur Windows Server 2012 Core est terminée pour pouvoir effectuer la partie sur Active Directory.
 
 ![Installation de base](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_base_07.png)
 
 ### Active Directory core
 
-Dans notre situation le serveur standard n'est pas encore configuré, nous allons donc crée la partie avec Active Directory.
+Dans notre situation le serveur standard n'est pas encore configuré, nous allons donc créer la partie avec Active Directory.
 
 Nous installons le rôle serveur Active Directory Domain Services :
 
@@ -441,4 +441,6 @@ Avec les membres présents dans le groupe
 Nous avons terminé la partie OU, utilisateur, groupes et les deux MMC possible à utiliser.  
 Nos Serveurs Windows 2012 R2 sont maintenant fonctionnelles et disposent d'un Active Directory configuré prêt à être utilisé.
 
-[Lien en ligne](portfolio.fpompey.com/exercice_windows/exercice_windows)
+Lien en ligne:
+
+    portfolio.fpompey.com/exercice_windows/exercice_windows
