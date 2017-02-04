@@ -439,3 +439,5 @@ Avec les membres présents dans le groupe
 
 Nous avons terminé la partie OU, utilisateur, groupes et les deux MMC possible à utiliser.  
 Nos Serveurs Windows 2012 R2 sont maintenant fonctionnelles et disposent d'un Active Directory configuré prêt à être utilisé.
+
+[Lien en ligne](portfolio.fpompey.com/exercice_windows/exercice_windows)
