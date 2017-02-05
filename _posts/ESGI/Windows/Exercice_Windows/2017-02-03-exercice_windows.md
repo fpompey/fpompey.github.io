@@ -185,10 +185,9 @@ Vous pouvez vérifier vos informations via votre terminal
 
 ![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_02.png)
 
-Vous pouvez également vérifier si vous arrivez bien à joindre votre domaine crée précédemment (depuis l'interface gui ou depuis le core)
+Vous pouvez également vérifier si vous arrivez bien à joindre votre domaine créé précédemment (depuis l'interface gui ou depuis le core)
 
 ![Installation Serveur Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Configuration_IP_Standard_03.png)
-
 Maintenant que la jonction est possible entre les deux serveurs nous allons faire rejoindre le second serveur au domaine.
 
 ## Ajout d'un serveur en tant que contrôleur de domaine dans le domaine existant
@@ -207,7 +206,8 @@ Nous installons le rôle serveur DNS
 
 ![Installation Active Directory Core](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_02.png)
 
-Install-ADDSDomainController -DomainName pompeyflorian.local  
+    Install-ADDSDomainController -DomainName pompeyflorian.local
+
 Il faudra saisir un mot de passe et valider, un redémarage sera requis.
 
 ### Version Standard
@@ -216,7 +216,7 @@ Nous allons ajouter le domaine contrôleur à un domaine existant.
 
 ![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_01.png)
 
-Configuration du serveur en tant que Catalogue Global sur le même site crée précédemment, le mot de passe DSRM est à mettre de coté en cas de panne Active Directory.
+Configuration du serveur en tant que Catalogue Global sur le même site créé précédemment, le mot de passe DSRM est à mettre de coté en cas de panne Active Directory.
 
 ![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_02.png)
 
@@ -240,15 +240,15 @@ Lancez l'installation
 
 ![Installation Active Directory Standard](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Install_Active_Directory_Standard_07.png)
 
-Le serveur va ensuite redémarrez.  
-Vos deux serveurs sont tous les deux controlleurs de domaine.
+Le serveur va ensuite redémarrer.    
+Vos deux serveurs sont tous les deux contrôlleurs de domaine.
 
 ![Jonction Active Directory](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Jonction_Active_Directory.png)
 
 
 ## Configuration du serveur en tant que Catalogue Global
 
-Il faut se rendre depuis le serveur avec l'interface visuelle sur **Active Directory Sites and services**
+Il faut se rendre depuis le serveur avec l'interface visuelle sur **Active Directory Sites and services**.  
 Dérouler l'arborescense *Sites and services Active Directory\Sites\nom_site\Serveurs* jusqu'à trouver votre serveur.
 Sur votre serveur, sur l'option Paramètres NTDS cliquer sur propriétés.
 
@@ -261,47 +261,47 @@ Activer ou désactiver le Catalogue global.
 ## Site de réplication
 
 Par défaut les liens de connexions intra-sites portent le nom *automatically generated*, un seul site *Default-First-Site-Name* et un lien inter site *DefaultIPSiteLink*.  
-Dans notre cas nous disposons de deux controlleurs de domaines sur un même site, nous allons donc en crée un second pour en définir un comme master et le second comme Slave.
+Dans notre cas nous disposons de deux contrôlleurs de domaines sur un même site, nous allons donc en créer un second pour en définir un comme master et le second comme Slave.
 La réplication intersites va s'effectuer ou via *IP* ou via *SMTP*, dans notre cas nous allons choisir via **IP**
 
 Il faut se rendre depuis le serveur avec l'interface visuelle sur **Active Directory Sites and services**
 
-Dans un premier temps, nous allons renommer le site par défaut avec le nom de son choix, pour ma part il s'appellera **Master** pour le serveur Core.  
+Dans un premier temps, nous allons renommer le site par défaut avec le nom de son choix, pour ma part il s'appellera **Master** pour le serveur Core.    
 Click droit sur *Default-First-Site-Name* et rename.
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Default-First-Site-Name
 
-Pour le second nous allons le crée et il s'appellera **Slave**
+Pour le second nous allons le crée et il s'appellera **Slave**  
 Click droit sur *Site* et **New\Site**
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\New\Site
 
-Nous pouvons maintenant déplacer un des serveurs sur le site précédemment crée  
+Nous pouvons maintenant déplacer un des serveurs sur le site précédemment créé    
 Click droit sur *[nom_serveur02]* et **Move** vers **Slave**
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Master\Servers\[nom_serveur02]\Move\Slave
 
-Une fois que le serveur se trouve bien sur le second site nous allons activer la réplication via IP  
+Une fois que le serveur se trouve bien sur le second site nous allons activer la réplication via IP    
 Click droit sur *[nom_serveur01]* et **Proprietes**, ajouter IP puis même chose sur *[nom_serveur02]*
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Master\[nom_serveur]\Servers\Proprietes
 
 ![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_01.png)
 
-Après avoir crée les sites nous allons crée les sous_réseaux
+Après avoir créé les sites nous allons mettre en place les sous_réseaux  
 Click droit sur *subnet* **New Subnet**, il faut saisir la plage d'adresse et le masque dans notre cas 192.168.50.0/24
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Subnet\New Subnet
 
-Puisque nous avons choisi d'effectuer la réplication via l'IP, nous allons devoir modifier **DEFAULTIPSITELINK**  
+Puisque nous avons choisi d'effectuer la réplication via l'IP, nous allons devoir modifier **DEFAULTIPSITELINK**    
 Click droit sur *DEFAULTIPSITELINK* dans Inter-site Transport\IP *Proprietes*
 
     Active Directory Sites and Services[nom_domaine_controller]\Sites\Inter-site Transport\IP\DEFAULTIPSITELINK\Proprietes
 
 ![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_02.png)
 
-Nous pouvons constater que nos deux sites se trouvent bien dans le même lien et nous pouvons modifier la planification.  
-Dans notre cas je vais définir la planification de la réplication toutess les heures sauf le mercredi et le samedi.
+Nous pouvons constater que nos deux sites se trouvent bien dans le même lien et nous pouvons modifier la planification.    
+Dans notre cas je vais définir la planification de la réplication toutes les heures sauf le mercredi et le samedi.
 
 ![Site Réplication](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Site_réplication_03.png)
 
@@ -318,13 +318,13 @@ Pour vérifier que tout c'est bien déroulé, nous pouvons vérifier en ligne de
 
 ## Création d'un OU
 
-Dans Active Directory Users ans Computers, nous allons crée une unité organisationnelle 'OU'
-Sur notre domaine effectuez un click droit puis **nouveau\Organisation Unit**
+Dans Active Directory Users ans Computers, nous allons créer une unité organisationnelle **OU**    
+Sur notre domaine effectuer un click droit puis **nouveau\Organisation Unit**
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_01.png)
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_02.png)
 
-Une fois l'OU **Holding** crée à la racine du domaine, nous allons crée trois OU **Compta, Marketing, Informatique** dans l'OU Holding.  
+Une fois l'OU **Holding** créé à la racine du domaine, nous allons mettre en place trois OU **Compta, Marketing, Informatique** dans l'OU Holding.      
 Même opération que tout à l'heure click droit puis **nouveau\Organisation Unit**
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_03.png)
@@ -333,13 +333,13 @@ Même opération que tout à l'heure click droit puis **nouveau\Organisation Uni
 
 ## Création des groupes de sécurités
 
-Une fois les *OU* crées, dans **compta** nous allons crée les groupes de sécurité **assistants** et **chefs comptables**  
+Une fois les *OU* créés, dans **compta** nous allons mettre en place les groupes de sécurité **assistants** et **chefs comptables**    
 Click droit puis **nouveau\Group**
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_06.png)
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_07.png)
 
-Effectuer de nouveau la même opération pour crée les groupes **acceuil** et **assistantes** dans l'OU *marketing* et les groupes **developpeurs** et **techniciens** dans l'OU *informatique*  
+Effectuer de nouveau la même opération pour créer les groupes **acceuil** et **assistantes** dans l'OU *marketing* et les groupes **developpeurs** et **techniciens** dans l'OU *informatique*  
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_08.png)
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_09.png)
@@ -348,9 +348,9 @@ Effectuer de nouveau la même opération pour crée les groupes **acceuil** et *
 
 ## Créations des utilisateurs
 
-Maintenant que tous nos groupes ont été crée nous allons ajouter des utilisateurs.  
-Nous allons crée quatres utilisateurs, il faut se rendre dans l'OU ou l'on souhaite crée l'utilisateur puis effectuez un click droit **nouveau\users**
-Renseignez les informations nécéssaire, attention à bien cocher la case pour que le **mot de passe n'expire jamais** puis finish.
+Maintenant que tous nos groupes ont été configurés, nous allons ajouter des utilisateurs.  
+Nous allons créer quatres utilisateurs, il faut se rendre dans l'OU ou l'on souhaite mettre en place l'utilisateur puis effectuez un click droit **nouveau\users**    
+Renseignez les informations nécessaire, attention à bien cocher la case pour que le **mot de passe n'expire jamais** puis finish.
 
 Utilisateurs Julien DROUET :
 
@@ -403,7 +403,7 @@ Onglet **Member of** pour voir les utilisateurs présent dans le groupe
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_30.png)
 
-Nous avons désormais fini de crée les utilisateurs dans les **OU** et **groupes** pour nos deux contrôleurs de domaines
+Nous avons désormais fini de créer les utilisateurs dans les **OU** et **groupes** pour nos deux contrôleurs de domaines
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_31.png)
 
@@ -415,13 +415,13 @@ L'arborescence du groupe Informatique
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_33.png)
 
-Nous pouvons également effectuer ces actions et modification depuis le MMC **Active Directory Administratice Center**
+Nous pouvons également effectuer ces actions et modifications depuis le MMC **Active Directory Administratice Center**
 
 Arborescence du groupe Informatique
 
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_34.png)
 
-Pour modifier les information d'un utilisateur click droit sur lui et avoir des informations tel que :
+Pour modifier les informations d'un utilisateur click droit sur lui et avoir des informations tel que :
 
 Modification d'un utilisateur
 
@@ -440,7 +440,7 @@ Avec les membres présents dans le groupe
 ![Création OU](http://portfolio.fpompey.com/images/ESGI/TP_Windows_Server/Création_OU_38.png)
 
 Nous avons terminé la partie OU, utilisateur, groupes et les deux MMC possible à utiliser.  
-Nos Serveurs Windows 2012 R2 sont maintenant fonctionnelles et disposent d'un Active Directory configuré prêt à être utilisé.
+Nos Serveurs Windows 2012 R2 sont maintenant fonctionnels et disposent d'un Active Directory configuré prêt à être utilisé.
 
 Lien en ligne:
 
