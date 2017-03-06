@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Notes Eric"
-teaser: "Notes Eric lors de la semaine du 10 Octobre 2016"
+title:  "Cours Linux"
+teaser: "Cours Linux lors de la semaine du 10 Octobre 2016"
 breadcrumb: false
 tags:
     - ESGI
@@ -11,7 +11,6 @@ categories:
     - cours_linux
 show_meta: false
 ---
-
 
 Gestion des droits sur un fichier  
 on peut les gérer pour un utilisateur, pour un groupe et pour les autres  

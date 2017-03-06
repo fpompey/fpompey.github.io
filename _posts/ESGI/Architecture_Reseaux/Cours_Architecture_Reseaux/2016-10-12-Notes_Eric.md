@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Notes Eric"
-teaser: "Notes Eric lors de la semaine du 10 Octobre 2016"
+title:  "Cours Architecture et Réseaux"
+teaser: "Cours Architecture et Réseaux lors de la semaine du 10 Octobre 2016"
 breadcrumb: false
 tags:
     - esgi

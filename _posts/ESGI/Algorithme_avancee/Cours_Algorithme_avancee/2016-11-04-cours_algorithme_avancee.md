@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Algorithme avancée"
-teaser: "Algorithme avancée lors de la semaine du 10 Octobre 2016"
+title:  "Cours Algorithme avancée"
+teaser: "Cours Algorithme avancée lors de la semaine du 10 Octobre 2016"
 breadcrumb: false
 tags:
     - esgi
