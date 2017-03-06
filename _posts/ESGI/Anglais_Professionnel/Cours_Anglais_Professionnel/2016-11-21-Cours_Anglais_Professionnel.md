@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Cours Anglais Proffessionnel"
-teaser: "Cours Anglais Proffessionnel lors de la semaine du 21 Novembre 2016"
+title:  "Cours Anglais Professionnel"
+teaser: "Cours Anglais Professionnel lors de la semaine du 21 Novembre 2016"
 breadcrumb: false
 tags:
     - esgi
