@@ -53,6 +53,8 @@
     url: "/esgi/windows/"
 -   title: "Langage Scripting Shell & Python"
     url: "/esgi/langage_script_shell_python/"
+-   title: "Langage Scripting Shell & Python"
+    url: "/esgi/cloud_computing/"
 #- title: P2 Fourniture de services
 #  url: "/P2/"
 #  side: left
