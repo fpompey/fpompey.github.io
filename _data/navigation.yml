@@ -25,18 +25,10 @@
   dropdown:
   - title: "Linux"
     url: "/esgi/linux/"
-      # dropdown:
-        #- title: "Cours Linux"
-        #  url: "/ESGI/Linux/Cours_Linux"
-        #- title: "Exercice Linux"
-        #  url: "/ESGI/Linux/Exercice_Linux"
+
   - title: "Architecture et Réseaux"
     url: "/esgi/architecture_reseaux/"
-      # dropdown:
-        #- title: "Cours Architecture et Réseaux"
-        #  url: "/ESGI/Architecture&Reseaux/Cours_Architecture&Reseaux"
-        #- title: "Exercice Architecture et Réseaux"
-        #  url: "/ESGI/Architecture&Reseaux/Exercice_Architecture&Reseaux"
+
   - title: "Nagios"
     url: "/esgi/nagios/"
 
@@ -45,6 +37,12 @@
 
   - title: "Algorithme avancée"
     url: "/esgi/algorithme_avancee/"
+
+  - title: "Langage Scripting Shell & Python"
+    url: "/esgi/langage_script_shell_python/"
+
+  - title: "Langage Scripting Shell & Python"
+    url: "/esgi/cloud_computing/"
 
   - title: "Programation C"
     url: "/esgi/programation_c/"
@@ -57,75 +55,6 @@
 
   - title: "Windows"
     url: "/esgi/windows/"
-
--   title: "Langage Scripting Shell & Python"
-    url: "/esgi/langage_script_shell_python/"
-    
--   title: "Langage Scripting Shell & Python"
-    url: "/esgi/cloud_computing/"
-#- title: P2 Fourniture de services
-#  url: "/P2/"
-#  side: left
-
-#- title: "Templates"
-#  url: "/design/"
-#  side: left
-#  dropdown:
-#  - title: "Grid & Colors"
-#    url: "/design/grid/"
-#  - title: "Typography"
-#    url: "/design/typography/"
-#  - title: "Page/Post"
-#    url: "/design/page/"
-#  - title: "Post-Left-Sidebar"
-#    url: "/design/post-left-sidebar/"
-#  - title: "Post-Right-Sidebar"
-#    url: "/design/post-right-sidebar/"
-#  - title: "Page Full-Width"
-#    url: "/design/page-fullwidth/"
-#  - title: "Blog-Page"
-#    url: "/blog/"
-#  - title: "Video"
-#    url: "/design/video/"
-#  - title: "Gallery"
-#    url: "/design/gallery/"
-#  - title: "Portfolio"
-#    url: "/design/portfolio/"
-
-#- title: "Header Styles"
-#  url: "/headers/"
-#  side: left
-#  dropdown:
-#  - title: "Header with Full-Width-Image"
-#    url: "/design/header-full-width-image/"
-#  - title: "Header with Image and Pattern"
-#    url: "/design/header-image-pattern/"
-#  - title: "Header with image and color"
-#    url: "/design/header-image-color/"
-#  - title: "Header Only With Logo"
-#    url: "/design/header-logo-only/"
-#  - title: "Header With Text"
-#    url: "/design/header-with-text/"
-#  - title: "No Header"
-#    url: "/design/no-header/"
-#  - title: "No Header but Image"
-#    url: "/design/no-header-but-image/"
-
-#- title: Documentation
-#  url: "/documentation/"
-#  side: left
-#  dropdown:
-#  - title: "Changelog"
-#    url: "/changelog/"
-#  - title: "Roadmap"
-#    url: "/roadmap/"
-
-#- title: Blog
-#  url: "/blog/"
-#  side: left
-#  dropdown:
-#  - title: "Blog Archive"
-#    url: "/blog/archive/"
 
 - title: "Recherchez"
   url: "/recherchez/"
