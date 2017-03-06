@@ -5,9 +5,9 @@ teaser: "Exercices Langage de scripting Shell et Python lors de la semaine du 06
 breadcrumb: false
 tags:
     - esgi
-    - langage_script_shell_python
+    - langage_scripting_shell_python
     - cours
 categories:
-    - exercice_langage_script_shell_python
+    - exercice_langage_scripting_shell_python
 show_meta: false
 ---
