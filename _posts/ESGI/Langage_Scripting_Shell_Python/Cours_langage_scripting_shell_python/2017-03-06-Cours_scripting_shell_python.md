@@ -5,9 +5,9 @@ teaser: "Cours Langage de scripting Shell et Python lors de la semaine du 06 Mar
 breadcrumb: false
 tags:
     - esgi
-    - langage_script_shell_python
+    - langage_scripting_shell_python
     - cours
 categories:
-    - cours_langage_script_shell_python
+    - cours_langage_scripting_shell_python
 show_meta: false
 ---
