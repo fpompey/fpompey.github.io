@@ -131,26 +131,101 @@ Effectuer les actions suivantes :
  - Afficher la sous liste du 3ieme liste à la fin de la liste
  - Afficher le dernier élément en utilisant un indiçage négatif
 
-Resultat (en cours):
+     Ma_liste=[17,20,38,26,68,45]
 
-    list=[17,20,38,26,68,45] # Définis la liste
-    print(list)              # Affiche la liste
-    list.sort()              # Tri la liste
-    print(list)              # Affiche la liste
-    list.append(17)          # Ajout de l'élément 17 à la fin de la liste
-    print(list)              # Affiche la liste
-    print(list.count(17))    # Affiche le nombre d'occurence de l'élément 17
-    list.reverse()           # Inverse la liste
-    print(list)              # Affiche la liste
-    print(len(list))         # Affichage de la taille de la liste
-    # print(list[10])          # Affichage de l'élément dans la liste
-    list.del(30)
-    print(list)
+     print("Ma liste initiale :", Ma_liste)
+     Ma_liste.sort()
+     print("Ma liste triée :", Ma_liste)
+     print("Nombre d'occurences de 17 :", Ma_liste.count(17))
+     Ma_liste.reverse()
+     print("Ma liste inversée :", Ma_liste)
+     print("Taille de la liste :", len(Ma_liste))
+     #print(Ma_liste.index(10))  #10 n'existe pas? Exception générée
+     if 10 in Ma_liste:
+         print("True", Ma_liste.index(10))
+     else :
+         print("False, l'élément 10 n'existe pas dans ma liste)
+
+     print("Indice de 38 :", Ma_liste.index(38))
+     Ma_liste.remove(38)
+     print("Ma liste après suppression de 38 :", Ma_liste)
+     print("Du 3ème au 4ème élément :")
+     print(Ma_liste[2:4])
+     print("La sous liste à partir du début au 2ème élément d'indice 1 :")
+     print(Ma_liste[:2])
+     print("La sous liste à partir du 3ème élément jusqu'à la fin")
+     print(Ma_liste[2:])
+     print("Dernier élément par indiçage négatif")
+     print(Ma_liste[-1])
+
+Résultat
+
+    Ma liste initiale : [17, 20, 38, 26, 68, 45]
+    Ma liste triée : [17, 20, 26, 38, 45, 68]
+    Nombre d'occurences de 17 : 1
+    Ma liste inversée : [68, 45, 38, 26, 20, 17]
+    Taille de la liste : 6
+    False, l'élément 10 n'existe pas dans ma liste
+    Indice de 38 : 2
+    Ma liste après suppression de 38 : [68, 45, 26, 20, 17]
+    Du 3ème au 4ème élément :
+    [26, 20]
+    La sous liste à partir du début au 2ème élément d'indice 1 :
+    [68, 45]
+    La sous liste à partir du 3ème élément jusqu'à la fin
+    [26, 20, 17]
+    Dernier élément par indiçage négatif
+    17
 
 
 ## Exerice 3 :
 
 Utiliser une liste en intension pour obtenir la liste [ad,ae,bd,be,cd,ce] à partir des chaînes abc et de en utilisant une version en extension avec deux boucles for imbriquées, puis une version en intension.
+
+    my_list=[]                       #déclaration de la liste vide
+
+    print("2 versions avec deux boucles imbriquées :")
+
+
+    #--------------------- Version 1
+
+
+    #list1=['a','b','c']
+    #list2=['d','e']
+    #
+    #for i in list1:
+    #    for j in list2:
+    #        my_list.append(i+j)
+    #
+    #print(my_list)
+
+
+    #--------------------- Version 2
+
+
+    for i in "abc":
+        for j in "de":
+            my_list.append(i+j)
+    print(my_list)
+
+
+    #--------------------- Version en intension, compactée
+
+
+    print("\nVersion en intention\n")
+
+    ma_liste=[i+j for i in "abc" for j in "de"]   #variable ma_liste initialisée en même temps
+
+    print(ma_liste)
+
+Résultat:
+
+2 versions avec deux boucles imbriquées :
+['ad', 'ae', 'bd', 'be', 'cd', 'ce']
+
+Version en intention
+
+['ad', 'ae', 'bd', 'be', 'cd', 'ce']
 
 ## Exerice 4 :
 
