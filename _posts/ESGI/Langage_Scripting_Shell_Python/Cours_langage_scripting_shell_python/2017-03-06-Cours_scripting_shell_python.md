@@ -12,6 +12,25 @@ categories:
 show_meta: false
 ---
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Synopsis](#synopsis)
+	- [Implémentations](#implmentations)
+	- [Structure d'un programme Python](#structure-dun-programme-python)
+	- [Convention de nommage](#convention-de-nommage)
+	- [Les mots réservés](#les-mots-rservs)
+	- [Opérateurs principaux](#oprateurs-principaux)
+	- [Le type chaine](#le-type-chaine)
+	- [Les entrés / sorties](#les-entrs-sorties)
+	- [Instructions](#instructions)
+	- [Instructions conditionnelles :](#instructions-conditionnelles-)
+	- [Les itérations](#les-itrations)
+	- [Techniques Fonctionnelles](#techniques-fonctionnelles)
+	- [Modules Python](#modules-python)
+	- [Les Listes](#les-listes)
+
+<!-- /TOC -->
+
 # Synopsis
 
 Python est un logiciel OpenSource, dérivé du C et du Java en fin d'année 1980. Python est présent dans de nolbreux llogiciels tels que les annuairesLDAP, langage de prédilection pour XML, inclus dans Open Office...
