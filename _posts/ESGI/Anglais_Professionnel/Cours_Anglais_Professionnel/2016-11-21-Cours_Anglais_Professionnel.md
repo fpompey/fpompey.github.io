@@ -13,12 +13,22 @@ show_meta: false
 ---
 Everyone ou nobody toujours 3ème persone du singulier
 
-Présent simple = Habitude => I work
+Présent simple = Habitude ou vérité général => I work
 Action en cours => I am working
 Futur => I will work
 Conditionnel => I would work
-Passé simple = Action terminé => I worked
-Passé simple = Action toujours d'actualité => I have worked
+Passé simple = Action terminé => I worked (I was working)
+Passé simple = Action toujours d'actualité => I have worked (I have been working)
+
+Passé antérieur = I had wordek
+Futur antérieur = I will have worked
+
+I have been woking for this company since 2010
+
+If I were a boy = Cas partiulier
+
+To rise - rose - risen (se lever pour une personne)
+To raise - raised-raised (se lever pour quelquechose something)
 
 Different companies
 **S** à la 3ème personne (he works, he does)
