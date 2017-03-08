@@ -12,6 +12,12 @@ categories:
 show_meta: false
 ---
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Exercice 1](#exercice-1)
+
+<!-- /TOC -->
+
 # Exercice 1
 
 Créer un tableau de 5 entiers

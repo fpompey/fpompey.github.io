@@ -28,6 +28,10 @@ show_meta: false
 	- [Techniques Fonctionnelles](#techniques-fonctionnelles)
 	- [Modules Python](#modules-python)
 	- [Les Listes](#les-listes)
+	- [Les n-uplets (tuple)](#les-n-uplets-tuple)
+	- [Les tableaux](#les-tableaux)
+	- [Les ensembles (set)](#les-ensembles-set)
+	- [Les dictionnaires (dict)](#les-dictionnaires-dict)
 
 <!-- /TOC -->
 
@@ -233,3 +237,125 @@ Un module est importé par le mot **import**
 **Résultat:**
 
 ![Liste 3](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Liste3.png)
+
+## Les n-uplets (tuple)
+
+ - Un **n-uplet** est une structure de données très flexible, ordonnée et non modifiable.
+  - Elle peux contenir des valeurs de types différents.
+
+![N-Uplet 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/N-Uplet1.png)
+
+![N-Uplet 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/N-Uplet2.png)
+
+![N-Uplet 3](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/N-Uplet3.png)
+
+![N-Uplet 4](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/N-Uplet4.png)
+
+![N-Uplet 5](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/N-Uplet5.png)
+
+## Les tableaux
+
+ - Le tableau associatif est un type de données permettant de stocker des couples *(clé:valeur)* dont l'accès se fait par la **clé**.
+  - La clé n'apparait qu'une fois dans le tableau.
+  - La clé peux être définie par l'opérateur **in**
+  - Le nombre de couples est calculé par la fonction **len()**
+
+## Les ensembles (set)
+
+ - Un sensemble est une collection non ordonnée d'éléments.
+ - Les opérations sur les ensembles sont : **l'intersection, l'union, la différence**
+
+![Ensemble 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Ensemble1.png)
+
+## Les dictionnaires (dict)
+
+ - Un dictionnaire est une collection de couples **(clé:valeur)** qui n'occupent pas un ordre immuable.
+ - Comme les listes lesdictionnaires sont modifiables.
+ - Une clé peux être alphabétique,numérique ou tout type hashable ou table de hachage.
+
+![Dictionnaire 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Dictionnaire1.png)
+
+![Dictionnaire 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Dictionnaire2.png)
+
+![Dictionnaire 3](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Dictionnaire3.png)
+
+![Dictionnaire 4](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Dictionnaire4.png)
+
+## Les fichiers
+
+ - Un module ou librairie Python est un fichier contenant des définitions et des instructions Python.
+ - Un paquetage est une collection de modules.
+ - Il est possible d’importer des fichiers (.py ou .pyc) comme des modules ou une hiérarchie de modules complexes.
+ - Un module est un bloc , il possède son espace de nommage.
+ - Il peut contenir des variables, des fonctions, des classes et d’autres modules
+
+**Exemple d'importation :**
+
+    import monmodule
+    from monmodule import mafonction
+
+Autotest:
+
+![Autotest](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Autotest.png)
+
+Importation:
+
+![Importation](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Importation.png)
+
+Ouverture d'un fichier
+
+![Ouverture](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Ouverture.png)
+
+ - Le fichier texte **fich.txt** est ouvert en lecture par défaut.
+ - La primitive **type()** précise que **f** est un objet structure d’entrée /sortie.
+ - La méthode **mro()** (Method Resolution Order) permet d’obtenir l’ordre dans lequel les méthodes et attributs sont recherchés dans les déclarations de classes (héritage)
+ - La méthode **dir()** liste les méthodes et les attributs que l’objet **f** intègre.
+ - La méthode **open** (nom du fichier, mode d’ouverture) renvoie un objet : descripteur de fichier **f**
+ - Le mode d’ouverture précise les opérations à effectuer sur le fichier :
+
+![Ouverture 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Ouverture2.png)
+
+Méthode de lecture:
+
+![Lecture](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Lecture.png)
+
+Ecrire dans un fichier:
+
+![Ecriture](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Ecriture.png)
+
+Se déplacer:
+
+![Deplacer](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Deplacer.png)
+
+![Deplacer 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Deplacer2.png)
+
+Exemple:
+
+![Exemple 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple1.png)
+
+![Resultat](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple2.png)
+
+**Méthodes:**
+
+ - f.read() : lit tout le contenu du fichier f et le renvoie sous
+ - forme de chaines de caractères.
+ - f.readline() : lit une ligne du fichier.
+ - f.readlines : lit tout le contenu du fichier et le renvoie sous forme d’une liste de chaines de caractères avec ‘\n’
+
+ - f.write(chaine) : écrit la chaine indiquée dans le fichier
+ - f.writelines(séquence) : écrit les chaines composant la séquence (liste, ensembles…) de chaines données dans le fichier f.
+ - f.tell() : affiche la position où en est la lecture du fichier.
+ - f.seek(n): permet de se déplacer au nième caractère (octet).
+
+ - f.mode : renvoie le mode d'ouverture du fichier,
+ - f.closed : True si le fichier est fermé, False sinon
+ - f.name() : renvoie le nom du fichier
+ - f.fileno() : est un numéro d'ouverture de fichier
+
+ - f.close() : referme un fichier ouvert et enregistre un fichier créé ou édité ('w')
+ - id( f ) : donne l'identifiant de la variable f.
+ - hash(f ) : donne l'identifiant de la donnée contenue dans la variable f.
+
+![Exemple 3](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple3.png)
+
+![Resultat 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple4.png)

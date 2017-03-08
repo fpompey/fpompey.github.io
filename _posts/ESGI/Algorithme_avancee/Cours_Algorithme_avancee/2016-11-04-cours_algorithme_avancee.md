@@ -12,13 +12,21 @@ categories:
 show_meta: false
 ---
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Structure de données](#structure-de-donnes)
+	- [Comment évoluer un algo ?](#comment-voluer-un-algo-)
+	- [Définition:](#dfinition)
+
+<!-- /TOC -->
+
 # Structure de données
   1. Tableau
   2. Liste/pile/file
   3. arbre (AB,ABR,AB+)
   4. Graphe
 
-# Comment évoluer un algo ?
+## Comment évoluer un algo ?
   1. Calcul de complexité
   2. Récursivité
 
@@ -49,7 +57,7 @@ Collection d'élements de même type, taille finie / infinie, ordonnée les doub
 
 Collection d'élements avec une relation d'ordre, un ensemble de noeusds avec un ensemble d'arête et de pic
 
-# Définition:
+## Définition:
 
 taille = nombre de noeuds  
 hauteur = nombre de branches qui separent la racine de la feuille la plus éloigné (hauteur de l'arbre vide = -1)   

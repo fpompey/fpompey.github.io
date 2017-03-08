@@ -11,3 +11,9 @@ categories:
     - cours_cloud_computing
 show_meta: false
 ---
+
+SaaS => EIM Incidents Messaging Tasks Waste
+
+PaaS => App development Dashboards Integration
+
+Iaas => Networking Security System-management Scalability

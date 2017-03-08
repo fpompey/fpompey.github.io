@@ -12,6 +12,17 @@ categories:
 show_meta: false
 ---
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [TP Pyhton](#tp-pyhton)
+	- [Exerice 1 :](#exerice-1-)
+	- [Exerice 2 :](#exerice-2-)
+	- [Exerice 3 :](#exerice-3-)
+	- [Exerice 4 :](#exerice-4-)
+	- [Exercice 5 :](#exercice-5-)
+
+<!-- /TOC -->
+
 # TP Pyhton
 
 ## Exerice 1 :
@@ -95,7 +106,7 @@ Correction :
     **print(list6)**              # Affichage de la liste6
     **print(list1)**              # Affichage de la liste1
 
-Résultat :
+**Résultat :**
 
     ['vendredi', 19, 'avril']
     vendredi
@@ -133,32 +144,34 @@ Effectuer les actions suivantes :
 
      Ma_liste=[17,20,38,26,68,45]
 
-     print("Ma liste initiale :", Ma_liste)
-     Ma_liste.sort()
-     print("Ma liste triée :", Ma_liste)
-     print("Nombre d'occurences de 17 :", Ma_liste.count(17))
-     Ma_liste.reverse()
-     print("Ma liste inversée :", Ma_liste)
-     print("Taille de la liste :", len(Ma_liste))
+     print("Ma liste initiale :", Ma_liste)                                   # Affiche l'objet Ma_liste
+     Ma_liste.sort()                                                          # Trie l'objet Ma_liste
+     print("Ma liste triée :", Ma_liste)                                      # Affiche l'objet Ma_liste trié
+     print("Nombre d'occurences de 17 :", Ma_liste.count(17))                 # Affiche le nombre d'occurence de la valeur défini (17)
+     Ma_liste.reverse()                                                       # Inverse l'ordre de la liste
+     print("Ma liste inversée :", Ma_liste)                                   # Affiche l'objet Ma_liste inversé
+     print("Taille de la liste :", len(Ma_liste))                             # Affiche la taille de l'objet Ma_liste
+
      #print(Ma_liste.index(10))  #10 n'existe pas? Exception générée
-     if 10 in Ma_liste:
-         print("True", Ma_liste.index(10))
-     else :
-         print("False, l'élément 10 n'existe pas dans ma liste)
 
-     print("Indice de 38 :", Ma_liste.index(38))
-     Ma_liste.remove(38)
-     print("Ma liste après suppression de 38 :", Ma_liste)
-     print("Du 3ème au 4ème élément :")
-     print(Ma_liste[2:4])
-     print("La sous liste à partir du début au 2ème élément d'indice 1 :")
-     print(Ma_liste[:2])
-     print("La sous liste à partir du 3ème élément jusqu'à la fin")
-     print(Ma_liste[2:])
-     print("Dernier élément par indiçage négatif")
-     print(Ma_liste[-1])
+     if 10 in Ma_liste:                                                       # Si l'indice 10 existe dans l'objet Ma_liste
+         print("True", Ma_liste.index(10))                                    # Alors affiche Vrai
+     else :                                                                   # Sinon
+         print("False, l'élément 10 n'existe pas dans ma liste)               # Affiche Faux et informe l'utilisateur
 
-Résultat
+     print("Indice de 38 :", Ma_liste.index(38))                              # Affiche l'indice 38 dans l'objet Ma_liste
+     Ma_liste.remove(38)                                                      # Supprime l'indice 38
+     print("Ma liste après suppression de 38 :", Ma_liste)                    # Affiche l'objet Ma_liste sans l'indice 38
+     print("Du 3ème au 4ème élément :")                                       # Affiche la phrase
+     print(Ma_liste[2:4])                                                     # Affiche l'objet Ma_liste de l'élément 3 à 4  (26 20)  
+     print("La sous liste à partir du début au 2ème élément d'indice 1 :")    # Affiche la phrase
+     print(Ma_liste[:2])                                                      # Affiche l'objet Ma_liste du début à l'élément 2 (68 45)
+     print("La sous liste à partir du 3ème élément jusqu'à la fin")           # Affiche la phrase
+     print(Ma_liste[2:])                                                      # Affiche l'objet Ma_liste du 3ème élément à la fin (26 20 17)
+     print("Dernier élément par indiçage négatif")                            # Affiche la phrase
+     print(Ma_liste[-1])                                                      # Affiche Le dernier élément par indice négatif (17)
+
+**Résultat :**
 
     Ma liste initiale : [17, 20, 38, 26, 68, 45]
     Ma liste triée : [17, 20, 26, 38, 45, 68]
@@ -218,7 +231,7 @@ Utiliser une liste en intension pour obtenir la liste [ad,ae,bd,be,cd,ce] à par
 
     print(ma_liste)
 
-Résultat:
+**Résultat:**
 
 2 versions avec deux boucles imbriquées :
 ['ad', 'ae', 'bd', 'be', 'cd', 'ce']
@@ -234,9 +247,177 @@ Exemple « Mais ou est passé Paul ? Paul est au ciné »
 
     Donc Dico[paul]=2
 
+
+    # Version programme principal
+
+    Mon_dico={}
+    Phrase=input("Saisir votre phrase :")
+    Ma_liste=Phrase.split()
+    print(Ma_liste)
+
+    # Utiliser count()
+    for mot in Ma_liste:
+        Mon_dico[mot]=Ma_liste.count(mot)
+    print(" Voici Mon_dico version 1:\n ")
+    print(Mon_dico)
+
+    # ou bien autre possibilité    
+    ##for mot in Ma_liste:
+    ##    if mot in Mon_dico:
+    ##        Mon_dico[mot]+=1
+    ##    else:
+    ##        Mon_dico[mot]=1
+    ##
+    ##print(" Voici Mon_dico version 2 :\n ")
+    ##print(Mon_dico)
+
+
+
+    #####################  version  Méthode ############################
+
+    def CptMots(texte):  # fonction compte mots
+        dico={}
+        listeMots=texte.split()  # extraire les mots de la chaine récupérés dans la liste
+        print(listeMots)
+        # Une version sans le count()
+        for mot in listeMots:
+            if mot in dico:
+                dico[mot]=dico[mot]+1
+            else:
+                dico[mot]=1
+        print("Voici le second dictionnaire :\n")
+        print(dico, '\n')
+        return dico
+
+
+    # Programme principal
+    resultat=CptMots("je ne veux pas aller ou vous allez , je ne veux pas ")
+    print(resultat)
+
+    #  autre version
+    print("Affichage des clés/valeurs :\n")
+    for clé in resultat.keys():
+        print("Clé:", clé ,"--> Valeur correspondante :", resultat[clé])
+    print("--------------------------------------------------\n")
+
+    print("Affichage des clés :\n")
+    for valeur in resultat.values():
+        print("-->", valeur)
+
+    dic={}
+    clé="toto "+"titi"  # clé composée
+    dic[clé]="pwd1"
+    print(dic.keys())
+
+**Résultat :**
+
+    Saisir votre phrase :Mais ou est passé Paul ? Paul est au ciné
+
+    ['Mais', 'ou', 'est', 'passé', 'Paul', '?', 'Paul', 'est', 'au', 'ciné']
+     Voici Mon_dico version 1:
+
+    {'Mais': 1, 'ou': 1, 'est': 2, 'passé': 1, 'Paul': 2, '?': 1, 'au': 1, 'ciné': 1}
+    ['je', 'ne', 'veux', 'pas', 'aller', 'ou', 'vous', 'allez', ',', 'je', 'ne', 'veux', 'pas']
+    Voici le second dictionnaire :
+
+    {'je': 2, 'ne': 2, 'veux': 2, 'pas': 2, 'aller': 1, 'ou': 1, 'vous': 1, 'allez': 1, ',': 1}
+
+    {'je': 2, 'ne': 2, 'veux': 2, 'pas': 2, 'aller': 1, 'ou': 1, 'vous': 1, 'allez': 1, ',': 1}
+    Affichage des clés/valeurs :
+
+    Clé: je --> Valeur correspondante : 2
+    Clé: ne --> Valeur correspondante : 2
+    Clé: veux --> Valeur correspondante : 2
+    Clé: pas --> Valeur correspondante : 2
+    Clé: aller --> Valeur correspondante : 1
+    Clé: ou --> Valeur correspondante : 1
+    Clé: vous --> Valeur correspondante : 1
+    Clé: allez --> Valeur correspondante : 1
+    Clé: , --> Valeur correspondante : 1
+    --------------------------------------------------
+
+    Affichage des clés :
+
+    --> 2
+    --> 2
+    --> 2
+    --> 2
+    --> 1
+    --> 1
+    --> 1
+    --> 1
+    --> 1
+    dict_keys(['toto titi'])
+
 ## Exercice 5 :
 
 1. Proposer une implémentation d’un annuaire de gestion des utilisateurs d’un réseau local avec le minimum (login/Password) avec le password hashé MD5.
 2. Justifier le choix de la structure de données.
 
 Minimum fonctionnel attendu : Création/consultation/MAJ et la suppression d’un user.
+
+## Exercice 6
+
+*Exemple de génération aléatoire de mots de passe*
+import random
+import string
+
+liste_caractères=string.ascii_letters+string.digits
+print("Les caractères utilisés", liste_caractères)
+
+passwd=""
+for i in range(8):
+    passwd+=liste_caractères[random.randint(0, len(liste_caractères)-1)]
+
+print("Le Mot de pass généré :",passwd)
+
+
+*Exemple de code de hashage*
+import hashlib
+
+*hashage avec md5*
+print(dir(hashlib))
+m=hashlib.md5()  # m object à hasher
+m.update(b'1ier message')
+m.update(b'2ieme message')
+
+print(" le hasage:",m.digest())
+print('taille du hasché 1 :' ,m.digest_size)
+print('taille bloc utilisé par md5 :', m.block_size)
+
+*Hashage avec un autre alogorithme en version hexadécimal : sha224*
+d=hashlib.sha224()
+d.update(b'1ier message a hasher 2ieme message a hasher')
+
+print("le hashage :", d.hexdigest())
+print('taille du hasché 2 :' ,d.digest_size)
+print('taille bloc utilisé par sha224 :', d.block_size)
+
+*hexdigest() méthode similaire à digest() mais renvoie une chaine en hexa*
+*plus longue , digest() renvoie des bytes*
+
+*vérification de l'intégration d'un mot de passe après un test de saisie 3 fois*
+
+import hashlib
+
+from getpass import getpass
+pwd = getpass("Tapez le mot de passe :  ")
+
+mot_de_passe = b"ESGI2017"  # mot de passe d'accès stocké
+
+mot_de_passe_chiffre = hashlib.md5(mot_de_passe).hexdigest()
+print("mot de pass hashé: " , mot_de_passe_chiffre)
+
+for i in range(3):
+    #saisie à améliorer avec IDLE
+    #pwd = getpass("Tapez le mot de passe :  ")
+    pwd=input("Tapez le mot de passe :")
+    # On encode la saisie pour avoir un type bytes ou octets
+    pwd = pwd.encode()
+
+    pwd_chiffre = hashlib.md5(pwd).hexdigest()
+    if pwd_chiffre == mot_de_passe_chiffre:
+        print("Mot de passe correct.")
+        break
+    else:
+        print("Mot de passe incorrect.")
