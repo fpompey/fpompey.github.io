@@ -32,6 +32,7 @@ show_meta: false
 	- [Les tableaux](#les-tableaux)
 	- [Les ensembles (set)](#les-ensembles-set)
 	- [Les dictionnaires (dict)](#les-dictionnaires-dict)
+	- [Les fichiers](#les-fichiers)
 
 <!-- /TOC -->
 
