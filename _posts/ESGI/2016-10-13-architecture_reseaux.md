@@ -9,7 +9,7 @@ categories:
 show_meta: false
 ---
 
-# Cours coucou
+# Cours
 <ul>
     {% for post in site.categories.cours_architecture_reseaux %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
