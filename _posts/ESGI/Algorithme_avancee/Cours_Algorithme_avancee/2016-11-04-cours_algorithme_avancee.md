@@ -25,7 +25,6 @@ show_meta: false
   2. Liste/pile/file
   3. arbre (AB,ABR,AB+)
   4. Graphe
-  5. coucou ca va bien ?
 
 ## Comment évoluer un algo ?
   1. Calcul de complexité
