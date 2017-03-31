@@ -360,3 +360,71 @@ Exemple:
 ![Exemple 3](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple3.png)
 
 ![Resultat 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Exemple4.png)
+
+
+## Programmation réseaux
+
+Avec python nous pouvons :
+
+ - Communication entre machines en local et à distance.
+ - Passage par un proxy avec authentification.
+ - Téléchargement internet et gestion des cookies.
+ - Capture de trames.
+ - Scan de ports
+
+*Notions de sockets:*
+
+ - Un socket est un objet de communication défini par une adresse IP et un numéro de port.
+ - La création d’un socket fait appel au module socket.
+
+![Socket 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Socket1.png)
+
+Méthodes:
+
+ - socket.AF_INET: indique la famille d’adresses utilisée : adresses IP internet.
+ - socket.SOCK_STREAM : type de socket ou technique de communication en continue, réservée à TCP (fiable).
+ - socket.SOCK_DGRAM : communication en mode datagramme réservée à UDP.
+
+Exemple de création :
+
+    >>> s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+*Client TCP*
+
+ - Ouvrir un socket avec **socket()**.
+ - Etablir une connexion avec un serveur distant avec **connect()**.
+ - Envoyer des données avec **send()** ou en recevoir avec **recv()**.
+ - Terminer avec **close()**.
+
+![Client 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Client1.png)
+
+*Serveur TCP*
+
+ - Ouvrir une socket avec **socket()**.
+ - Faire correspondre un port et une adresse IP avec **bind()**.
+ - Attendre et écouter sur ce port avec **listen()**.
+ - Accepter une connexion entrante avec **accept()** qui permet d’obtenir un socket propre au client.
+
+ - Envoyer des données avec **send()** ou en recevoir avec **recv()**.
+ - Terminer la connexion avec le client à l’aide de **close()**.
+ - Fermer le socket du serveur avec **close()**.
+
+**Attention, les données échangées entre les machines sont des octets ou type byte.**
+
+ - Avant l’envoi, encoder le message avec la méthode **encode()** ou l’envoyer sous forme **b**’contenu message’
+ - Après réception, décoder le message avec la méthode **decode()**
+
+Exemple script générant des bytes:
+
+![Script Bytes 1](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Script_Bytes1.png)
+
+Résultats:
+
+![Script Bytes 2](http://portfolio.fpompey.com/images/ESGI/Langage_de_scripting_Shell_Python/Script_Bytes2.png)
+
+**Attention, par défaut, l'utilisation de sockets est bloquant, pas de tâches parallèles!!**
+
+Pour résoudre ce problème :
+
+ - Les sockets asynchrones (débit réseau)
+ - Les threads (traitement CPU)

@@ -20,6 +20,9 @@ show_meta: false
 	- [Exerice 3 :](#exerice-3-)
 	- [Exerice 4 :](#exerice-4-)
 	- [Exercice 5 :](#exercice-5-)
+	- [Exercice 6](#exercice-6)
+	- [Exercice 7](#exercice-7)
+	- [Exercice fin de projet](#exercice-fin-de-projet)
 
 <!-- /TOC -->
 
@@ -358,66 +361,214 @@ Minimum fonctionnel attendu : Création/consultation/MAJ et la suppression d’u
 
 ## Exercice 6
 
-*Exemple de génération aléatoire de mots de passe*
-import random
-import string
+Génération de mots de passe aléatoire:
 
-liste_caractères=string.ascii_letters+string.digits
-print("Les caractères utilisés", liste_caractères)
+    ###########Exemple de génération aléatoire de mots de passe###########
+    import random
+    import string
 
-passwd=""
-for i in range(8):
-    passwd+=liste_caractères[random.randint(0, len(liste_caractères)-1)]
+    liste_caractères=string.ascii_letters+string.digits
+    print("Les caractères utilisés", liste_caractères)
 
-print("Le Mot de pass généré :",passwd)
+    passwd=""
+    for i in range(8):
+        passwd+=liste_caractères[random.randint(0, len(liste_caractères)-1)]
+
+    print("Le Mot de pass généré :",passwd)
 
 
-*Exemple de code de hashage*
-import hashlib
+    ###########Exemple de code de hashage###########
+    import hashlib
 
-*hashage avec md5*
-print(dir(hashlib))
-m=hashlib.md5()  # m object à hasher
-m.update(b'1ier message')
-m.update(b'2ieme message')
+    ###########hashage avec md5###########
+    print(dir(hashlib))
+    m=hashlib.md5()  # m object à hasher
+    m.update(b'1ier message')
+    m.update(b'2ieme message')
 
-print(" le hasage:",m.digest())
-print('taille du hasché 1 :' ,m.digest_size)
-print('taille bloc utilisé par md5 :', m.block_size)
+    print(" le hasage:",m.digest())
+    print('taille du hasché 1 :' ,m.digest_size)
+    print('taille bloc utilisé par md5 :', m.block_size)
 
-*Hashage avec un autre alogorithme en version hexadécimal : sha224*
-d=hashlib.sha224()
-d.update(b'1ier message a hasher 2ieme message a hasher')
+    ###########Hashage avec un autre alogorithme en version hexadécimal : sha224###########
+    d=hashlib.sha224()
+    d.update(b'1ier message a hasher 2ieme message a hasher')
 
-print("le hashage :", d.hexdigest())
-print('taille du hasché 2 :' ,d.digest_size)
-print('taille bloc utilisé par sha224 :', d.block_size)
+    print("le hashage :", d.hexdigest())
+    print('taille du hasché 2 :' ,d.digest_size)
+    print('taille bloc utilisé par sha224 :', d.block_size)
 
-*hexdigest() méthode similaire à digest() mais renvoie une chaine en hexa*
-*plus longue , digest() renvoie des bytes*
+    ###########hexdigest() méthode similaire à digest() mais renvoie une chaine en hexa###########
+    ###########plus longue , digest() renvoie des bytes###########
 
-*vérification de l'intégration d'un mot de passe après un test de saisie 3 fois*
+    ###########vérification de l'intégration d'un mot de passe après un test de saisie 3 fois###########
 
-import hashlib
+    import hashlib
 
-from getpass import getpass
-pwd = getpass("Tapez le mot de passe :  ")
+    from getpass import getpass
+    pwd = getpass("Tapez le mot de passe :  ")
 
-mot_de_passe = b"ESGI2017"  # mot de passe d'accès stocké
+    mot_de_passe = b"ESGI2017"  # mot de passe d'accès stocké
 
-mot_de_passe_chiffre = hashlib.md5(mot_de_passe).hexdigest()
-print("mot de pass hashé: " , mot_de_passe_chiffre)
+    mot_de_passe_chiffre = hashlib.md5(mot_de_passe).hexdigest()
+    print("mot de pass hashé: " , mot_de_passe_chiffre)
 
-for i in range(3):
-    #saisie à améliorer avec IDLE
-    #pwd = getpass("Tapez le mot de passe :  ")
-    pwd=input("Tapez le mot de passe :")
-    # On encode la saisie pour avoir un type bytes ou octets
-    pwd = pwd.encode()
+    for i in range(3):
+        #saisie à améliorer avec IDLE
+        #pwd = getpass("Tapez le mot de passe :  ")
+        pwd=input("Tapez le mot de passe :")
+        # On encode la saisie pour avoir un type bytes ou octets
+        pwd = pwd.encode()
 
-    pwd_chiffre = hashlib.md5(pwd).hexdigest()
-    if pwd_chiffre == mot_de_passe_chiffre:
-        print("Mot de passe correct.")
-        break
-    else:
-        print("Mot de passe incorrect.")
+        pwd_chiffre = hashlib.md5(pwd).hexdigest()
+        if pwd_chiffre == mot_de_passe_chiffre:
+            print("Mot de passe correct.")
+            break
+        else:
+            print("Mot de passe incorrect.")
+
+## Exercice 7
+
+Programmation réseau:
+
+**Serveur basique**
+
+    ###############################################
+    # Mise en place d'un serveur simple
+    # simulation d'une connexion client/serveur
+    #"""""""""""""""""  verson basique """""""""""#
+
+    import socket  # importation du module socket
+    import sys
+
+    # les paramètres du serveur en local pour le test
+    HOST='127.0.0.1'     # adresse IP du serveur
+    PORT=8093           # port d'écoute du serveur
+    TAILLE_BUFFER=1024   # taille max à recevoir, par défaut
+
+
+    try :
+    # création d'un socket
+      Mysocket=socket.socket(socket.AF_INET, socket.SOCK_STREAM) # famille et mode
+
+    # liaison du scoket à une adresse IP et un port
+      Mysocket.bind((HOST, PORT))
+
+    except socket.error:
+      print("Problème de socket !!!")
+      sys.exit()
+
+    # boucle de traitement tant qu'il y a des clients connectés
+    while 1 :   # ou while True
+        print(">>> Serveur prêt, en attente d'un client...")
+
+        Mysocket.listen(5)  # écoute d'une connexion
+
+    # établissement de la connexion
+        connexion,adresse=Mysocket.accept()
+        print(">>> Connexion client réussie, adresse IP %s, port %s \n" % (adresse[0], adresse[1]))
+
+    # dialogue avec le client, envoi de message en byte
+        connexion.send(b"hello client")
+        print(">>> Vous étes sur les serveur, prêt à recevoir vos msg")
+        print(">>> Tapez FIN ou rien si vous souhaitez interrompre la connexion")
+
+    # réception de message du client
+        msgClient=connexion.recv(TAILLE_BUFFER)  # réception de 1024 caractères
+        print('>>> C:' ,msgClient.decode())
+
+    # boucle d'échange avec le client
+        while 1 :  # ou while True
+
+                 if msgClient==b"FIN" or msgClient==b"":
+                        break
+
+                 msgServer=input(">>> ")
+                 msgServer=msgServer.encode()  # encodage en byte
+                 print(">>> Envoi vers le client")
+                 connexion.send(msgServer)             
+                 msgClient=connexion.recv(TAILLE_BUFFER)
+                 print(">>> Reception du client")
+                 print(msgClient.decode())  # décodage inverse
+
+    # fermeture de la connexion
+        connexion.send(b"Au revoir")
+        print(">>> connexion interompue par le client!!!!")
+        connexion.close()
+        ch=input("<R>ecommencer <T>erminer?")
+        if ch==b'T':
+            print('Fin des connexions.')
+            break
+    Mysocket.close()
+
+Résultat:
+
+    >>> Serveur prêt, en attente d'un client...
+    >>> Connexion client réussie, adresse IP 127.0.0.1, port 50148
+
+    >>> Vous étes sur les serveur, prêt à recevoir vos msg
+    >>> Tapez FIN ou rien si vous souhaitez interrompre la connexion
+    >>> C: hello serveur                 
+
+**Client basique**
+
+    ###############################################
+    # Mise en place d'un client simple
+    # simulation d'une connexion client/serveur
+    #"""""""""""""""""  version basique """""""""""#
+
+    import socket, sys
+
+    # création d'un socket pour la connexion avec le serveur en local
+    sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    try:
+    # connexion au serveur, bloc surveillé, et gestion de l'exception
+        sock.connect(('127.0.0.1',8093))
+
+    except socket.error:
+       print("la connexion a échoué.......")
+       sys.exit()
+
+    print(">>> Connexion établie avec le serveur...")
+
+    # Envoi et réception de messages en byte
+    sock.send(b"hello serveur")
+    msgServer=sock.recv(1024) # taille par défaut
+
+    print(">>> S :", msgServer.decode())
+
+    while 1:
+
+             if msgServer==b'FIN' or msgServer==b'':
+                  break   
+
+             msgClient=input(">>> ")
+             msgClient=msgClient.encode()  # encodage en byte
+             print(">>> Envoi vers le serveur")
+             sock.send(msgClient)         
+             msgServer=sock.recv(100)
+             print(">>> Reception du serveur")
+             print(msgServer.decode())  # décodage inverse
+
+    print (">>> Connexion interrompue par le serveur!!!")
+    sock.close()
+
+Résultat:
+
+    >>> Connexion établie avec le serveur...
+    >>> S : hello client
+    >>> coucou
+    >>> Envoi vers le serveur
+    >>> Reception du serveur
+
+## Exercice fin de projet
+
+Serveur de fichier FTP partagé quelque soit le nombre de clients. (Serveur FTP déjà existant)
+Dans le réseau FTP, avoir également un serveur admin avec plusieurs fonctions:
+
+ - Gestion des utilisateurs
+ - Gestion des versions FTP
+ - Scan de ports
+ - Simulation Force-Brute (s'introduire en essayant de casser le mdp)
+ - Eventuellement stock des logs (optionnelle)
