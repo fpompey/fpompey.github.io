@@ -56,6 +56,9 @@
   - title: "Windows"
     url: "/esgi/windows/"
 
+  - title: "VmWare"
+    url: "/esgi/vmware/"
+
 - title: "Recherchez"
   url: "/recherchez/"
   side: right
