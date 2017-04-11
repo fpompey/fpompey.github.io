@@ -113,4 +113,114 @@ table ASCII)
 
 9) Ecrire un programme qui lit un verbe régulier en « er » au clavier et qui en affiche la
 conjugaison au présent de l’indicatif. Contrôlez s’il s’agit bien d’un verbe en « er » avant de le
-conjuguer. Vous pouvez utiliser les fonctions de string.h
+conjuguer. Vous pouvez utiliser les fonctions de string.
+
+
+## Structures
+
+Une structure est une assemblage de variables qui peuvent être de différents types (à la différence des tableaux où tous les éléments sont de même type).
+
+**Définition:**
+
+Les structures se définissent soit **avant le main** soit dans le **fichier d'en-tête**(fichier.h)
+
+    struct NomDeMaStructure
+    {
+      int variable1;
+      double variable2;
+      char variable3;
+    };
+
+**Attention, le nom de la structure doit toujours commencer par une majuscule.**  
+**Avoir un ; à la fin du block stucture**
+
+    struct Point
+    {
+      int x;
+      int y;
+    };
+
+    int main()
+    {
+      *struct Point* pointA; // point A est une variable de type struct de point.
+    }
+
+Pour éviter l'utilisation du mot-clé *struct* lors de la définition de variables du type de la structure, on utilise le mot-clé **typedef**  
+Il s'écrit juste après la structure.   
+**typedef** (*nom à remplacer*) puis (*nouveau nom*) ;
+
+**Exemple:**
+
+    typedef struct Point Point;
+
+**Autre Exemple:**
+
+    int main()
+    {
+      Point Point B;
+      pointB.x = 17;
+      pointB.y = 6;
+    }
+
+On utilise l'opérateur **.** pour accéder aux variables d'une structure lorsque l'on est sur une variable de type de cette même structure.
+
+**Initialisation:**
+
+Point pointB = {0 , 0}; // **valeur dans l'ordre de définition des variables dans la structure, attention il doit y en avoir le même nombre**
+
+*Est équivalent*
+
+pointB.x=0;
+pointB.y=0;
+
+###  Pointeur de Structures
+
+Un pointeur de structure est une variable contenant l'adresse mémoire d'une structure.
+
+Point* ppoint = NULL;
+
+**Exemple:**
+
+Pour transmettre une structureà une fonction, on enverra l'adresse mémoire de cette structure.
+
+    void multiplier(Point *ppoint, int nombre)
+    {
+      (*ppoint).x = (*ppoint).x * nombre;
+
+      ou est équivalent
+
+      ppoint -> x = (ppoint -> x) * nombre; // **L'opérateur "->" n'existe que dans le cas d'un pointeur de structure.**
+    }
+
+    int main()
+    {
+      Point pointA;
+      pointA.x=7;
+      pointA.y=8;
+      multiplier(&pointA, 6);
+      printf("%d %d", pointA.x, pointA.y);
+
+      return 0;
+    }
+
+### Enumérations
+
+C'est un ensemble de valeurs.
+
+**Exemple:**
+
+    enum Volume
+    {
+      FAIBLE, MOYEN, FORT
+    };
+    typedef enum Volume Volume;
+
+    int main()
+    {
+      Volume son = Volume FAIBLE;
+
+      if(son == Volume.FORT)
+      {
+        son = Volume.MOYEN;
+      }
+    }
