@@ -98,3 +98,5 @@ Parcours postfixe => g d r
 Parcours infixe => g r d
 
 On écrit le noeud si on est sur **r** sinon on est sur un arbre et on reappelle le parcours (Récursif)
+
+## 

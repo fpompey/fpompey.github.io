@@ -69,3 +69,24 @@ Créer un tableau de 5 entiers
 
         return 0;
     }
+
+## Exercice 2:
+
+ELECTIONDUPRESIDENT
+1010100010011101000001111
+
+E=4
+L=1
+C=1
+T=2
+I=2
+O=1
+N=2
+D=2
+U=1
+P=1
+R=1
+S=1
+
+POUTINe
+7

@@ -59,6 +59,15 @@
   - title: "VmWare"
     url: "/esgi/vmware/"
 
+  - title: "Cisco CCNA1"
+    url: "/esgi/cisco_ccna1/"
+
+  - title: "Cisco CCNA2"
+    url: "/esgi/cisco_ccna2/"
+
+  - title: "Base de données relationnelles"
+    url: "/esgi/bdd/"
+
 - title: "Recherchez"
   url: "/recherchez/"
   side: right
