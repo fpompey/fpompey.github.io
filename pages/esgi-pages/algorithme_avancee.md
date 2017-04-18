@@ -1,12 +1,14 @@
 ---
 layout: page
+show_meta: false
 title:  "Algorithme Avancée"
 breadcrumb: true
+header: no
+permalink: "/esgi/algorithme_avancee"
 tags:
     - algorithme
 categories:
     - esgi
-show_meta: false
 ---
 
 # Cours

@@ -1,9 +1,11 @@
 ---
 layout: page
-title:  "Linux"
+title:  "Nagios"
 breadcrumb: true
+header: no
+permalink: "/esgi/nagios"
 tags:
-    - linux
+    - nagios
 categories:
     - esgi
 show_meta: false
@@ -11,14 +13,14 @@ show_meta: false
 
 # Cours
 <ul>
-    {% for post in site.categories.cours_linux %}
+    {% for post in site.categories.cours_nagios %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
 # Exercices
 <ul>
-    {% for post in site.categories.exercice_linux %}
+    {% for post in site.categories.exercice_nagios %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

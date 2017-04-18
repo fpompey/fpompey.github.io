@@ -2,6 +2,8 @@
 layout: page
 title:  "Base de données relationnelles"
 breadcrumb: true
+header: no
+permalink: "/esgi/bdd"
 tags:
     - bdd
 categories:

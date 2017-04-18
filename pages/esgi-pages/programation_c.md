@@ -1,9 +1,11 @@
 ---
 layout: page
-title:  "Nagios"
+title:  "Programation C"
 breadcrumb: true
+header: no
+permalink: "/esgi/programation_c"
 tags:
-    - nagios
+    - programation_c
 categories:
     - esgi
 show_meta: false
@@ -11,14 +13,14 @@ show_meta: false
 
 # Cours
 <ul>
-    {% for post in site.categories.cours_nagios %}
+    {% for post in site.categories.cours_programation_c %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
 # Exercices
 <ul>
-    {% for post in site.categories.exercice_nagios %}
+    {% for post in site.categories.exercice_programation_c %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

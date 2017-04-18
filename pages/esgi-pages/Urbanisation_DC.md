@@ -1,9 +1,11 @@
 ---
 layout: page
-title:  "Programation C"
+title:  "Urbanisation DataCenter"
 breadcrumb: true
+header: no
+permalink: "/esgi/urbanisation_dc"
 tags:
-    - programation_c
+    - urbanisation_dc
 categories:
     - esgi
 show_meta: false
@@ -11,14 +13,14 @@ show_meta: false
 
 # Cours
 <ul>
-    {% for post in site.categories.cours_programation_c %}
+    {% for post in site.categories.cours_urbanisation_dc %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
 # Exercices
 <ul>
-    {% for post in site.categories.exercice_programation_c %}
+    {% for post in site.categories.exercice_urbanisation_dc %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>

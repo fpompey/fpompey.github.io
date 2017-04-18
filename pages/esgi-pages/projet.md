@@ -2,6 +2,8 @@
 layout: page
 title:  "Projets"
 breadcrumb: true
+header: no
+permalink: "/esgi/projets"
 tags:
     - projet
 categories:
