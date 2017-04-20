@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Cours Algorithme avancée"
-teaser: "Cours Algorithme avancée lors de la semaine du 10 Octobre 2016"
+title:  "Structure de données"
+teaser: "Structure de données lors de la semaine du 10 Octobre 2016"
 breadcrumb: false
 tags:
     - esgi
@@ -98,5 +98,3 @@ Parcours postfixe => g d r
 Parcours infixe => g r d
 
 On écrit le noeud si on est sur **r** sinon on est sur un arbre et on reappelle le parcours (Récursif)
-
-## 
