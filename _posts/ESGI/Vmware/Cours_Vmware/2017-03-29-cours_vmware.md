@@ -68,22 +68,26 @@ Meilleure performances graphiques à l'aide du driver (ne dépend que des ressou
 
 # Fonctionnalités du Vcenter (par coeur)
 
-HA => High availability - haute disponibilité - Plan de reprise d'activité  
-Prérequis
+HA => High availability - Plan de reprise d'activité
+Redémarre sur un autre hyperviseur.     
+Prérequis:
 
   - 2 hyperviseur
-  - License comprenant le HA
+  - License comprenant le HA pour le Vcenter
   - Avoir le Vcenter
-  - Licence vcenter comprenant le HA
-  - Avoir un VDC (virtual Datacenter)
+  - Licence vcenter comprenant le HA pour l'hyperviseur
   - Avoir un cluster (dans le VDC)
+  - Avoir un VDC (virtual Datacenter)
   - Avoir un stockage partagé visible pour tous les Vcenters.
   - Activer le HA
 
-FT => Fault Tolerance - permet d'avoir 0 coupure de service - image fantome de la machine virtuelle sur un autre hyperviseur qui va faire fonctionner en temps réel sur la machine fantome
+FT => Fault Tolerance - permet d'avoir 0 coupure de service - image fantome de la machine virtuelle sur un autre hyperviseur qui va faire fonctionner en temps réel sur la machine fantome.
+Consomme autant de ressources.  
+Prérequis:
 
+- Avoir HA
 - 2 hyperviseur
-- License comprenant le FT
+- License comprenant le FT pour l'hyperviseur
 - Avoir le Vcenter
 - Licence vcenter comprenant le FT
 - Avoir un VDC (virtual Datacenter)
@@ -91,12 +95,15 @@ FT => Fault Tolerance - permet d'avoir 0 coupure de service - image fantome de l
 - Avoir un stockage partagé visible pour tous les Vcenters.
 - Le disque doit impérativement être en thick
 - Avoir un réseau FT dédié pour les deux hyperviseurs
+- Procésseur récent et identiques
 - Activer le FT
 
-Vmotion => Déplacement des fichiers. Deplacement réseau (effectue un routage du flux), déplacement ram utilise swap + snapshot (effectue une image disque sur le stockage sans le déplacer), déplacement CPU
+Vmotion => Deplacement réseau (effectue un routage du flux), déplacement ram utilise swap + snapshot (effectue une image disque sur le stockage sans le déplacer), Déplacement CPU (Même barque de processeurs)  
+Prérequis:
 
+- Avoir HA
 - 2 hyperviseur
-- License comprenant le Vmotion
+- License comprenant le Vmotion pour l'hyperviseur
 - Avoir le Vcenter
 - Licence vcenter comprenant le Vmotion
 - Avoir un VDC (virtual Datacenter)
@@ -106,16 +113,45 @@ Vmotion => Déplacement des fichiers. Deplacement réseau (effectue un routage d
 - Avoir un réseau Vmotion dédié pour les deux hyperviseurs
 - Avoir les mêmes CPU
 - Activer option EVC
-- Avoir HA
 - Activer le Vmotion
 
-DRS => Réparties la charge entre les différents hyperviseur.
+Storage VMotion => Idem que VMotion mais dédié au stockages. Déplacement des fichiers.
+
+ - Avoir un stockage partagé
+
+EVC => Prend le composant le plus bas pour s'adapter avec les autres générations.
+
+DRS => Distributed ressources Scheduler - Réparties la charge entre les différents hyperviseur.
 Prérequis:
 
   - Idem HA
   - Idem Vmotion
 
-DPM => Gestion des ressources grâce à DRS, eteint certain hyperviseur en fonction des besoins.
+DPM => Distributed power management -  Gestion des ressources grâce à DRS, eteint certain hyperviseur en fonction des besoins.
 Prérequis:
 
   - Idem DRS
+  - Wake on lan
+
+
+**PowerCLI vmware:**
+
+se connecter au Vcenter : Connect-VIServer -Server 172.180.0.x
+
+get-vm : affiche les vm sur les ESXi
+
+get-vmhost : Affiche les hosts connecté
+
+get-inventory : Fais un inventaire complet
+
+get-vm - name 'debian Test' | get-vmhost : affiche ou est le host de la vm
+
+Move-VM 'debian test' -destination 172.180.0.x : fait une migration test ver l'ESXi
+
+get-vm -name 'debian test' | get-datastore : affiche la location du datastore de la vm
+
+remove-cluster "Nom_cluster" : supprime un cluster
+
+Remove-Datacenter "NomDataCenter" : Supprime un DC
+
+New-Datacenter "nomDataCenter"

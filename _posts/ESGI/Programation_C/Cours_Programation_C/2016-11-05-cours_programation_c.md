@@ -224,3 +224,87 @@ C'est un ensemble de valeurs.
         son = Volume.MOYEN;
       }
     }
+
+### Fichiers
+
+- En C la manipulation d'un fichier s'effectue à l'aide d'un pointeur sur une structure de type FILE
+- La variable contient l'adresse mémoire du début d fichier (le pointeur sur FILE)
+
+**1/ Ouverture de fichier**
+
+fopen(); fonction permettant d'ouvrir un fichier
+-> elle retourne un pointeur sur le fichier ouvert (FILE*)
+-> elle prend 2 paramètres :
+  - Le nom du fichier -> "toto.txt"
+                      -> "C:\\files\\toto.txt"  Il faut doubles les antislashs pour échapper le caractère
+  - Mode d'ouverture (pour le traitement qui va suivre)
+
+**Modes d'ouverture**
+
+**"r"** (read) : ouvre le fichier en lecture (uniquement si il existe déjà)
+**"w"** (write) : ouvre le fichier en écriture. Si inexistant, le fichier est créé, si il existe déjà, son contenu est écrasé
+**"a"** (append) : ouvre le fichier en écriture (comme le "w") mais il ajoute le contenu à la fin si le fichier existe déjà
+**"r+"** : Lecture/écriture uniquement si le fichier existe déjà (il ne permet pas de le créer)
+**"w+"** : Lecture/écriture, créé le fichier si inexistant et l'écrase si existant
+**"a+"** : Lecture/écriture, créé le fichier si inexistant, et ajoute à la suite si existant
+
+*Exemple :*
+
+    FILE* fichier= fopen(**"monfichier.txt"** *(Nom ou chemin du fichier)*, **"w"** *(Mode d'ouverture 1 seul parmi la liste)*);
+
+    if(fichier !=NULL){
+      Le fichier est bie ouvert
+    }
+
+    else{
+      printf("Echec d'ouverture du fichier");
+    }
+
+**2/ Fermeture d'un fichier**
+
+Quelque soit son mode d'ouverture, chaque fichier ouvert doit être fermé
+
+    fclose(*(pointeur sur fichier)*);
+
+**3/ Ecrire des données dans un fichier**
+
+    fputc => écrit un seul caractère à la fois
+    fputs => écrit une chaîne de caractères
+    fprintf => écrit chaine formatée
+
+*Exemple:*
+
+    FILE * fichier= fopen ("file.txt", "w");
+    if(ficher!=NULL){
+      fputc(**'B'** *(caractère à écrire)*, **fichier** *(pointeur sur fichier ouvert en écriture)*);
+      fputs(**"Bonjour"** *(chaine de caractères)*, **fichier**);
+      int jour = 22;
+      fprintf("Lundi **%d** *(jour)* mai", fichier);
+      fclose(fichier);
+
+    }
+
+**4/ Lecture de fichier**
+
+fgetc(*(pointeur sur fichier)*) => Permet de lire un caractère à la fois dans le fichier
+
+-> La fonction retourne le caractère lu
+-> Elle retourne EOF (end of file) lorsqu'elle arrive à la fin du fichier:
+
+    FILE * fic = fopen ("fichier.txt", "n");
+    if(fic!=NULL)
+    {
+      do
+      {
+        char carac = fgetc(fic);
+        printf("%c", carac);
+      }
+      while(carac!=EOF);
+      fclose(fic);
+    }
+
+**5/ Curseur**
+
+ftell() => donne la position du curseur
+fseek() => permet de déplacer le curseur
+rewind() => permet de remettre la position du curseur au début du fichier
